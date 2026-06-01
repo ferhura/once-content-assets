@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" aria-label="ONCE México — Isotipo">
+  <title>ONCE México · Isotipo</title>
+  <g fill="none" stroke="#00AFED" stroke-width="28" stroke-linecap="round" stroke-linejoin="round">
+    
+    <path d="M 280 60 L 80 60 Q 60 60 60 80 L 60 320 Q 60 340 80 340 L 320 340 Q 340 340 340 320 L 340 200"></path>
+    
+    <polyline points="115 215 180 280 320 125"></polyline>
+  </g>
+</svg>

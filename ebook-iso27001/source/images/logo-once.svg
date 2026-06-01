@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 692" width="1800" height="692" aria-label="ONCE México — Lockup horizontal">
+  <title>ONCE México · Logo horizontal</title>
+  
+  <g transform="translate(100, 146) scale(1)" fill="none" stroke="#00AFED" stroke-width="48" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 480 100 L 140 100 Q 100 100 100 140 L 100 540 Q 100 580 140 580 L 540 580 Q 580 580 580 540 L 580 340"></path>
+    <polyline points="195 365 305 475 540 220"></polyline>
+  </g>
+  
+  <line x1="820" y1="170" x2="820" y2="522" stroke="#2A2A2E" stroke-width="16"></line>
+  
+  <g font-family="Archivo, &#39;Helvetica Neue&#39;, Arial, sans-serif" font-weight="700" fill="#2A2A2E" letter-spacing="6">
+    <text x="900" y="320" font-size="200">ONCE</text>
+    <text x="900" y="530" font-size="200">MÉXICO</text>
+  </g>
+</svg>

@@ -5,22 +5,26 @@
 <title>ISO/IEC 27001 — La Guía Ejecutiva · ONCE México</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Archivo:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 <style>
   :root {
-    --paper: #f7f5ed;
-    --paper-2: #efebe0;
-    --ink: #0f1115;
-    --ink-soft: #2a2d33;
-    --muted: #707070;
-    --rule: #d6d2c4;
-    --rule-soft: #e2decf;
-    --accent: #00bcd4;
-    --accent-deep: #0095a8;
-    --dark: #0f1115;
-    --serif: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
-    --sans: 'Inter', -apple-system, system-ui, sans-serif;
-    --mono: 'IBM Plex Mono', ui-monospace, monospace;
+    /* ONCE brand tokens (from once-branding/tokens.css) */
+    --paper: #F7F6F2;
+    --paper-2: #EFEDE5;
+    --sand: #E9E3D7;
+    --ink: #1A1B1F;
+    --ink-soft: #2A2A2E;
+    --muted: #6B6C70;
+    --rule: #D4D5D7;
+    --rule-soft: #EBEBEC;
+    --accent: #00AFED;
+    --accent-deep: #0088BA;
+    --accent-soft: #E5F6FD;
+    --accent-ink: #003A52;
+    --dark: #0B0D12;
+    --serif: 'Spectral', 'Source Serif Pro', Georgia, serif;
+    --sans: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+    --mono: 'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { background: #cbc5b3; }
@@ -161,10 +165,10 @@
     font-family: var(--sans); font-weight: 700; color: var(--ink);
   }
   .logo-mark .square {
-    width: 38px; height: 38px;
-    border: 2px solid var(--ink); display: grid; place-items: center;
-    color: var(--accent); font-size: 22px;
+    width: 44px; height: 44px;
+    display: grid; place-items: center;
   }
+  .logo-mark .square svg { width: 44px; height: 44px; display: block; }
   .logo-mark .name { font-size: 14pt; line-height: 1; }
   .logo-mark .name small { display: block; font-size: 9pt; font-weight: 500; color: var(--muted); letter-spacing: 0.04em; }
   .logo-tag { font-family: var(--mono); font-size: 8pt; color: var(--muted); letter-spacing: 0.18em; text-transform: uppercase; }
@@ -317,6 +321,28 @@
   .row { display: flex; gap: 24px; }
   .gap-l { gap: 36px; }
   .center { text-align: center; }
+
+  /* photo / image blocks */
+  .photo {
+    width: 100%;
+    border: 0;
+    display: block;
+    object-fit: cover;
+  }
+  .photo.cap {
+    aspect-ratio: 4/5;
+  }
+  .photo.wide { aspect-ratio: 3/2; }
+  .photo-block { position: relative; }
+  .photo-block .logo-overlay {
+    position: absolute;
+    bottom: 14px; right: 14px;
+    background: rgba(255,255,255,0.94);
+    padding: 6px 10px;
+    display: flex; align-items: center; gap: 6px;
+    font-family: var(--sans); font-size: 8pt; font-weight: 600; color: var(--ink);
+  }
+  .photo-block .logo-overlay svg { width: 16px; height: 16px; }
 </style>
 </head>
 <body>
@@ -328,9 +354,9 @@
   <!-- decorative shape (checkmark / wave) -->
   <div class="cover-shape">
     <svg viewBox="0 0 800 1100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M 480 0 L 800 0 L 800 600 L 480 0 Z" fill="#bce8ee" opacity="0.55"/>
-      <path d="M 760 0 L 800 0 L 800 250 L 760 0 Z" fill="#9adde6" opacity="0.6"/>
-      <path d="M 480 0 C 600 200 700 350 800 450 L 800 700 C 650 550 530 360 460 220 Z" fill="#a8e2eb" opacity="0.55"/>
+      <path d="M 480 0 L 800 0 L 800 600 L 480 0 Z" fill="#E5F6FD" opacity="0.85"/>
+      <path d="M 760 0 L 800 0 L 800 250 L 760 0 Z" fill="#B3E6F8" opacity="0.7"/>
+      <path d="M 480 0 C 600 200 700 350 800 450 L 800 700 C 650 550 530 360 460 220 Z" fill="#CFEEFB" opacity="0.7"/>
     </svg>
   </div>
   <div class="cover-main">
@@ -358,7 +384,7 @@
     <div class="cover-foot">
       <div class="logo-block">
         <div class="logo-mark">
-          <span class="square">✓</span>
+          <span class="square"><svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#00AFED" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"><path d="M 280 60 L 80 60 Q 60 60 60 80 L 60 320 Q 60 340 80 340 L 320 340 Q 340 340 340 320 L 340 200"></path><polyline points="115 215 180 280 320 125"></polyline></g></svg></span>
           <span class="name">ONCE<br/><small>MÉXICO ®</small></span>
         </div>
         <span class="logo-tag">CERTEZA HECHA NORMA.</span>
@@ -456,11 +482,15 @@
         <p class="body">Imagina que tu empresa ganó la propuesta técnica. El cliente está convencido. El precio es competitivo. Entonces llega el correo del área de Compras:</p>
         <p class="body" style="font-style: italic; padding-left: 12px; border-left: 3px solid var(--accent); margin-top: 12pt; color: var(--ink);">"Antes de proceder al contrato, necesitamos su certificado ISO/IEC 27001 vigente emitido por un organismo acreditado."</p>
       </div>
+      <div class="h3" style="margin-top: 30px;">¿Qué responde <em>tu equipo hoy?</em></div>
+      <p class="body" style="margin-top: 10px;">Si la respuesta es "no contamos con esa certificación", no estás solo. La gran mayoría de las empresas tecnológicas latinoamericanas que venden —o intentan vender— a corporativos, gobierno o instituciones financieras no tienen una respuesta institucional, documentada y externamente validada sobre cómo protegen la información de sus clientes.</p>
     </div>
     <div class="right">
-      <div class="h3" style="margin-top: 86px;">¿Qué responde <em>tu equipo hoy?</em></div>
-      <div class="body-block">
-        <p class="body">Si la respuesta es "no contamos con esa certificación", no estás solo. La gran mayoría de las empresas tecnológicas latinoamericanas que venden —o intentan vender— a corporativos, gobierno o instituciones financieras no tienen una respuesta institucional, documentada y externamente validada sobre cómo protegen la información de sus clientes.</p>
+      <div class="photo-block" style="margin-top: 80px;">
+        <img class="photo cap" src="images/cover-hero.jpg" alt="Infraestructura de red corporativa"/>
+        <div class="logo-overlay"><svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#00AFED" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"><path d="M 280 60 L 80 60 Q 60 60 60 80 L 60 320 Q 60 340 80 340 L 320 340 Q 340 340 340 320 L 340 200"/><polyline points="115 215 180 280 320 125"/></g></svg> ONCE MÉXICO</div>
+      </div>
+      <div class="body-block" style="margin-top: 16px;">
         <p class="body">Saben que sus sistemas son seguros. Pero no pueden demostrarlo con evidencia auditada por un tercero independiente. Esa brecha —entre "tenemos buenos controles" y "tenemos un sistema de gestión certificado"— es exactamente el problema que este ebook está diseñado para ayudarte a cerrar.</p>
         <p class="body">No con teoría abstracta. Con un marco internacional concreto, aplicable hoy, que transforma la ciberseguridad de un centro de costos defensivo en el <b>mayor habilitador comercial de tu organización.</b></p>
       </div>
@@ -669,6 +699,10 @@
       <div style="margin-top: 12px;" class="display">Quién debe <em>certificarse.</em></div>
       <div class="colofon-mark" style="margin-top: 30px;"></div>
       <p class="body" style="font-family: var(--serif); font-style: italic; font-size: 12pt; color: var(--ink-soft); max-width: 92%;">La norma es universal en su diseño, pero no todas las organizaciones tienen la misma urgencia. Algunos sectores en LATAM ya enfrentan consecuencias materializadas —en forma de contratos perdidos, licitaciones bloqueadas o rondas de inversión congeladas— mientras otros están a meses de enfrentarlas.</p>
+      <div class="photo-block" style="margin-top: 24px;">
+        <img class="photo wide" src="images/equipo.png" alt="Equipo evaluando seguridad"/>
+        <div class="logo-overlay"><svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#00AFED" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"><path d="M 280 60 L 80 60 Q 60 60 60 80 L 60 320 Q 60 340 80 340 L 320 340 Q 340 340 340 320 L 340 200"/><polyline points="115 215 180 280 320 125"/></g></svg> ONCE MÉXICO</div>
+      </div>
     </div>
     <div class="right">
       <div class="chip-grid" style="margin-top: 86px;">
@@ -948,12 +982,16 @@
       <p class="body" style="font-family: var(--serif); font-style: italic; font-size: 12pt; color: var(--ink-soft); max-width: 92%;">ISO/IEC 27001:2022 estructura su evaluación en dos componentes paralelos: las cláusulas mandatorias de gobernanza y el catálogo operativo de <b style="font-style: normal; color: var(--ink);">93 controles del Anexo A.</b> Lo que sigue es lo que un auditor verifica el día de la auditoría.</p>
     </div>
     <div class="right" style="padding-top: 86px;">
+      <div class="photo-block" style="margin-bottom: 18px;">
+        <img class="photo wide" src="images/auditoria.jpg" alt="Auditoría de certificación"/>
+        <div class="logo-overlay"><svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#00AFED" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"><path d="M 280 60 L 80 60 Q 60 60 60 80 L 60 320 Q 60 340 80 340 L 320 340 Q 340 340 340 320 L 340 200"/><polyline points="115 215 180 280 320 125"/></g></svg> ONCE MÉXICO</div>
+      </div>
       <div class="label-muted">RESUMEN · DOS COMPONENTES DE AUDITORÍA</div>
       <table class="data-table" style="margin-top: 14px;">
         <thead><tr><th>Componente</th><th>Qué evalúa</th></tr></thead>
         <tbody>
           <tr><td><b>Cláusulas 4 — 10</b></td><td>Gobernanza del SGSI: liderazgo, alcance, riesgos, objetivos, mejora continua.</td></tr>
-          <tr><td><b>Anexo A</b></td><td>93 controles operativos organizados en 4 categorías: organizacionales, personas, físicos y tecnológicos.</td></tr>
+          <tr><td><b>Anexo A</b></td><td>93 controles operativos en 4 categorías: organizacionales, personas, físicos y tecnológicos.</td></tr>
         </tbody>
       </table>
     </div>
@@ -1257,10 +1295,16 @@
     <span class="brand">ONCE MÉXICO · GUÍA EJECUTIVA</span>
     <span class="right"><span>CAPÍTULO 07</span><span class="sep"></span><span>07 / 07</span></span>
   </div>
-  <div style="padding-top: 6mm;">
-    <div class="label-muted">07 · CAPÍTULO SIETE</div>
-    <div style="margin-top: 10px;" class="display med">Escenarios ilustrativos <em>de mercado.</em></div>
-    <p class="body" style="font-family: var(--serif); font-style: italic; margin-top: 14px; max-width: 80%;">Tres escenarios representativos construidos a partir de patrones observados en el mercado. Las organizaciones y las cifras son ilustrativas; no representan clientes específicos ni resultados atribuibles a los servicios de certificación de ONCE México.</p>
+  <div style="padding-top: 6mm; display: grid; grid-template-columns: 1.4fr 1fr; gap: 28px; align-items: start;">
+    <div>
+      <div class="label-muted">07 · CAPÍTULO SIETE</div>
+      <div style="margin-top: 10px;" class="display med">Escenarios ilustrativos <em>de mercado.</em></div>
+      <p class="body" style="font-family: var(--serif); font-style: italic; margin-top: 14px;">Tres escenarios representativos construidos a partir de patrones observados en el mercado. Las organizaciones y las cifras son ilustrativas; no representan clientes específicos ni resultados atribuibles a los servicios de certificación de ONCE México.</p>
+    </div>
+    <div class="photo-block">
+      <img class="photo cap" src="images/casos.jpg" alt="Profesionales en evaluación"/>
+      <div class="logo-overlay"><svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#00AFED" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"><path d="M 280 60 L 80 60 Q 60 60 60 80 L 60 320 Q 60 340 80 340 L 320 340 Q 340 340 340 320 L 340 200"/><polyline points="115 215 180 280 320 125"/></g></svg> ONCE MÉXICO</div>
+    </div>
   </div>
   <div style="padding-top: 24px;">
     <div class="label-muted" style="color: var(--accent);">CASO 01 · SaaS · GUADALAJARA · 42 EMPLEADOS</div>
