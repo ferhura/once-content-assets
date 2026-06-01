@@ -172,6 +172,10 @@
   .logo-mark .name { font-size: 14pt; line-height: 1; }
   .logo-mark .name small { display: block; font-size: 9pt; font-weight: 500; color: var(--muted); letter-spacing: 0.04em; }
   .logo-tag { font-family: var(--mono); font-size: 8pt; color: var(--muted); letter-spacing: 0.18em; text-transform: uppercase; }
+  /* horizontal lockup ONCE MÉXICO */
+  .logo-lockup { display: block; height: 60px; width: auto; }
+  .logo-lockup.lg { height: 80px; }
+  .logo-lockup.sm { height: 44px; }
   .sello-box {
     width: 220px; border: 1.5px solid var(--ink);
     display: flex; flex-direction: column;
@@ -372,6 +376,7 @@
         <span class="pill">ISO/IEC 27001 : 2022</span>
         <span style="color: var(--muted);">EDICIÓN 2026</span>
       </div>
+      <div class="label-mono" style="color: var(--accent); letter-spacing: 0.22em; font-size: 9pt;">SEGURIDAD DE LA INFORMACIÓN · CERTIFICACIÓN INTERNACIONAL</div>
       <div class="label-mono" style="color: var(--ink); letter-spacing: 0.2em;">LA GUÍA EJECUTIVA</div>
     </div>
     <div class="cover-title">
@@ -382,10 +387,17 @@
     </div>
     <div class="cover-foot">
       <div class="logo-block">
-        <div class="logo-mark">
-          <span class="square"><svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#00AFED" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"><path d="M 280 60 L 80 60 Q 60 60 60 80 L 60 320 Q 60 340 80 340 L 320 340 Q 340 340 340 320 L 340 200"></path><polyline points="115 215 180 280 320 125"></polyline></g></svg></span>
-          <span class="name">ONCE<br/><small>MÉXICO ®</small></span>
-        </div>
+        <svg class="logo-lockup lg" viewBox="0 0 1800 692" xmlns="http://www.w3.org/2000/svg" aria-label="ONCE México">
+          <g transform="translate(100, 146)" fill="none" stroke="#00AFED" stroke-width="48" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M 480 100 L 140 100 Q 100 100 100 140 L 100 540 Q 100 580 140 580 L 540 580 Q 580 580 580 540 L 580 340"></path>
+            <polyline points="195 365 305 475 540 220"></polyline>
+          </g>
+          <line x1="820" y1="170" x2="820" y2="522" stroke="#2A2A2E" stroke-width="16"></line>
+          <g font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-weight="700" fill="#2A2A2E" letter-spacing="6">
+            <text x="900" y="320" font-size="200">ONCE</text>
+            <text x="900" y="530" font-size="200">MÉXICO</text>
+          </g>
+        </svg>
         <span class="logo-tag">CERTEZA HECHA NORMA.</span>
       </div>
       <div>
@@ -1328,10 +1340,17 @@
       <p class="body"><b>EDITOR · ONCE México</b> · Organismo de certificación · <span style="color: var(--accent); font-weight: 600;">oncemexico.org</span></p>
       <p class="label-mono" style="margin-top: 6px;">ONCE MÉXICO ® · CERTEZA HECHA NORMA</p>
     </div>
-    <div class="logo-mark">
-      <span class="square"><svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#00AFED" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"><path d="M 280 60 L 80 60 Q 60 60 60 80 L 60 320 Q 60 340 80 340 L 320 340 Q 340 340 340 320 L 340 200"></path><polyline points="115 215 180 280 320 125"></polyline></g></svg></span>
-      <span class="name">ONCE<br/><small>MÉXICO ®</small></span>
-    </div>
+    <svg class="logo-lockup" viewBox="0 0 1800 692" xmlns="http://www.w3.org/2000/svg" aria-label="ONCE México">
+      <g transform="translate(100, 146)" fill="none" stroke="#00AFED" stroke-width="48" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M 480 100 L 140 100 Q 100 100 100 140 L 100 540 Q 100 580 140 580 L 540 580 Q 580 580 580 540 L 580 340"></path>
+        <polyline points="195 365 305 475 540 220"></polyline>
+      </g>
+      <line x1="820" y1="170" x2="820" y2="522" stroke="#2A2A2E" stroke-width="16"></line>
+      <g font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-weight="700" fill="#2A2A2E" letter-spacing="6">
+        <text x="900" y="320" font-size="200">ONCE</text>
+        <text x="900" y="530" font-size="200">MÉXICO</text>
+      </g>
+    </svg>
   </div>
   <p class="label-muted" style="margin-top: 14px;">© 2026 · CERTEZA HECHA NORMA</p>
   <div class="bottom">031</div>
