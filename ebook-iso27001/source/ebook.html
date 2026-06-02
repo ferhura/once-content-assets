@@ -35,9 +35,8 @@
   .page {
     width: 210mm; height: 297mm;
     background: var(--paper);
-    padding: 16mm 16mm 14mm 16mm;
+    padding: 14mm 14mm 12mm 14mm;
     position: relative;
-    overflow: hidden;
     page-break-after: always;
     display: flex;
     flex-direction: column;
@@ -162,14 +161,19 @@
   .logo-block { display: flex; flex-direction: column; gap: 14px; }
   .logo-mark {
     display: inline-flex; align-items: center; gap: 10px;
-    font-family: var(--sans); font-weight: 700; color: var(--ink);
+    font-family: var(--sans); font-weight: 700; color: var(--ink-soft);
   }
   .logo-mark .square {
-    width: 44px; height: 44px;
+    width: 48px; height: 48px;
     display: grid; place-items: center;
   }
-  .logo-mark .square svg { width: 44px; height: 44px; display: block; }
-  .logo-mark .name { font-size: 14pt; line-height: 1; }
+  .logo-mark .square svg { width: 48px; height: 48px; display: block; }
+  .logo-mark .sep-v {
+    width: 1.5px; height: 36px; background: var(--ink-soft);
+    display: inline-block; margin: 0 4px;
+  }
+  .logo-mark .name { font-size: 13pt; line-height: 1.05; font-weight: 700; letter-spacing: 0.04em; }
+  .logo-mark .name sup { font-size: 6pt; font-weight: 500; }
   .logo-mark .name small { display: block; font-size: 9pt; font-weight: 500; color: var(--muted); letter-spacing: 0.04em; }
   .logo-tag { font-family: var(--mono); font-size: 8pt; color: var(--muted); letter-spacing: 0.18em; text-transform: uppercase; }
   /* horizontal lockup ONCE MÉXICO */
@@ -217,7 +221,8 @@
   /* ============ CHAPTER PAGE TWO-COL ============ */
   .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 38px; padding-top: 6mm; }
   .two-col.narrow { grid-template-columns: 0.92fr 1.08fr; }
-  .two-col .left .display { font-size: 44pt; line-height: 0.98; }
+  .two-col .left .display { font-size: 38pt; line-height: 1.0; }
+  .two-col.narrow .left .display { font-size: 34pt; line-height: 1.02; }
   .two-col p.body { font-family: var(--sans); font-size: 10pt; line-height: 1.6; color: var(--ink-soft); }
   .two-col .body-block { margin-top: 18px; }
 
@@ -387,17 +392,11 @@
     </div>
     <div class="cover-foot">
       <div class="logo-block">
-        <svg class="logo-lockup lg" viewBox="0 0 1800 692" xmlns="http://www.w3.org/2000/svg" aria-label="ONCE México">
-          <g transform="translate(100, 146)" fill="none" stroke="#00AFED" stroke-width="48" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M 480 100 L 140 100 Q 100 100 100 140 L 100 540 Q 100 580 140 580 L 540 580 Q 580 580 580 540 L 580 340"></path>
-            <polyline points="195 365 305 475 540 220"></polyline>
-          </g>
-          <line x1="820" y1="170" x2="820" y2="522" stroke="#2A2A2E" stroke-width="16"></line>
-          <g font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-weight="700" fill="#2A2A2E" letter-spacing="6">
-            <text x="900" y="320" font-size="200">ONCE</text>
-            <text x="900" y="530" font-size="200">MÉXICO</text>
-          </g>
-        </svg>
+        <div class="logo-mark">
+          <span class="square"><svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#00AFED" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"><path d="M 280 60 L 80 60 Q 60 60 60 80 L 60 320 Q 60 340 80 340 L 320 340 Q 340 340 340 320 L 340 200"></path><polyline points="115 215 180 280 320 125"></polyline></g></svg></span>
+          <span class="sep-v"></span>
+          <span class="name">ONCE<br/>MÉXICO<sup>®</sup></span>
+        </div>
         <span class="logo-tag">CERTEZA HECHA NORMA.</span>
       </div>
       <div>
@@ -1340,17 +1339,11 @@
       <p class="body"><b>EDITOR · ONCE México</b> · Organismo de certificación · <span style="color: var(--accent); font-weight: 600;">oncemexico.org</span></p>
       <p class="label-mono" style="margin-top: 6px;">ONCE MÉXICO ® · CERTEZA HECHA NORMA</p>
     </div>
-    <svg class="logo-lockup" viewBox="0 0 1800 692" xmlns="http://www.w3.org/2000/svg" aria-label="ONCE México">
-      <g transform="translate(100, 146)" fill="none" stroke="#00AFED" stroke-width="48" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M 480 100 L 140 100 Q 100 100 100 140 L 100 540 Q 100 580 140 580 L 540 580 Q 580 580 580 540 L 580 340"></path>
-        <polyline points="195 365 305 475 540 220"></polyline>
-      </g>
-      <line x1="820" y1="170" x2="820" y2="522" stroke="#2A2A2E" stroke-width="16"></line>
-      <g font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-weight="700" fill="#2A2A2E" letter-spacing="6">
-        <text x="900" y="320" font-size="200">ONCE</text>
-        <text x="900" y="530" font-size="200">MÉXICO</text>
-      </g>
-    </svg>
+    <div class="logo-mark">
+      <span class="square"><svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#00AFED" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"><path d="M 280 60 L 80 60 Q 60 60 60 80 L 60 320 Q 60 340 80 340 L 320 340 Q 340 340 340 320 L 340 200"></path><polyline points="115 215 180 280 320 125"></polyline></g></svg></span>
+      <span class="sep-v"></span>
+      <span class="name">ONCE<br/>MÉXICO<sup>®</sup></span>
+    </div>
   </div>
   <p class="label-muted" style="margin-top: 14px;">© 2026 · CERTEZA HECHA NORMA</p>
   <div class="bottom">031</div>
