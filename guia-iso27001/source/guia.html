@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Guía informativa · Certificación ISO/IEC 27001:2022 · ONCE México</title>
+<style>
+:root {
+  --accent: #1FA9E0;
+  --accent-dark: #0E8DBF;
+  --accent-soft: #EAF7FC;
+  --ink: #3A3F44;
+  --ink-strong: #2B3036;
+  --muted: #7A8087;
+  --slate: #3E4A52;
+  --rule: #E3E6E8;
+  --paper: #FFFFFF;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+@page { size: 210mm 297mm; margin: 0; }
+body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: var(--ink); background: #888; }
+@media screen { body { display: flex; flex-direction: column; align-items: center; gap: 20px; padding: 20px 0; } .page { box-shadow: 0 2px 10px rgba(0,0,0,.3); } }
+@media print { body { background: none; } }
+
+.page {
+  width: 210mm; height: 297mm; background: var(--paper);
+  position: relative; overflow: hidden; page-break-after: always;
+  display: flex; flex-direction: column;
+}
+.page:last-child { page-break-after: auto; }
+
+/* ── Portada ── */
+.cover { padding: 0; }
+.cover .sidebar { position: absolute; top: 0; left: 0; bottom: 0; width: 11mm; background: var(--accent); }
+.cover .inner { padding: 16mm 18mm 0 24mm; display: flex; flex-direction: column; height: 100%; }
+.cover .logo { height: 21mm; width: auto; align-self: flex-start; }
+.cover .org {
+  margin-top: 5mm; font-size: 10.5pt; font-weight: 700; letter-spacing: .22em;
+  color: var(--accent); text-transform: uppercase;
+}
+.cover .kicker { margin-top: 22mm; font-size: 12pt; font-weight: 700; letter-spacing: .3em; color: var(--ink-strong); text-transform: uppercase; }
+.cover h1 { margin-top: 6mm; font-size: 38pt; line-height: 1.12; font-weight: 300; color: var(--ink-strong); }
+.cover h1 b { font-weight: 700; }
+.cover .sub { margin-top: 8mm; border-left: 3.5px solid var(--accent); padding-left: 6mm; }
+.cover .sub .t1 { font-size: 13.5pt; font-weight: 700; color: var(--accent); margin-bottom: 2.5mm; }
+.cover .sub .t2 { font-size: 13pt; line-height: 1.5; color: var(--ink); }
+.cover .chips { display: flex; gap: 6mm; margin-top: 13mm; }
+.cover .chipcard {
+  flex: 1; border: 1px solid var(--rule); border-radius: 3mm; padding: 5.5mm 5mm;
+  display: flex; gap: 4mm; align-items: flex-start; background: var(--paper);
+}
+.cover .chipcard .ico {
+  width: 9mm; height: 9mm; flex: 0 0 auto; border-radius: 50%;
+  border: 2px solid var(--accent); color: var(--accent);
+  display: grid; place-items: center; font-size: 12pt; font-weight: 700;
+}
+.cover .chipcard h4 { font-size: 10.5pt; font-weight: 700; color: var(--ink-strong); margin-bottom: 1.5mm; }
+.cover .chipcard p { font-size: 9pt; line-height: 1.4; color: var(--muted); }
+.cover .closing { margin-top: auto; padding-bottom: 12mm; font-size: 12.5pt; line-height: 1.6; color: var(--ink); }
+.cover .footbar {
+  background: var(--slate); color: #fff; padding: 6mm 18mm 6mm 24mm;
+  display: flex; justify-content: space-between; align-items: center; font-size: 9pt;
+}
+.cover .footbar .badge { background: var(--accent); color: #fff; font-weight: 700; padding: 2.5mm 5mm; border-radius: 1.5mm; font-size: 9pt; }
+
+/* ── Páginas interiores ── */
+.inner-page { padding: 0 16mm; }
+.pghead {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 7mm 0 3.5mm; border-bottom: 2.5px solid var(--slate); margin-bottom: 6mm;
+}
+.pghead img { height: 11mm; width: auto; }
+.pghead .sec { font-size: 10pt; font-weight: 700; letter-spacing: .18em; color: var(--accent); text-transform: uppercase; }
+.pgfoot {
+  margin-top: auto; border-top: 1px solid var(--rule);
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 3.5mm 0 7mm; font-size: 9pt; color: var(--ink);
+}
+.pgfoot .pg { color: var(--accent); font-weight: 700; }
+
+h2 { font-size: 18pt; font-weight: 700; color: var(--ink-strong); margin-bottom: 2mm; }
+h2 + .hr { width: 12mm; height: 1.2mm; background: var(--accent); border-radius: 1mm; margin-bottom: 5mm; }
+h3.sub { font-size: 12.5pt; font-weight: 700; color: var(--accent); margin: 5.5mm 0 3.5mm; }
+p.body { font-size: 10.5pt; line-height: 1.5; margin-bottom: 3mm; }
+p.body b { color: var(--ink-strong); }
+
+.callout {
+  background: var(--slate); color: #fff; border-radius: 2.5mm;
+  padding: 5mm 6mm; margin: 4.5mm 0;
+}
+.callout .k { font-size: 9pt; font-weight: 700; letter-spacing: .2em; color: var(--accent); text-transform: uppercase; margin-bottom: 2.5mm; }
+.callout p { font-size: 10pt; line-height: 1.5; }
+.callout p b { color: #fff; }
+
+.softnote {
+  background: var(--accent-soft); border-left: 3.5px solid var(--accent);
+  border-radius: 0 2mm 2mm 0; padding: 4.5mm 5.5mm; margin: 4.5mm 0;
+  font-size: 10pt; line-height: 1.5;
+}
+.softnote b { color: var(--accent-dark); }
+
+.cardrow { display: flex; gap: 4mm; margin: 3.5mm 0; }
+.cardrow .c {
+  flex: 1; background: var(--accent-soft); border-radius: 2mm; padding: 4mm 4.5mm;
+  border-top: 2.5px solid var(--accent);
+}
+.cardrow .c h4 { font-size: 10.5pt; font-weight: 700; color: var(--ink-strong); margin-bottom: 2mm; }
+.cardrow .c p { font-size: 8.5pt; line-height: 1.4; color: var(--ink); }
+
+.clausegrid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5mm; margin: 3.5mm 0; }
+.clause {
+  border: 1px solid var(--rule); border-left: 3.5px solid var(--accent);
+  border-radius: 2mm; padding: 3.8mm 4.8mm;
+}
+.clause .k { font-size: 8.5pt; font-weight: 700; letter-spacing: .16em; color: var(--accent); text-transform: uppercase; margin-bottom: 1.8mm; }
+.clause h4 { font-size: 11pt; font-weight: 700; color: var(--ink-strong); margin-bottom: 1.8mm; }
+.clause p { font-size: 9pt; line-height: 1.4; color: var(--ink); }
+.clause.wide { grid-column: 1 / -1; }
+
+.plist { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5mm 7mm; margin: 3.5mm 0; }
+.pitem { display: flex; gap: 3.5mm; align-items: flex-start; }
+.pitem .n {
+  width: 6.5mm; height: 6.5mm; flex: 0 0 auto; border-radius: 50%;
+  background: var(--accent-soft); color: var(--accent); font-weight: 700;
+  display: grid; place-items: center; font-size: 9pt; margin-top: .5mm;
+}
+.pitem .n.check { background: var(--accent); color: #fff; }
+.pitem .n.dot { width: 3.8mm; height: 3.8mm; margin-top: 1.6mm; position: relative; }
+.pitem .n.dot::after { content: ''; position: absolute; inset: 1.15mm; border-radius: 50%; background: var(--accent); }
+
+.pitem h4 { font-size: 10.5pt; font-weight: 700; color: var(--ink-strong); margin-bottom: 1.2mm; }
+.pitem p { font-size: 9pt; line-height: 1.4; color: var(--ink); }
+
+.steps { display: flex; gap: 4mm; margin: 3.5mm 0 5mm; }
+.step { flex: 1; border: 1px solid var(--rule); border-radius: 2.5mm; padding: 4.5mm 4mm; text-align: center; border-top: 3px solid var(--accent); }
+.step .big { font-size: 19pt; font-weight: 300; color: var(--accent); margin-bottom: 1.5mm; }
+.step h4 { font-size: 11pt; font-weight: 700; color: var(--ink-strong); margin-bottom: 2mm; }
+.step p { font-size: 8.5pt; line-height: 1.4; color: var(--ink); text-align: left; }
+
+.faq { border: 1px solid var(--rule); border-radius: 2.5mm; padding: 4mm 5mm; margin-bottom: 3.2mm; }
+.faq h4 { font-size: 10.5pt; font-weight: 700; color: var(--ink-strong); margin-bottom: 1.8mm; }
+.faq p { font-size: 9.5pt; line-height: 1.45; padding-left: 4.5mm; position: relative; }
+.faq p::before { content: '●'; color: var(--accent); position: absolute; left: 0; font-size: 8pt; top: 1.5pt; }
+
+.gantt { margin: 3mm 0; }
+.gantt .row { display: flex; align-items: center; gap: 3mm; margin-bottom: 1.6mm; }
+.gantt .lbl { flex: 0 0 20mm; text-align: right; font-size: 9pt; font-weight: 700; color: var(--ink-strong); }
+.gantt .bar { height: 5.8mm; border-radius: 1.2mm; color: #fff; font-size: 8pt; font-weight: 600; display: flex; align-items: center; padding: 0 3mm; }
+.legend { display: flex; gap: 7mm; margin-top: 3mm; font-size: 8.5pt; color: var(--ink); }
+.legend span::before { content: '■ '; }
+
+.contactbox { background: var(--slate); color: #fff; border-radius: 2.5mm; padding: 5mm 6mm; margin: 4mm 0; }
+.contactbox .k { font-size: 9pt; font-weight: 700; letter-spacing: .2em; color: var(--accent); text-transform: uppercase; margin-bottom: 3.5mm; }
+.contactbox p { font-size: 10pt; line-height: 1.6; }
+.contactbox b { color: #fff; }
+.ctabox { background: var(--slate); color: #fff; border-radius: 2.5mm; padding: 5.5mm; margin-top: 4mm; text-align: center; }
+.ctabox h3 { font-size: 13pt; font-weight: 700; margin-bottom: 2.5mm; }
+.ctabox p { font-size: 9.5pt; line-height: 1.5; }
+.ctabox .cta { margin-top: 4mm; font-size: 11.5pt; font-weight: 700; color: var(--accent); display: flex; justify-content: center; gap: 12mm; }
+
+/* densificación por página */
+.dense h3.sub { margin: 3.5mm 0 2.2mm; }
+.dense p.body { margin-bottom: 2mm; }
+.dense .steps { margin: 3mm 0 4mm; }
+.dense .step { padding: 3.6mm 3.4mm; }
+.dense .clause { padding: 3mm 4mm; }
+.dense .clause p { font-size: 8.5pt; }
+.dense .clause h4 { font-size: 10.5pt; margin-bottom: 1.4mm; }
+.dense .gantt .bar { height: 5mm; }
+.dense .gantt .row { margin-bottom: 1.1mm; }
+.dense .pgfoot { padding-bottom: 6mm; }
+.tight .plist { gap: 2.8mm 6mm; }
+.tight p.body { margin-bottom: 2.2mm; }
+.tight .faq { padding: 3.4mm 4.5mm; margin-bottom: 2.6mm; }
+.tight .faq p { font-size: 9pt; }
+.tight .cardrow .c { padding: 3.4mm 4mm; }
+</style>
+</head>
+<body>
+
+<!-- ═══ PORTADA ═══ -->
+<div class="page cover">
+  <span class="sidebar"></span>
+  <div class="inner">
+    <img class="logo" src="images/logo-once-mexico.png" alt="ONCE México">
+    <div class="org">Organismo de Normalización y Certificación Empresarial</div>
+    <div class="kicker">Guía informativa</div>
+    <h1>Certificación<br><b>ISO/IEC 27001:2022</b></h1>
+    <div class="sub">
+      <div class="t1">Sistema de Gestión de Seguridad de la Información</div>
+      <div class="t2">Todo lo que su organización necesita saber<br>para certificarse con éxito</div>
+    </div>
+    <div class="chips">
+      <div class="chipcard"><span class="ico">✓</span><div><h4>Seguridad</h4><p>Riesgos gestionados y controles verificados</p></div></div>
+      <div class="chipcard"><span class="ico">+</span><div><h4>Reconocimiento</h4><p>Certificación con validez internacional</p></div></div>
+      <div class="chipcard"><span class="ico">⌂</span><div><h4>Confianza</h4><p>Ante clientes, socios y reguladores</p></div></div>
+    </div>
+    <div class="closing">Una guía práctica de <b>ONCE México</b> para entender<br>la norma, sus requisitos y el camino hacia la certificación.</div>
+  </div>
+  <div class="footbar">
+    <span><b>ONCE México</b> &nbsp;·&nbsp; contacto@oncemexico.org &nbsp;·&nbsp; 55 12 04 11 31 &nbsp;·&nbsp; www.oncemexico.org</span>
+    <span class="badge">Documento informativo</span>
+  </div>
+</div>
+
+<!-- ═══ PÁG 1 · QUÉ ES ═══ -->
+<div class="page inner-page tight">
+  <div class="pghead"><img src="images/logo-once-mexico.png" alt="ONCE México"><span class="sec">¿Qué es ISO 27001?</span></div>
+  <h2>¿Qué es ISO/IEC 27001:2022?</h2><div class="hr"></div>
+  <p class="body"><b>ISO/IEC 27001:2022</b> es la norma internacional líder para sistemas de gestión de seguridad de la información (SGSI). Establece los requisitos para establecer, implementar, mantener y mejorar continuamente un sistema que preserve la <b>confidencialidad, integridad y disponibilidad</b> de la información mediante la gestión de riesgos.</p>
+  <p class="body">Aplica a organizaciones de cualquier tamaño y sector, públicas o privadas, y cubre la información en cualquier formato: digital, física o verbal. No es una norma exclusiva de las áreas de TI: es un sistema de gestión que integra procesos, personas y tecnología.</p>
+  <div class="callout">
+    <div class="k">Dato clave</div>
+    <p>El detonador más común para certificarse rara vez es la seguridad por sí misma: es <b>un cliente importante que la exige, una licitación que la pide como requisito o una obligación regulatoria o contractual</b>. La certificación convierte la seguridad en una ventaja comercial.</p>
+  </div>
+  <h3 class="sub">¿Qué busca ISO/IEC 27001?</h3>
+  <div class="cardrow">
+    <div class="c"><h4>Confidencialidad</h4><p>Que la información sea accesible solo para quien está autorizado.</p></div>
+    <div class="c"><h4>Integridad</h4><p>Que la información sea exacta y completa, sin alteraciones indebidas.</p></div>
+    <div class="c"><h4>Disponibilidad</h4><p>Que la información esté accesible cuando la operación la necesita.</p></div>
+    <div class="c"><h4>Gestión de riesgos</h4><p>Identificar, evaluar y tratar los riesgos de seguridad según su contexto.</p></div>
+  </div>
+  <h3 class="sub">Los 7 elementos clave del SGSI</h3>
+  <p class="body">Un SGSI basado en ISO/IEC 27001 se sostiene sobre estos elementos, que la auditoría evalúa en conjunto:</p>
+  <div class="plist">
+    <div class="pitem"><span class="n">1</span><div><h4>Alcance bien definido</h4><p>Qué procesos, sitios y activos cubre el SGSI. Un alcance acotado es un factor clave de éxito.</p></div></div>
+    <div class="pitem"><span class="n">2</span><div><h4>Liderazgo de la dirección</h4><p>La alta dirección aprueba la política, asigna recursos y participa: no es un proyecto solo de TI.</p></div></div>
+    <div class="pitem"><span class="n">3</span><div><h4>Evaluación de riesgos</h4><p>Identificar activos, amenazas y vulnerabilidades. El análisis de riesgos es el eje de toda la norma.</p></div></div>
+    <div class="pitem"><span class="n">4</span><div><h4>Tratamiento y SoA</h4><p>Decidir cómo tratar cada riesgo y documentarlo en la Declaración de Aplicabilidad.</p></div></div>
+    <div class="pitem"><span class="n">5</span><div><h4>Controles implementados</h4><p>Controles del Anexo A seleccionados según los riesgos, operando y generando evidencia.</p></div></div>
+    <div class="pitem"><span class="n">6</span><div><h4>Personas competentes</h4><p>Personal capacitado y consciente de su papel en la seguridad de la información.</p></div></div>
+    <div class="pitem"><span class="n">7</span><div><h4>Mejora continua</h4><p>Medición, auditorías internas, revisión por la dirección y acciones correctivas.</p></div></div>
+  </div>
+  <div class="pgfoot"><span>ONCE México · Guía informativa ISO/IEC 27001:2022</span><span class="pg">Pág. 1</span></div>
+</div>
+
+<!-- ═══ PÁG 2 · ESTRUCTURA ═══ -->
+<div class="page inner-page">
+  <div class="pghead"><img src="images/logo-once-mexico.png" alt="ONCE México"><span class="sec">Requisitos de la norma</span></div>
+  <h2>Estructura y requisitos de ISO/IEC 27001:2022</h2><div class="hr"></div>
+  <p class="body">La norma tiene dos partes: las <b>cláusulas 4 a 10</b>, con los requisitos obligatorios del sistema de gestión (no se pueden excluir), y el <b>Anexo A</b>, un catálogo de controles de seguridad que se seleccionan según los riesgos de cada organización.</p>
+  <div class="clausegrid">
+    <div class="clause"><div class="k">Cláusula 4</div><h4>Contexto de la organización</h4><p>Comprender la organización, su contexto, las necesidades de las partes interesadas y determinar el alcance del SGSI.</p></div>
+    <div class="clause"><div class="k">Cláusula 5</div><h4>Liderazgo</h4><p>Compromiso de la alta dirección, política de seguridad de la información y asignación de roles y responsabilidades.</p></div>
+    <div class="clause"><div class="k">Cláusula 6</div><h4>Planificación</h4><p>Evaluación y plan de tratamiento de riesgos, Declaración de Aplicabilidad (SoA) y objetivos de seguridad.</p></div>
+    <div class="clause"><div class="k">Cláusula 7</div><h4>Apoyo</h4><p>Recursos, competencia del personal, toma de conciencia, comunicación e información documentada.</p></div>
+    <div class="clause"><div class="k">Cláusula 8</div><h4>Operación</h4><p>Planificación y control operacional; ejecución periódica de la evaluación y el tratamiento de riesgos de seguridad.</p></div>
+    <div class="clause"><div class="k">Cláusula 9</div><h4>Evaluación del desempeño</h4><p>Seguimiento, medición, análisis, evaluación, auditorías internas y revisión por la dirección.</p></div>
+    <div class="clause wide"><div class="k">Cláusula 10</div><h4>Mejora</h4><p>No conformidades, acciones correctivas y mejora continua del SGSI. El sistema debe adaptarse a los cambios del contexto, de las amenazas y del negocio para mantenerse eficaz.</p></div>
+  </div>
+  <div class="softnote">
+    <b style="font-size:11.5pt;">Anexo A — 93 controles en 4 temas</b><br>
+    La versión 2022 organiza los controles de seguridad en cuatro grupos: <b>organizacionales (37)</b>, <b>de personas (8)</b>, <b>físicos (14)</b> y <b>tecnológicos (34)</b>. No es obligatorio implementarlos todos: se seleccionan según la evaluación de riesgos y cada inclusión o exclusión se justifica en la <b>Declaración de Aplicabilidad (SoA)</b>, el documento más distintivo de ISO/IEC 27001.
+  </div>
+  <div class="pgfoot"><span>ONCE México · Guía informativa ISO/IEC 27001:2022</span><span class="pg">Pág. 2</span></div>
+</div>
+
+<!-- ═══ PÁG 3 · INFORMACIÓN DOCUMENTADA ═══ -->
+<div class="page inner-page">
+  <div class="pghead"><img src="images/logo-once-mexico.png" alt="ONCE México"><span class="sec">Información documentada</span></div>
+  <h2>¿Qué información documentada se requiere?</h2><div class="hr"></div>
+  <p class="body">ISO/IEC 27001:2022 exige mantener y conservar información documentada en diversos puntos de la norma. A continuación los principales elementos que la auditoría verificará:</p>
+  <div class="plist" style="margin-top:6mm;">
+    <div class="pitem"><span class="n dot"></span><div><h4>Alcance del SGSI</h4><p>Qué procesos, sitios y activos cubre el sistema (Cl. 4.3).</p></div></div>
+    <div class="pitem"><span class="n dot"></span><div><h4>Política de seguridad de la información</h4><p>Compromiso documentado de la alta dirección (Cl. 5.2).</p></div></div>
+    <div class="pitem"><span class="n dot"></span><div><h4>Proceso de evaluación de riesgos</h4><p>Metodología, criterios de aceptación y responsables (Cl. 6.1.2).</p></div></div>
+    <div class="pitem"><span class="n dot"></span><div><h4>Declaración de Aplicabilidad (SoA)</h4><p>Controles aplicables, su justificación y las exclusiones (Cl. 6.1.3).</p></div></div>
+    <div class="pitem"><span class="n dot"></span><div><h4>Objetivos de seguridad</h4><p>Metas medibles, con planes para lograrlas (Cl. 6.2).</p></div></div>
+    <div class="pitem"><span class="n dot"></span><div><h4>Competencia del personal</h4><p>Evidencia de formación, habilidades y experiencia (Cl. 7.2).</p></div></div>
+    <div class="pitem"><span class="n dot"></span><div><h4>Resultados de la evaluación de riesgos</h4><p>Riesgos identificados y su valoración periódica (Cl. 8.2).</p></div></div>
+    <div class="pitem"><span class="n dot"></span><div><h4>Plan de tratamiento de riesgos</h4><p>Acciones, controles y evidencia de su implementación (Cl. 8.3).</p></div></div>
+    <div class="pitem"><span class="n dot"></span><div><h4>Auditorías internas y revisión por la dirección</h4><p>Programa, resultados y decisiones tomadas (Cl. 9.2 y 9.3).</p></div></div>
+    <div class="pitem"><span class="n dot"></span><div><h4>No conformidades y acciones correctivas</h4><p>Registro, análisis de causa raíz y acciones tomadas (Cl. 10.2).</p></div></div>
+  </div>
+  <div class="softnote">Esta lista no es exhaustiva. La norma permite flexibilidad, pero el auditor puede solicitar <b>información documentada adicional</b> dependiendo del tamaño, complejidad y sector de la organización.</div>
+  <div class="pgfoot"><span>ONCE México · Guía informativa ISO/IEC 27001:2022</span><span class="pg">Pág. 3</span></div>
+</div>
+
+<!-- ═══ PÁG 4 · PROCESO ═══ -->
+<div class="page inner-page dense">
+  <div class="pghead"><img src="images/logo-once-mexico.png" alt="ONCE México"><span class="sec">Proceso de certificación</span></div>
+  <h2>¿Cómo es el proceso de certificación?</h2><div class="hr"></div>
+  <p class="body">El proceso de certificación con ONCE México sigue los lineamientos de <b>ISO/IEC 17021-1:2015</b> y se compone de las siguientes etapas:</p>
+  <div class="steps">
+    <div class="step"><div class="big">1</div><h4>Solicitud</h4><p>La organización solicita la certificación y proporciona información sobre su alcance y operación.</p></div>
+    <div class="step"><div class="big">2</div><h4>Etapa 1</h4><p>Revisión documental del SGSI para verificar la preparación para la auditoría en sitio.</p></div>
+    <div class="step"><div class="big">3</div><h4>Etapa 2</h4><p>Auditoría en sitio para evaluar la implementación y eficacia del sistema.</p></div>
+    <div class="step"><div class="big">4</div><h4>Certificación</h4><p>Si los resultados son satisfactorios, se emite el certificado con validez de 3 años.</p></div>
+  </div>
+  <h3 class="sub">Detalle de cada etapa</h3>
+  <div class="clausegrid">
+    <div class="clause"><div class="k">Etapa 1 — Revisión documental</div><h4>Evaluación de preparación</h4><p>Se revisa la documentación del SGSI: política, evaluación de riesgos, SoA, objetivos y alcance y la preparación general de la organización para la auditoría en sitio. Puede realizarse de forma remota.</p></div>
+    <div class="clause"><div class="k">Etapa 2 — Auditoría en sitio</div><h4>Evaluación de implementación</h4><p>El equipo auditor visita las instalaciones para verificar que el SGSI está implementado y funciona eficazmente. Se entrevista al personal y se revisan registros y evidencias.</p></div>
+    <div class="clause"><div class="k">Seguimientos anuales</div><h4>Mantener la certificación</h4><p>Durante los 3 años de vigencia se realizan auditorías de seguimiento (generalmente anuales) para verificar que el sistema se mantiene y mejora continuamente.</p></div>
+    <div class="clause"><div class="k">Re-certificación</div><h4>Renovar el ciclo</h4><p>Al cumplirse los 3 años se realiza una auditoría de re-certificación para iniciar un nuevo ciclo. Es similar a la auditoría inicial pero considerando la madurez del sistema.</p></div>
+  </div>
+  <h3 class="sub">Cronograma típico</h3>
+  <p class="body" style="font-size:10pt;"><b>Fase 1 — Preparación</b> (previo a la certificación)</p>
+  <div class="gantt">
+    <div class="row"><span class="lbl">Mes 1–6+</span><span class="bar" style="flex:1;background:#2E8B74;">Implementación del SGSI — 4 a 8 meses en promedio (según alcance y madurez)</span></div>
+  </div>
+  <p class="body" style="font-size:10pt;margin-top:3mm;"><b>Fase 2 — Ciclo de certificación</b> (una vez implementado el SGSI)</p>
+  <div class="gantt">
+    <div class="row"><span class="lbl">Mes 1</span><span class="bar" style="flex:.85;background:var(--accent);">Solicitud + Etapa 1: Revisión documental</span></div>
+    <div class="row"><span class="lbl">Mes 2</span><span class="bar" style="flex:.8;background:var(--slate);">Etapa 2 — Auditoría en sitio</span></div>
+    <div class="row"><span class="lbl">Mes 3</span><span class="bar" style="flex:.85;background:#2E8B74;">Cierre de hallazgos + emisión de certificado</span></div>
+    <div class="row"><span class="lbl">Año 1–2</span><span class="bar" style="flex:.6;background:#9FD8EE;color:#2B3036;">Seguimientos anuales</span></div>
+    <div class="row"><span class="lbl">Año 3</span><span class="bar" style="flex:.75;background:var(--accent);">Re-certificación</span></div>
+  </div>
+  <div class="legend"><span style="color:var(--accent);">Certificación</span><span style="color:var(--slate);">Auditoría en sitio</span><span style="color:#2E8B74;">Cierre</span><span style="color:#9FD8EE;">Seguimiento</span></div>
+  <div class="pgfoot"><span>ONCE México · Guía informativa ISO/IEC 27001:2022</span><span class="pg">Pág. 4</span></div>
+</div>
+
+<!-- ═══ PÁG 5 · BENEFICIOS Y FAQ ═══ -->
+<div class="page inner-page tight">
+  <div class="pghead"><img src="images/logo-once-mexico.png" alt="ONCE México"><span class="sec">Beneficios y preguntas frecuentes</span></div>
+  <h2>Beneficios de certificarse en ISO/IEC 27001</h2><div class="hr"></div>
+  <div class="cardrow">
+    <div class="c"><h4>Confianza verificada</h4><p>Un tercero independiente acredita que su seguridad opera como sistema.</p></div>
+    <div class="c"><h4>Acceso a contratos</h4><p>Clientes corporativos, financieros y licitaciones la exigen cada vez más.</p></div>
+    <div class="c"><h4>Menos riesgo</h4><p>Menor probabilidad e impacto de incidentes de seguridad de la información.</p></div>
+    <div class="c"><h4>Cultura de seguridad</h4><p>Personas, procesos y tecnología alineados bajo una disciplina de gestión.</p></div>
+  </div>
+  <div class="plist" style="margin-top:5mm;">
+    <div class="pitem"><span class="n check">✓</span><div><h4>Cumplimiento demostrable</h4><p>Evidencia ante requisitos regulatorios, contractuales y de privacidad de datos.</p></div></div>
+    <div class="pitem"><span class="n check">✓</span><div><h4>Continuidad del negocio</h4><p>El costo de un incidente supera ampliamente el costo de prevenirlo.</p></div></div>
+    <div class="pitem"><span class="n check">✓</span><div><h4>Decisiones basadas en riesgos</h4><p>Inversión en seguridad dirigida a lo que realmente importa al negocio.</p></div></div>
+    <div class="pitem"><span class="n check">✓</span><div><h4>Ventaja competitiva</h4><p>Diferenciación real frente a competidores que no cuentan con la certificación.</p></div></div>
+  </div>
+  <h3 class="sub">Preguntas frecuentes</h3>
+  <div class="faq"><h4>¿Cuánto tiempo toma certificarse?</h4><p>El proceso de auditoría y certificación toma entre <b>2 y 4 meses</b> una vez que el SGSI está implementado. La implementación previa típicamente toma de <b>4 a 8 meses</b> con un alcance acotado, según la madurez de la organización.</p></div>
+  <div class="faq"><h4>¿Cuánto cuesta la certificación?</h4><p>La inversión depende del <b>tamaño de la organización</b> (número de empleados), la <b>complejidad de los procesos</b> y el <b>número de sitios</b> a auditar. ONCE México ofrece cotizaciones personalizadas sin compromiso.</p></div>
+  <div class="faq"><h4>¿Cuánto dura el certificado?</h4><p>El certificado tiene <b>validez de 3 años</b>, sujeto a auditorías de seguimiento anuales que verifican el mantenimiento y mejora del sistema.</p></div>
+  <div class="faq"><h4>¿Debo implementar los 93 controles del Anexo A?</h4><p>No. Los controles se <b>seleccionan según su evaluación de riesgos</b>; los que no apliquen pueden excluirse justificándolo en la Declaración de Aplicabilidad (SoA). La certificación no exige implementarlos todos.</p></div>
+  <div class="faq"><h4>¿Aplica para mi tipo de empresa?</h4><p>Sí. No necesita ser un banco ni una gran corporación: aplica a <b>cualquier organización que maneje información valiosa</b> — de clientes, empleados o propia — sin importar tamaño o sector. Tampoco es un proyecto exclusivo de TI.</p></div>
+  <div class="pgfoot"><span>ONCE México · Guía informativa ISO/IEC 27001:2022</span><span class="pg">Pág. 5</span></div>
+</div>
+
+<!-- ═══ PÁG 6 · ACERCA DE ONCE ═══ -->
+<div class="page inner-page">
+  <div class="pghead"><img src="images/logo-once-mexico.png" alt="ONCE México"><span class="sec">Acerca de ONCE México</span></div>
+  <h2>¿Por qué certificarse con ONCE México?</h2><div class="hr"></div>
+  <p class="body"><b>ONCE México</b> es un organismo de certificación comprometido con la excelencia y la accesibilidad. Nuestro enfoque combina rigor técnico con un trato cercano, guiando a cada organización durante todo el proceso de certificación.</p>
+  <div class="cardrow">
+    <div class="c"><h4>Equipo calificado</h4><p>Auditores con experiencia en múltiples sectores industriales y de servicios.</p></div>
+    <div class="c"><h4>Proceso claro</h4><p>Comunicación transparente en cada etapa, sin sorpresas ni costos ocultos.</p></div>
+    <div class="c"><h4>Trato personalizado</h4><p>Atención directa y adaptada al tamaño y necesidades de su organización.</p></div>
+    <div class="c"><h4>Cobertura nacional</h4><p>Capacidad para atender organizaciones en toda la República Mexicana.</p></div>
+  </div>
+  <h3 class="sub">Algunas normas que certificamos</h3>
+  <div class="plist">
+    <div class="pitem"><span class="n check">✓</span><div><h4>ISO 9001:2015</h4><p>Sistema de Gestión de la Calidad</p></div></div>
+    <div class="pitem"><span class="n check">✓</span><div><h4>ISO 14001:2015</h4><p>Sistema de Gestión Ambiental</p></div></div>
+    <div class="pitem"><span class="n check">✓</span><div><h4>ISO 45001:2018</h4><p>Seguridad y Salud en el Trabajo</p></div></div>
+    <div class="pitem"><span class="n check">✓</span><div><h4>ISO/IEC 27001:2022</h4><p>Seguridad de la Información</p></div></div>
+  </div>
+  <p class="body" style="font-size:9.5pt;color:var(--muted);">Estos son solo algunos ejemplos. Consulte con nuestro equipo por otras normas y esquemas de certificación disponibles.</p>
+  <div class="contactbox">
+    <div class="k">Datos de contacto</div>
+    <p><b>ONCE México</b> — Organismo de Normalización y Certificación Empresarial<br>
+    <b>Domicilio:</b> Corporativo Kansas · Av. Insurgentes Sur 859, Piso 2, Col. Nápoles, Alcaldía Benito Juárez, C.P. 03810, Ciudad de México<br>
+    <b>Teléfono:</b> 55 12 04 11 31<br>
+    <b>Correo:</b> contacto@oncemexico.org<br>
+    <b>Web:</b> www.oncemexico.org</p>
+  </div>
+  <div class="ctabox">
+    <h3>Dé el primer paso hacia la certificación</h3>
+    <p>Solicite una cotización personalizada sin compromiso. Nuestro equipo le guiará en cada etapa del proceso.</p>
+    <div class="cta"><span>contacto@oncemexico.org</span><span>55 12 04 11 31</span></div>
+  </div>
+  <div class="pgfoot"><span>ONCE México · Guía informativa ISO/IEC 27001:2022</span><span class="pg">Pág. 6</span></div>
+</div>
+
+</body>
+</html>

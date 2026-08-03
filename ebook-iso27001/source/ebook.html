@@ -49,7 +49,7 @@
   .top {
     display: flex; justify-content: space-between; align-items: center;
     font-family: var(--mono);
-    font-size: 8pt;
+    font-size: 8.5pt;
     letter-spacing: 0.12em;
     color: var(--muted);
     text-transform: uppercase;
@@ -63,12 +63,12 @@
   .top .right .sep { width: 18px; height: 1px; background: var(--ink); }
 
   /* ============ BOTTOM (page number) ============ */
-  .bottom { font-family: var(--mono); font-size: 8pt; color: var(--muted); letter-spacing: 0.18em; }
+  .bottom { font-family: var(--mono); font-size: 9pt; color: var(--muted); letter-spacing: 0.18em; }
 
   /* ============ HEADINGS / TYPE ============ */
   .eyebrow {
     font-family: var(--mono);
-    font-size: 8pt;
+    font-size: 9pt;
     color: var(--accent);
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -83,12 +83,12 @@
     color: var(--ink);
   }
   .display em, .display .ital { font-style: italic; color: var(--accent); font-weight: 500; }
-  .display.smaller { font-size: 38pt; }
-  .display.med { font-size: 28pt; }
+  .display.smaller { font-size: 40pt; }
+  .display.med { font-size: 31pt; }
   .h2 {
     font-family: var(--serif);
     font-weight: 500;
-    font-size: 24pt;
+    font-size: 27pt;
     line-height: 1.05;
     color: var(--ink);
   }
@@ -96,35 +96,37 @@
   .h3 {
     font-family: var(--serif);
     font-weight: 500;
-    font-size: 18pt;
-    line-height: 1.1;
+    font-size: 20pt;
+    line-height: 1.12;
   }
   .h3 em, .h3 .ital { font-style: italic; color: var(--accent); }
   .subtitle {
     font-family: var(--serif);
     font-style: italic;
-    font-size: 12pt;
+    font-size: 13pt;
     line-height: 1.45;
     color: var(--ink-soft);
   }
   .label-mono {
     font-family: var(--mono);
-    font-size: 8pt;
+    font-size: 8.5pt;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--ink);
   }
   .label-muted {
     font-family: var(--mono);
-    font-size: 8pt;
+    font-size: 8.5pt;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--muted);
   }
-  p.body { font-family: var(--sans); font-size: 10pt; line-height: 1.55; color: var(--ink-soft); }
-  p.body + p.body { margin-top: 9pt; }
+  p.body { font-family: var(--sans); font-size: 11pt; line-height: 1.6; color: var(--ink-soft); }
+  p.body + p.body { margin-top: 10pt; }
   p.body b, p.body strong { font-weight: 600; color: var(--ink); }
   p.body i, p.body em { font-style: italic; }
+  ul.body { font-family: var(--sans); font-size: 11pt; line-height: 1.6; color: var(--ink-soft); padding-left: 20px; }
+  ul.body li + li { margin-top: 5pt; }
   .rule { height: 1px; background: var(--rule); margin: 14px 0; }
   .rule.short { width: 36px; height: 3px; background: var(--accent); border: 0; }
 
@@ -138,71 +140,52 @@
   .cover-top-block { display: flex; flex-direction: column; gap: 24px; padding-top: 12mm; }
   .iso-pill {
     display: inline-flex; align-items: center; gap: 12px;
-    font-family: var(--mono); font-size: 9pt; letter-spacing: 0.15em;
+    font-family: var(--mono); font-size: 9.5pt; letter-spacing: 0.15em;
     text-transform: uppercase;
   }
   .iso-pill .pill {
-    padding: 6px 14px; border: 1.5px solid var(--accent); border-radius: 999px;
+    padding: 7px 15px; border: 1.5px solid var(--accent); border-radius: 999px;
     color: var(--ink); background: rgba(0,188,212,0.06);
   }
-  .cover-title { margin-top: 90px; }
+  .cover-title { margin-top: 70px; }
   .cover-title .display {
     font-size: 78pt; letter-spacing: -0.015em; line-height: 0.95;
   }
   .cover-sub {
     border-top: 1px solid var(--ink);
-    width: 320px;
+    width: 340px;
     padding-top: 14px;
-    margin-top: 36px;
+    margin-top: 34px;
     font-family: var(--serif); font-style: italic;
-    font-size: 11.5pt; line-height: 1.45; color: var(--ink-soft);
-    max-width: 480px;
+    font-size: 12.5pt; line-height: 1.5; color: var(--ink-soft);
+    max-width: 500px;
   }
   .cover-foot { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 24px; padding-bottom: 0; }
-  .logo-block { display: flex; flex-direction: column; gap: 14px; }
-  .logo-mark {
-    display: inline-flex; align-items: center; gap: 10px;
-    font-family: var(--sans); font-weight: 700; color: var(--ink-soft);
-  }
-  .logo-mark .square {
-    width: 48px; height: 48px;
-    display: grid; place-items: center;
-  }
-  .logo-mark .square svg { width: 48px; height: 48px; display: block; }
-  .logo-mark .sep-v {
-    width: 1.5px; height: 36px; background: var(--ink-soft);
-    display: inline-block; margin: 0 4px;
-  }
-  .logo-mark .name { font-size: 13pt; line-height: 1.05; font-weight: 700; letter-spacing: 0.04em; }
-  .logo-mark .name sup { font-size: 6pt; font-weight: 500; }
-  .logo-mark .name small { display: block; font-size: 9pt; font-weight: 500; color: var(--muted); letter-spacing: 0.04em; }
-  .logo-tag { font-family: var(--mono); font-size: 8pt; color: var(--muted); letter-spacing: 0.18em; text-transform: uppercase; }
-  /* horizontal lockup ONCE MÉXICO */
-  .logo-lockup { display: block; height: 60px; width: auto; }
-  .logo-lockup.lg { height: 80px; }
-  .logo-lockup.sm { height: 44px; }
+  .logo-block { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
+  .logo-block img { align-self: flex-start; flex: 0 0 auto; object-fit: contain; }
+  .logo-tag { font-family: var(--mono); font-size: 8.5pt; color: var(--muted); letter-spacing: 0.18em; text-transform: uppercase; }
   .sello-box {
-    width: 220px; border: 1.5px solid var(--ink);
+    width: 230px; border: 1.5px solid var(--ink);
     display: flex; flex-direction: column;
-    padding: 12px 16px 14px;
+    padding: 13px 16px 15px;
     text-align: center;
   }
-  .sello-box .label { font-family: var(--mono); font-size: 8pt; color: var(--muted); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start; padding-bottom: 6px; }
-  .sello-box .iso-num { font-family: var(--serif); font-size: 36pt; line-height: 1; font-weight: 600; color: var(--ink); margin-top: 4px; }
-  .sello-box .iso-desc { font-family: var(--mono); font-size: 7pt; color: var(--muted); letter-spacing: 0.15em; text-transform: uppercase; margin-top: 10px; }
-  .sello-label-above { font-family: var(--mono); font-size: 7pt; color: var(--muted); letter-spacing: 0.18em; text-transform: uppercase; text-align: right; margin-bottom: 8px; }
+  .sello-box .label { font-family: var(--mono); font-size: 8.5pt; color: var(--muted); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start; padding-bottom: 6px; }
+  .sello-box .iso-num { font-family: var(--serif); font-size: 38pt; line-height: 1; font-weight: 600; color: var(--ink); margin-top: 4px; }
+  .sello-box .iso-desc { font-family: var(--mono); font-size: 7.5pt; color: var(--muted); letter-spacing: 0.15em; text-transform: uppercase; margin-top: 10px; }
+  .sello-label-above { font-family: var(--mono); font-size: 7.5pt; color: var(--muted); letter-spacing: 0.18em; text-transform: uppercase; text-align: right; margin-bottom: 8px; }
 
   /* ============ COLOFÓN p2 ============ */
   .colofon { display: grid; grid-template-columns: 1.05fr 1fr; gap: 50px; padding-top: 6mm; }
   .colofon .left .display { font-size: 46pt; line-height: 0.98; }
   .colofon-mark { width: 38px; height: 3px; background: var(--ink); margin-bottom: 16px; margin-top: 40px; }
-  .colofon-quote { font-family: var(--serif); font-style: italic; font-size: 11pt; line-height: 1.5; color: var(--ink-soft); max-width: 92%; }
-  .colofon .meta { display: flex; flex-direction: column; gap: 18px; padding-top: 14px; }
-  .meta-row { display: flex; flex-direction: column; gap: 4px; border-top: 1px solid var(--rule); padding-top: 12px; }
-  .meta-row .lbl { font-family: var(--mono); font-size: 7.5pt; color: var(--muted); letter-spacing: 0.18em; text-transform: uppercase; }
-  .meta-row .val { font-family: var(--sans); font-size: 10pt; font-weight: 500; color: var(--ink); }
+  .colofon-quote { font-family: var(--serif); font-style: italic; font-size: 12.5pt; line-height: 1.55; color: var(--ink-soft); max-width: 94%; }
+  .colofon .meta { display: flex; flex-direction: column; gap: 20px; padding-top: 14px; }
+  .meta-row { display: flex; flex-direction: column; gap: 5px; border-top: 1px solid var(--rule); padding-top: 13px; }
+  .meta-row .lbl { font-family: var(--mono); font-size: 8pt; color: var(--muted); letter-spacing: 0.18em; text-transform: uppercase; }
+  .meta-row .val { font-family: var(--sans); font-size: 11pt; font-weight: 500; color: var(--ink); }
   .colofon-foot { grid-column: 2; padding-top: 16px; border-top: 1px solid var(--rule); }
-  .colofon-foot p { font-family: var(--sans); font-size: 8.5pt; line-height: 1.55; color: var(--ink-soft); margin-bottom: 8pt; }
+  .colofon-foot p { font-family: var(--sans); font-size: 9.5pt; line-height: 1.6; color: var(--ink-soft); margin-bottom: 9pt; }
   .colofon-foot b { font-weight: 600; color: var(--ink); }
 
   /* ============ TOC p3 ============ */
@@ -210,37 +193,37 @@
   .toc .left .display { font-size: 48pt; line-height: 0.98; }
   .toc-foot { margin-top: 40px; }
   .toc-foot .bar { width: 36px; height: 3px; background: var(--ink); margin-bottom: 12px; }
-  .toc-foot p { font-family: var(--serif); font-style: italic; font-size: 10pt; line-height: 1.5; color: var(--ink-soft); max-width: 90%; }
+  .toc-foot p { font-family: var(--serif); font-style: italic; font-size: 11.5pt; line-height: 1.55; color: var(--ink-soft); max-width: 92%; }
   .toc .items { display: flex; flex-direction: column; }
-  .toc-item { display: grid; grid-template-columns: 24px 1fr 56px; gap: 14px; padding: 8px 0; border-top: 1px solid var(--rule); align-items: start; }
-  .toc-item .n { font-family: var(--mono); font-size: 8pt; color: var(--muted); letter-spacing: 0.1em; padding-top: 3px; }
-  .toc-item .ttl { display: block; font-family: var(--serif); font-size: 13pt; line-height: 1.1; color: var(--ink); }
+  .toc-item { display: grid; grid-template-columns: 26px 1fr 60px; gap: 14px; padding: 13px 0; border-top: 1px solid var(--rule); align-items: start; }
+  .toc-item .n { font-family: var(--mono); font-size: 8.5pt; color: var(--muted); letter-spacing: 0.1em; padding-top: 4px; }
+  .toc-item .ttl { display: block; font-family: var(--serif); font-size: 14.5pt; line-height: 1.15; color: var(--ink); }
   .toc-item .ttl em, .toc-item .ttl .ital { font-style: italic; color: var(--ink); }
-  .toc-item .sub { display: block; font-family: var(--sans); font-size: 7.5pt; color: var(--muted); line-height: 1.4; margin-top: 4px; }
-  .toc-item .pg { font-family: var(--mono); font-size: 8pt; color: var(--muted); letter-spacing: 0.1em; padding-top: 5px; text-align: right; white-space: nowrap; }
+  .toc-item .sub { display: block; font-family: var(--sans); font-size: 8.5pt; color: var(--muted); line-height: 1.45; margin-top: 5px; }
+  .toc-item .pg { font-family: var(--mono); font-size: 8.5pt; color: var(--muted); letter-spacing: 0.1em; padding-top: 6px; text-align: right; white-space: nowrap; }
 
   /* ============ CHAPTER PAGE TWO-COL ============ */
   .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 38px; padding-top: 6mm; }
   .two-col.narrow { grid-template-columns: 0.92fr 1.08fr; }
-  .two-col .left .display { font-size: 38pt; line-height: 1.0; }
-  .two-col.narrow .left .display { font-size: 34pt; line-height: 1.02; }
-  .two-col p.body { font-family: var(--sans); font-size: 10pt; line-height: 1.6; color: var(--ink-soft); }
-  .two-col .body-block { margin-top: 18px; }
+  .two-col .left .display { font-size: 40pt; line-height: 1.0; }
+  .two-col.narrow .left .display { font-size: 36pt; line-height: 1.02; }
+  .two-col p.body { font-family: var(--sans); font-size: 11pt; line-height: 1.6; color: var(--ink-soft); }
+  .two-col .body-block { margin-top: 20px; }
 
   /* ============ TABLES (data) ============ */
   .data-table { border-collapse: collapse; width: 100%; font-family: var(--sans); }
   .data-table th, .data-table td {
     border-top: 1px solid var(--rule);
-    padding: 11px 12px;
-    font-size: 9.5pt;
-    line-height: 1.45;
+    padding: 14px 13px;
+    font-size: 11pt;
+    line-height: 1.5;
     vertical-align: top;
     text-align: left;
     color: var(--ink-soft);
   }
   .data-table th {
     font-family: var(--mono);
-    font-size: 7.5pt;
+    font-size: 8.5pt;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     color: var(--ink);
@@ -256,74 +239,74 @@
   .chip-grid { display: grid; gap: 0; }
   .chip {
     border-top: 1px solid var(--rule);
-    padding: 12px 0;
+    padding: 16px 0;
   }
   .chip:last-child { border-bottom: 1px solid var(--rule); }
   .chip .row1 { display: flex; justify-content: space-between; gap: 18px; align-items: baseline; }
-  .chip .label { font-family: var(--mono); font-size: 8pt; color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; }
-  .chip .what { font-family: var(--serif); font-weight: 500; font-size: 13pt; color: var(--ink); }
-  .chip .when { font-family: var(--mono); font-size: 8pt; color: var(--muted); letter-spacing: 0.12em; }
-  .chip .desc { font-family: var(--sans); font-size: 9pt; line-height: 1.5; color: var(--ink-soft); margin-top: 6px; max-width: 92%; }
+  .chip .label { font-family: var(--mono); font-size: 8.5pt; color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; }
+  .chip .what { font-family: var(--serif); font-weight: 500; font-size: 15pt; line-height: 1.2; color: var(--ink); }
+  .chip .when { font-family: var(--mono); font-size: 8.5pt; color: var(--muted); letter-spacing: 0.12em; }
+  .chip .desc { font-family: var(--sans); font-size: 10.5pt; line-height: 1.55; color: var(--ink-soft); margin-top: 7px; max-width: 94%; }
 
   /* dark callout */
   .callout-dark {
     background: var(--dark); color: #f5f5ee;
-    padding: 18px 20px; max-width: 320px;
+    padding: 24px 26px; max-width: 370px;
   }
-  .callout-dark .label { font-family: var(--mono); font-size: 8pt; color: var(--accent); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 8px; }
-  .callout-dark .text { font-family: var(--serif); font-style: italic; font-size: 13pt; line-height: 1.35; }
+  .callout-dark .label { font-family: var(--mono); font-size: 8.5pt; color: var(--accent); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 10px; }
+  .callout-dark .text { font-family: var(--serif); font-style: italic; font-size: 15pt; line-height: 1.4; }
   .callout-dark .text em, .callout-dark .text .ital { color: var(--accent); }
 
   /* numeric callout used in scenarios */
-  .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
-  .stat-grid .stat { border-top: 1.5px solid var(--ink); padding-top: 10px; }
-  .stat-grid .stat .num { font-family: var(--serif); font-weight: 600; font-size: 26pt; line-height: 1; color: var(--ink); }
-  .stat-grid .stat .num small { font-size: 14pt; }
-  .stat-grid .stat .lbl { font-family: var(--mono); font-size: 7pt; color: var(--muted); letter-spacing: 0.18em; text-transform: uppercase; margin-top: 8px; }
-  .stat-grid .stat .desc { font-family: var(--sans); font-size: 8.5pt; line-height: 1.45; color: var(--ink-soft); margin-top: 8px; }
+  .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+  .stat-grid .stat { border-top: 1.5px solid var(--ink); padding-top: 12px; }
+  .stat-grid .stat .num { font-family: var(--serif); font-weight: 600; font-size: 32pt; line-height: 1; color: var(--ink); }
+  .stat-grid .stat .num small { font-size: 17pt; }
+  .stat-grid .stat .lbl { font-family: var(--mono); font-size: 8pt; color: var(--muted); letter-spacing: 0.18em; text-transform: uppercase; margin-top: 9px; }
+  .stat-grid .stat .desc { font-family: var(--sans); font-size: 10pt; line-height: 1.5; color: var(--ink-soft); margin-top: 9px; }
 
   /* myth/objection block */
   .myth {
     border-top: 1px solid var(--rule);
     padding: 14px 0;
   }
-  .myth .num { font-family: var(--mono); font-size: 8pt; color: var(--accent); letter-spacing: 0.18em; }
+  .myth .num { font-family: var(--mono); font-size: 8.5pt; color: var(--accent); letter-spacing: 0.18em; }
   .myth .quote {
     font-family: var(--serif); font-style: italic;
-    font-size: 14pt; line-height: 1.4; color: var(--ink);
+    font-size: 17pt; line-height: 1.4; color: var(--ink);
     margin: 8px 0 12px;
-    padding-left: 14px; border-left: 3px solid var(--accent);
+    padding-left: 16px; border-left: 3px solid var(--accent);
   }
-  .myth .resp-label { font-family: var(--mono); font-size: 8pt; color: var(--muted); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 6px; }
-  .myth .body { font-family: var(--sans); font-size: 9.5pt; line-height: 1.55; color: var(--ink-soft); }
-  .myth .body + .body { margin-top: 7pt; }
+  .myth .resp-label { font-family: var(--mono); font-size: 8.5pt; color: var(--muted); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 6px; }
+  .myth .body { font-family: var(--sans); font-size: 11pt; line-height: 1.6; color: var(--ink-soft); }
+  .myth .body + .body { margin-top: 8pt; }
   .myth .body b { font-weight: 600; color: var(--ink); }
 
   /* role list */
   .role-list { display: flex; flex-direction: column; }
-  .role-list .role { border-top: 1px solid var(--rule); padding: 11px 0; display: grid; grid-template-columns: 1.1fr 0.6fr 1.6fr; gap: 16px; }
+  .role-list .role { border-top: 1px solid var(--rule); padding: 13px 0; display: grid; grid-template-columns: 1.1fr 0.6fr 1.6fr; gap: 16px; }
   .role-list .role:last-child { border-bottom: 1px solid var(--rule); }
-  .role-list .role .name { font-family: var(--serif); font-size: 12pt; color: var(--ink); font-weight: 500; }
-  .role-list .role .name small { display: block; font-family: var(--sans); font-size: 8pt; color: var(--muted); margin-top: 2px; }
-  .role-list .role .dedi { font-family: var(--mono); font-size: 9pt; color: var(--ink); letter-spacing: 0.05em; }
-  .role-list .role .fn { font-family: var(--sans); font-size: 9pt; line-height: 1.5; color: var(--ink-soft); }
+  .role-list .role .name { font-family: var(--serif); font-size: 13pt; color: var(--ink); font-weight: 500; }
+  .role-list .role .name small { display: block; font-family: var(--sans); font-size: 9pt; color: var(--muted); margin-top: 2px; }
+  .role-list .role .dedi { font-family: var(--mono); font-size: 10pt; color: var(--ink); letter-spacing: 0.05em; }
+  .role-list .role .fn { font-family: var(--sans); font-size: 10pt; line-height: 1.5; color: var(--ink-soft); }
 
   /* phase list (roadmap) */
-  .phase-list .phase { display: grid; grid-template-columns: 30px 1.2fr 1.4fr 80px; gap: 14px; border-top: 1px solid var(--rule); padding: 12px 0; align-items: start; }
+  .phase-list .phase { display: grid; grid-template-columns: 30px 1.2fr 1.4fr 80px; gap: 14px; border-top: 1px solid var(--rule); padding: 13px 0; align-items: start; }
   .phase-list .phase:last-child { border-bottom: 1px solid var(--rule); }
-  .phase-list .num { font-family: var(--mono); font-size: 9pt; color: var(--accent); letter-spacing: 0.15em; padding-top: 4px; }
-  .phase-list .nm { font-family: var(--serif); font-size: 12pt; color: var(--ink); font-weight: 500; padding-top: 1px; }
-  .phase-list .entr { font-family: var(--sans); font-size: 9pt; line-height: 1.5; color: var(--ink-soft); padding-top: 3px; }
-  .phase-list .dur { font-family: var(--mono); font-size: 9pt; color: var(--ink); letter-spacing: 0.05em; padding-top: 4px; text-align: right; }
+  .phase-list .num { font-family: var(--mono); font-size: 10pt; color: var(--accent); letter-spacing: 0.15em; padding-top: 4px; }
+  .phase-list .nm { font-family: var(--serif); font-size: 13pt; color: var(--ink); font-weight: 500; padding-top: 1px; }
+  .phase-list .entr { font-family: var(--sans); font-size: 10pt; line-height: 1.5; color: var(--ink-soft); padding-top: 3px; }
+  .phase-list .dur { font-family: var(--mono); font-size: 10pt; color: var(--ink); letter-spacing: 0.05em; padding-top: 4px; text-align: right; }
 
   /* routes (3 cards) */
-  .routes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 18px; }
-  .route { border: 1px solid var(--rule); padding: 18px 16px; display: flex; flex-direction: column; gap: 10px; background: var(--paper-2); }
-  .route .num { font-family: var(--mono); font-size: 8pt; color: var(--accent); letter-spacing: 0.18em; }
-  .route .nm { font-family: var(--serif); font-size: 14pt; color: var(--ink); font-weight: 500; line-height: 1.15; }
-  .route .desc { font-family: var(--sans); font-size: 9pt; color: var(--ink-soft); line-height: 1.5; }
-  .route .badge { font-family: var(--mono); font-size: 7.5pt; color: var(--accent); letter-spacing: 0.18em; border-top: 1px solid var(--rule); padding-top: 8px; }
-  .route .cta { font-family: var(--mono); font-size: 8pt; color: var(--ink); letter-spacing: 0.12em; margin-top: auto; padding-top: 8px; }
+  .routes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 20px; }
+  .route { border: 1px solid var(--rule); padding: 20px 18px; display: flex; flex-direction: column; gap: 11px; background: var(--paper-2); }
+  .route .num { font-family: var(--mono); font-size: 8.5pt; color: var(--accent); letter-spacing: 0.18em; }
+  .route .nm { font-family: var(--serif); font-size: 15pt; color: var(--ink); font-weight: 500; line-height: 1.18; }
+  .route .desc { font-family: var(--sans); font-size: 9.5pt; color: var(--ink-soft); line-height: 1.5; }
+  .route .badge { font-family: var(--mono); font-size: 8pt; color: var(--accent); letter-spacing: 0.18em; border-top: 1px solid var(--rule); padding-top: 9px; }
+  .route .cta { font-family: var(--mono); font-size: 8.5pt; color: var(--ink); letter-spacing: 0.12em; margin-top: auto; padding-top: 9px; }
 
   /* small util */
   .pad-top-l { padding-top: 24px; }
@@ -331,6 +314,20 @@
   .row { display: flex; gap: 24px; }
   .gap-l { gap: 36px; }
   .center { text-align: center; }
+
+  /* checklist rows (bordered list) */
+  .check-rows { list-style: none; padding-left: 0 !important; }
+  .check-rows li { border-top: 1px solid var(--rule); padding: 15px 0 15px 24px; position: relative; margin-top: 0 !important; }
+  .check-rows li:last-child { border-bottom: 1px solid var(--rule); }
+  .check-rows li::before { content: ''; position: absolute; left: 2px; top: 23px; width: 8px; height: 8px; background: var(--accent); }
+
+  /* stretch a column so its chips fill the full page height */
+  .two-col.opener { flex: 1; }
+  .opener .chip .what { font-size: 17pt; }
+  .opener .chip .label, .opener .chip .when { font-size: 9pt; }
+  .stretch-col { display: flex; flex-direction: column; }
+  .stretch-col .chip-grid { flex: 1; display: flex; flex-direction: column; }
+  .stretch-col .chip { flex: 1; display: flex; flex-direction: column; justify-content: center; }
 
   /* photo / image blocks */
   .photo {
@@ -382,7 +379,7 @@
         <span class="pill">ISO/IEC 27001 : 2022</span>
         <span style="color: var(--muted);">EDICIÓN 2026</span>
       </div>
-      <div class="label-mono" style="color: var(--accent); letter-spacing: 0.22em; font-size: 9pt;">SEGURIDAD DE LA INFORMACIÓN · CERTIFICACIÓN INTERNACIONAL</div>
+      <div class="label-mono" style="color: var(--accent); letter-spacing: 0.22em; font-size: 9.5pt;">SEGURIDAD DE LA INFORMACIÓN · CERTIFICACIÓN INTERNACIONAL</div>
       <div class="label-mono" style="color: var(--ink); letter-spacing: 0.2em;">LA GUÍA EJECUTIVA</div>
     </div>
     <div class="cover-title">
@@ -393,11 +390,7 @@
     </div>
     <div class="cover-foot">
       <div class="logo-block">
-        <div class="logo-mark">
-          <span class="square"><svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#00AFED" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"><path d="M 280 60 L 80 60 Q 60 60 60 80 L 60 320 Q 60 340 80 340 L 320 340 Q 340 340 340 320 L 340 200"></path><polyline points="115 215 180 280 320 125"></polyline></g></svg></span>
-          <span class="sep-v"></span>
-          <span class="name">ONCE<br/>MÉXICO<sup>®</sup></span>
-        </div>
+        <img src="images/logo-once-mexico.png" alt="ONCE México" style="height:64px;width:166px;display:block;">
         <span class="logo-tag">CERTEZA HECHA NORMA.</span>
       </div>
       <div>
@@ -464,14 +457,14 @@
     </div>
     <div class="items">
       <div class="toc-item"><span class="n">00</span><span><span class="ttl">Introducción · <em>La seguridad de la información ya no es un tema técnico</em></span><span class="sub">El cambio de paradigma · Los costos de la inacción · La confianza auditada</span></span><span class="pg">04 — 07</span></div>
-      <div class="toc-item"><span class="n">01</span><span><span class="ttl">El filtro invisible que expulsa a su empresa <em>de los grandes contratos</em></span><span class="sub">Los datos de Gartner · Cómo funciona el filtro · Lo que ocurre cada mes</span></span><span class="pg">08 — 10</span></div>
-      <div class="toc-item"><span class="n">02</span><span><span class="ttl">El cuello de botella que congela sus ventas <em>y agota a su CTO</em></span><span class="sub">El cuestionario corporativo · El impacto real · El ciclo de ventas congelado</span></span><span class="pg">11 — 13</span></div>
-      <div class="toc-item"><span class="n">03</span><span><span class="ttl">De centro de costos <em>a motor de ingresos</em></span><span class="sub">Los tres indicadores que cambian · El antes y el después</span></span><span class="pg">14 — 16</span></div>
-      <div class="toc-item"><span class="n">04</span><span><span class="ttl">Un solo sistema para gobernar <em>todos sus marcos regulatorios</em></span><span class="sub">La fatiga de cumplimiento · El centro de mando unificado · El impacto en números</span></span><span class="pg">17 — 19</span></div>
-      <div class="toc-item"><span class="n">05</span><span><span class="ttl">Las objeciones que frenan la decisión directiva — <em>y cómo desmontarlas</em></span><span class="sub">Las dos objeciones más frecuentes en los comités de dirección</span></span><span class="pg">20 — 22</span></div>
-      <div class="toc-item"><span class="n">06</span><span><span class="ttl">Lo que evalúa el auditor — <em>y qué significa estar realmente listo</em></span><span class="sub">Cláusulas mandatorias · Anexo A · Las dos etapas</span></span><span class="pg">23 — 26</span></div>
-      <div class="toc-item"><span class="n">07</span><span><span class="ttl">Tres empresas que esperaron demasiado — <em>y lo que ganaron al actuar</em></span><span class="sub">Vextia · Teksonar · Kreddia</span></span><span class="pg">27 — 30</span></div>
-      <div class="toc-item"><span class="n">→</span><span><span class="ttl">¿Listo para iniciar su proceso de certificación?</span><span class="sub">Tres acciones concretas · Sobre ONCE México</span></span><span class="pg">31</span></div>
+      <div class="toc-item"><span class="n">01</span><span><span class="ttl">El filtro invisible que expulsa a su empresa <em>de los grandes contratos</em></span><span class="sub">Los datos de Gartner · Cómo funciona el filtro · Lo que ocurre cada mes</span></span><span class="pg">08 — 09</span></div>
+      <div class="toc-item"><span class="n">02</span><span><span class="ttl">El cuello de botella que congela sus ventas <em>y agota a su CTO</em></span><span class="sub">El cuestionario corporativo · El impacto real · El ciclo de ventas congelado</span></span><span class="pg">10 — 11</span></div>
+      <div class="toc-item"><span class="n">03</span><span><span class="ttl">De centro de costos <em>a motor de ingresos</em></span><span class="sub">Los tres indicadores que cambian · El antes y el después</span></span><span class="pg">12 — 14</span></div>
+      <div class="toc-item"><span class="n">04</span><span><span class="ttl">Un solo sistema para gobernar <em>todos sus marcos regulatorios</em></span><span class="sub">La fatiga de cumplimiento · El centro de mando unificado · El impacto en números</span></span><span class="pg">15 — 17</span></div>
+      <div class="toc-item"><span class="n">05</span><span><span class="ttl">Las objeciones que frenan la decisión directiva — <em>y cómo desmontarlas</em></span><span class="sub">Las dos objeciones más frecuentes en los comités de dirección</span></span><span class="pg">18 — 19</span></div>
+      <div class="toc-item"><span class="n">06</span><span><span class="ttl">Lo que evalúa el auditor — <em>y qué significa estar realmente listo</em></span><span class="sub">Cláusulas mandatorias · Anexo A · Las dos etapas</span></span><span class="pg">20 — 22</span></div>
+      <div class="toc-item"><span class="n">07</span><span><span class="ttl">Tres empresas que esperaron demasiado — <em>y lo que ganaron al actuar</em></span><span class="sub">Vextia · Teksonar · Kreddia</span></span><span class="pg">23 — 26</span></div>
+      <div class="toc-item"><span class="n">→</span><span><span class="ttl">¿Listo para iniciar su proceso de certificación?</span><span class="sub">Tres acciones concretas · Sobre ONCE México</span></span><span class="pg">27</span></div>
     </div>
   </div>
   <div class="bottom">003</div>
@@ -485,19 +478,19 @@
     <span class="brand">ONCE MÉXICO · GUÍA EJECUTIVA</span>
     <span class="right"><span>INTRODUCCIÓN</span><span class="sep"></span><span>00 / 07</span></span>
   </div>
-  <div class="two-col">
+  <div class="two-col" style="flex: 1;">
     <div class="left">
       <div class="label-muted">INTRODUCCIÓN</div>
       <div style="margin-top: 12px;" class="display">La seguridad de la información ya no es <em>un tema técnico.</em></div>
       <div class="body-block">
-        <p class="body" style="font-family: var(--serif); font-style: italic; font-size: 11pt;">En el tejido económico actual, donde la digitalización acelerada ha convertido a los datos en el activo más valioso de cualquier organización, la protección de la información ha dejado de ser una preocupación confinada a los departamentos técnicos.</p>
+        <p class="body" style="font-family: var(--serif); font-style: italic; font-size: 13pt; line-height: 1.55;">En el tejido económico actual, donde la digitalización acelerada ha convertido a los datos en el activo más valioso de cualquier organización, la protección de la información ha dejado de ser una preocupación confinada a los departamentos técnicos.</p>
       </div>
-      <div class="h3" style="margin-top: 24px;">Hoy es un pilar de la viabilidad financiera <em>y la alta estrategia corporativa.</em></div>
-      <p class="body" style="margin-top: 10px;">Las dinámicas comerciales globales exigen un nivel de transparencia sin precedentes, transformando radicalmente la manera en que las empresas interactúan con sus clientes, socios y proveedores.</p>
+      <div class="h3" style="margin-top: 28px;">Hoy es un pilar de la viabilidad financiera <em>y la alta estrategia corporativa.</em></div>
+      <p class="body" style="margin-top: 14px;">Las dinámicas comerciales globales exigen un nivel de transparencia sin precedentes, transformando radicalmente la manera en que las empresas interactúan con sus clientes, socios y proveedores.</p>
     </div>
-    <div class="right">
-      <div class="photo-block" style="margin-top: 80px;">
-        <img class="photo cap" src="images/cover-hero.jpg" alt="Infraestructura corporativa"/>
+    <div class="right" style="display: flex; flex-direction: column;">
+      <div class="photo-block" style="margin-top: 34px; flex: 1; display: flex;">
+        <img class="photo" style="aspect-ratio: auto; height: 100%;" src="images/cover-hero.jpg" alt="Infraestructura corporativa"/>
       </div>
     </div>
   </div>
@@ -519,28 +512,28 @@
       <div class="body-block">
         <p class="body">De acuerdo con el <i>Cost of a Data Breach Report</i> de IBM, una sola brecha de datos cuesta en promedio <b>$4.88 millones de dólares</b> a nivel global.</p>
         <p class="body">Este impacto no se limita al desembolso económico directo para contener el incidente o reparar la infraestructura. Un ataque severo desencadena consecuencias de largo alcance:</p>
-        <ul class="body" style="font-family: var(--sans); font-size: 10pt; line-height: 1.55; color: var(--ink-soft); padding-left: 18px; margin-top: 6pt;">
+        <ul class="body check-rows" style="margin-top: 14pt;">
           <li>Interrupción prolongada del negocio</li>
           <li>Gastos legales imprevistos y penalizaciones regulatorias</li>
           <li>Daño reputacional que puede destruir en segundos la confianza que tomó años construir</li>
         </ul>
-        <p class="body" style="margin-top: 10pt; font-weight: 600; color: var(--ink);">Para las PyMEs tecnológicas, un evento de esta magnitud representa una amenaza existencial.</p>
+        <p class="body" style="margin-top: 16pt; font-weight: 600; color: var(--ink); border-left: 3px solid var(--accent); padding-left: 14px;">Para las PyMEs tecnológicas, un evento de esta magnitud representa una amenaza existencial.</p>
       </div>
     </div>
-    <div class="right" style="padding-top: 86px;">
-      <div class="stat-grid" style="grid-template-columns: 1fr;">
+    <div class="right" style="padding-top: 78px;">
+      <div class="stat-grid" style="grid-template-columns: 1fr; gap: 30px;">
         <div class="stat">
-          <span class="num">$4.88<small>M USD</small></span>
+          <span class="num" style="font-size: 40pt;">$4.88<small>M USD</small></span>
           <div class="lbl">COSTO PROMEDIO GLOBAL</div>
           <div class="desc">de una sola brecha de datos, según el Cost of a Data Breach Report de IBM 2024.</div>
         </div>
         <div class="stat">
-          <span class="num">52<small>%</small></span>
+          <span class="num" style="font-size: 40pt;">52<small>%</small></span>
           <div class="lbl">COMPRA CORPORATIVA</div>
           <div class="desc">de los procesos de compra corporativa de seguridad exigen ISO 27001 de forma mandatoria, según Gartner.</div>
         </div>
         <div class="stat">
-          <span class="num">80–90<small>%</small></span>
+          <span class="num" style="font-size: 40pt;">80–90<small>%</small></span>
           <div class="lbl">SECTORES REGULADOS</div>
           <div class="desc">En financiero, salud y sector público, la proporción se eleva entre 80 y 90 %.</div>
         </div>
@@ -558,21 +551,22 @@
     <span class="brand">ONCE MÉXICO · GUÍA EJECUTIVA</span>
     <span class="right"><span>EL CAMBIO DE PARADIGMA</span><span class="sep"></span><span>00 / 07</span></span>
   </div>
-  <div class="two-col">
-    <div class="left">
-      <div class="label-muted">EL CAMBIO DE PARADIGMA</div>
-      <div style="margin-top: 12px;" class="display">El eslabón más débil <em>de la cadena.</em></div>
-      <div class="body-block">
-        <p class="body">Ante este panorama, se ha producido un cambio de paradigma en el mercado corporativo. Las grandes corporaciones, las instituciones financieras y las entidades del sector público han comprendido que su propia seguridad es <b>tan sólida como el eslabón más débil de su cadena de suministro.</b></p>
-        <p class="body">Las revisiones improvisadas y las promesas verbales de seguridad han quedado obsoletas. Los compradores corporativos sofisticados exigen evidencias reales, estandarizadas y validadas por un tercero independiente acreditado antes de considerar la firma de cualquier acuerdo contractual.</p>
+  <div style="flex: 1; display: flex; flex-direction: column;">
+    <div class="two-col" style="flex: 1;">
+      <div class="left">
+        <div class="label-muted">EL CAMBIO DE PARADIGMA</div>
+        <div style="margin-top: 12px; font-size: 46pt;" class="display">El eslabón más débil <em>de la cadena.</em></div>
+        <div class="colofon-mark" style="margin-top: 28px;"></div>
+        <p class="body" style="font-size: 12.5pt; line-height: 1.7;">Ante este panorama, se ha producido un cambio de paradigma en el mercado corporativo. Las grandes corporaciones, las instituciones financieras y las entidades del sector público han comprendido que su propia seguridad es <b>tan sólida como el eslabón más débil de su cadena de suministro.</b></p>
+      </div>
+      <div class="right" style="padding-top: 84px;">
+        <p class="body" style="font-size: 12.5pt; line-height: 1.7;">Las revisiones improvisadas y las promesas verbales de seguridad han quedado obsoletas. Los compradores corporativos sofisticados exigen evidencias reales, estandarizadas y validadas por un tercero independiente acreditado antes de considerar la firma de cualquier acuerdo contractual.</p>
+        <p class="body" style="margin-top: 16pt; font-size: 12.5pt; line-height: 1.7;">En este entorno, la norma internacional ISO/IEC 27001:2022 emerge no como un simple sello de cumplimiento documental, sino como el <b>pasaporte estratégico definitivo</b> para asegurar el crecimiento y garantizar la sostenibilidad del negocio.</p>
       </div>
     </div>
-    <div class="right" style="padding-top: 86px;">
-      <div class="callout-dark">
-        <div class="label">LA DISTINCIÓN FUNDAMENTAL</div>
-        <div class="text">La confianza ya no se presume: <em>debe ser auditada externamente.</em></div>
-      </div>
-      <p class="body" style="margin-top: 18px;">En este entorno, la norma internacional ISO/IEC 27001:2022 emerge no como un simple sello de cumplimiento documental, sino como el <b>pasaporte estratégico definitivo</b> para asegurar el crecimiento y garantizar la sostenibilidad del negocio.</p>
+    <div class="callout-dark" style="max-width: 100%; margin-top: 28px; padding: 36px 40px;">
+      <div class="label">LA DISTINCIÓN FUNDAMENTAL</div>
+      <div class="text" style="font-size: 22pt; max-width: 88%;">La confianza ya no se presume: <em>debe ser auditada externamente.</em></div>
     </div>
   </div>
   <div class="bottom">006</div>
@@ -582,21 +576,23 @@
      PAGE 07 · INTRO · A lo largo de estas páginas
      ===================================================== -->
 <div class="page">
+  <div style="display: flex; flex-direction: column; flex: 1;">
   <div class="top">
     <span class="brand">ONCE MÉXICO · GUÍA EJECUTIVA</span>
     <span class="right"><span>HOJA DE RUTA</span><span class="sep"></span><span>00 / 07</span></span>
   </div>
-  <div style="padding-top: 6mm;">
+  <div style="padding-top: 8mm;">
     <div class="label-muted">A LO LARGO DE ESTAS PÁGINAS ENCONTRARÁ</div>
-    <div style="margin-top: 10px;" class="display med">Lo que sigue, <em>en cuatro ejes.</em></div>
+    <div style="margin-top: 12px;" class="display med" >Lo que sigue, <em>en cuatro ejes.</em></div>
   </div>
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; padding-top: 28px;">
-    <div class="chip"><div class="row1"><span class="label">01</span><span class="when">EL FILTRO INVISIBLE</span></div><div class="what" style="margin-top: 6px; font-size: 12pt;">Los datos detrás de la descalificación automática</div><div class="desc">Los procesos de compra corporativa en que una empresa sin certificación queda fuera antes de ser evaluada.</div></div>
-    <div class="chip"><div class="row1"><span class="label">02</span><span class="when">EL COSTO EXACTO</span></div><div class="what" style="margin-top: 6px; font-size: 12pt;">Lo que cuesta no estar certificado hoy</div><div class="desc">El esfuerzo técnico, los ciclos de venta congelados y el canal de ventas que se pierde mes con mes.</div></div>
-    <div class="chip"><div class="row1"><span class="label">03</span><span class="when">CASOS REALES</span></div><div class="what" style="margin-top: 6px; font-size: 12pt;">Tres empresas que transformaron su postura</div><div class="desc">Vextia (SaaS · Guadalajara) · Teksonar (Servicios TI · CDMX) · Kreddia (Fintech · Monterrey).</div></div>
-    <div class="chip"><div class="row1"><span class="label">04</span><span class="when">CRITERIO DEL AUDITOR</span></div><div class="what" style="margin-top: 6px; font-size: 12pt;">Qué significa estar realmente listo</div><div class="desc">Lo que evalúa un auditor acreditado bajo ISO/IEC 17021-1 para emitir un certificado oficial.</div></div>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px 40px; padding-top: 32px; flex: 1; align-content: space-evenly;">
+    <div class="chip" style="padding: 22px 0;"><div class="row1"><span class="label">01</span><span class="when">EL FILTRO INVISIBLE</span></div><div class="what" style="margin-top: 8px;">Los datos detrás de la descalificación automática</div><div class="desc">Los procesos de compra corporativa en que una empresa sin certificación queda fuera antes de ser evaluada.</div></div>
+    <div class="chip" style="padding: 22px 0;"><div class="row1"><span class="label">02</span><span class="when">EL COSTO EXACTO</span></div><div class="what" style="margin-top: 8px;">Lo que cuesta no estar certificado hoy</div><div class="desc">El esfuerzo técnico, los ciclos de venta congelados y el canal de ventas que se pierde mes con mes.</div></div>
+    <div class="chip" style="padding: 22px 0;"><div class="row1"><span class="label">03</span><span class="when">CASOS REALES</span></div><div class="what" style="margin-top: 8px;">Tres empresas que transformaron su postura</div><div class="desc">Vextia (SaaS · Guadalajara) · Teksonar (Servicios TI · CDMX) · Kreddia (Fintech · Monterrey).</div></div>
+    <div class="chip" style="padding: 22px 0;"><div class="row1"><span class="label">04</span><span class="when">CRITERIO DEL AUDITOR</span></div><div class="what" style="margin-top: 8px;">Qué significa estar realmente listo</div><div class="desc">Lo que evalúa un auditor acreditado bajo ISO/IEC 17021-1 para emitir un certificado oficial.</div></div>
   </div>
-  <p class="body" style="font-family: var(--serif); font-style: italic; font-size: 12pt; margin-top: 26px; border-top: 1px solid var(--rule); padding-top: 14px;">Si su empresa gestiona datos de clientes, procesa pagos o vende tecnología a medianas y grandes empresas, <b style="font-style: normal;">este ebook es para usted.</b></p>
+  <p class="body" style="font-family: var(--serif); font-style: italic; font-size: 15pt; line-height: 1.5; margin-top: 30px; border-top: 1.5px solid var(--ink); padding-top: 20px;">Si su empresa gestiona datos de clientes, procesa pagos o vende tecnología a medianas y grandes empresas, <b style="font-style: normal;">este ebook es para usted.</b></p>
+  </div>
   <div class="bottom">007</div>
 </div>
 
@@ -608,18 +604,18 @@
     <span class="brand">ONCE MÉXICO · GUÍA EJECUTIVA</span>
     <span class="right"><span>CAPÍTULO 01</span><span class="sep"></span><span>01 / 07</span></span>
   </div>
-  <div class="two-col narrow">
+  <div class="two-col narrow opener" style="padding-top: 10mm;">
     <div class="left">
       <div class="label-muted">01 · CAPÍTULO UNO</div>
-      <div style="margin-top: 12px;" class="display">El filtro invisible que expulsa a su empresa <em>de los grandes contratos.</em></div>
-      <div class="colofon-mark" style="margin-top: 30px;"></div>
-      <p class="body" style="font-family: var(--serif); font-style: italic; font-size: 12pt; color: var(--ink-soft); max-width: 92%;">Para cualquier director general o fundador de una empresa de software o proveedora de servicios tecnológicos, una de las realidades más frustrantes es ver cómo una oportunidad comercial sólida se desvanece en las etapas finales del proceso de selección por motivos completamente ajenos a la calidad del producto o servicio técnico.</p>
+      <div style="margin-top: 14px;" class="display">El filtro invisible que expulsa a su empresa <em>de los grandes contratos.</em></div>
+      <div class="colofon-mark" style="margin-top: 34px;"></div>
+      <p class="body" style="font-family: var(--serif); font-style: italic; font-size: 13.5pt; line-height: 1.55; color: var(--ink-soft); max-width: 94%;">Para cualquier director general o fundador de una empresa de software o proveedora de servicios tecnológicos, una de las realidades más frustrantes es ver cómo una oportunidad comercial sólida se desvanece en las etapas finales del proceso de selección por motivos completamente ajenos a la calidad del producto o servicio técnico.</p>
     </div>
-    <div class="right" style="padding-top: 60px;">
+    <div class="right stretch-col" style="padding-top: 70px; padding-bottom: 10mm;">
       <div class="chip-grid">
-        <div class="chip"><div class="row1"><span class="label">1.1</span><span class="when">LOS DATOS</span></div><div class="what" style="margin-top: 6px;">Lo que dicen los datos de Gartner</div><div class="desc">El 52 % de los procesos de compra corporativa exigen ISO 27001 de forma mandatoria. En sectores regulados sube al 80–90 %.</div></div>
-        <div class="chip"><div class="row1"><span class="label">1.2</span><span class="when">EL MECANISMO</span></div><div class="what" style="margin-top: 6px;">Cómo funciona el filtro</div><div class="desc">El mecanismo de descalificación automática que opera en los comités de compras corporativos.</div></div>
-        <div class="chip"><div class="row1"><span class="label">1.3</span><span class="when">EL COSTO</span></div><div class="what" style="margin-top: 6px;">El costo de cada mes sin el certificado</div><div class="desc">Cuánto reduce el mercado accesible y cuánta ventaja entrega a competidores certificados.</div></div>
+        <div class="chip" style="padding: 24px 0;"><div class="row1"><span class="label">1.1</span><span class="when">LOS DATOS</span></div><div class="what" style="margin-top: 8px;">Lo que dicen los datos de Gartner</div><div class="desc">El 52 % de los procesos de compra corporativa exigen ISO 27001 de forma mandatoria. En sectores regulados sube al 80–90 %.</div></div>
+        <div class="chip" style="padding: 24px 0;"><div class="row1"><span class="label">1.2</span><span class="when">EL MECANISMO</span></div><div class="what" style="margin-top: 8px;">Cómo funciona el filtro</div><div class="desc">El mecanismo de descalificación automática que opera en los comités de compras corporativos.</div></div>
+        <div class="chip" style="padding: 24px 0;"><div class="row1"><span class="label">1.3</span><span class="when">EL COSTO</span></div><div class="what" style="margin-top: 8px;">El costo de cada mes sin el certificado</div><div class="desc">Cuánto reduce el mercado accesible y cuánta ventaja entrega a competidores certificados.</div></div>
       </div>
     </div>
   </div>
@@ -627,12 +623,12 @@
 </div>
 
 <!-- =====================================================
-     PAGE 09 · 1.1 + 1.2
+     PAGE 09 · 1.1 + 1.2 + 1.3
      ===================================================== -->
 <div class="page">
   <div class="top">
     <span class="brand">ONCE MÉXICO · GUÍA EJECUTIVA</span>
-    <span class="right"><span>1.1 · LOS DATOS DE GARTNER</span><span class="sep"></span><span>01 / 07</span></span>
+    <span class="right"><span>1.1 · 1.2 · 1.3</span><span class="sep"></span><span>01 / 07</span></span>
   </div>
   <div class="two-col">
     <div class="left">
@@ -642,89 +638,70 @@
         <p class="body">Investigaciones de Gartner demuestran de manera contundente que el <b>52 % de los procesos de compra de seguridad a nivel corporativo</b> exigen de forma mandatoria la norma ISO 27001.</p>
         <p class="body">Cuando el análisis se traslada a sectores con regulaciones estrictas y alta sensibilidad de datos —financiero, salud, legal, sector público— esta proporción se dispara de manera drástica, alcanzando rangos de entre el <b>80 % y el 90 %.</b></p>
       </div>
+      <div class="callout-dark" style="margin-top: 26px; max-width: 100%;">
+        <div class="label">EN EL ENTORNO ENTERPRISE</div>
+        <div class="text">La falta de una certificación internacional equivale a ser invisible — o a ser catalogado proactivamente <em>como un riesgo inasumible.</em></div>
+      </div>
+      <p class="body" style="margin-top: 22px; font-weight: 600; color: var(--ink); border-left: 3px solid var(--accent); padding-left: 14px;">Cada mes que su empresa opera sin este respaldo, se reduce drásticamente el mercado accesible y se entrega una ventaja competitiva masiva a sus competidores certificados.</p>
     </div>
-    <div class="right" style="padding-top: 86px;">
+    <div class="right" style="padding-top: 10px;">
       <div class="label-muted">1.2 · EL MECANISMO</div>
-      <div style="margin-top: 8px;" class="h3">Cómo funciona <em>el filtro.</em></div>
-      <p class="body" style="margin-top: 10px;">Los comités de compras reciben decenas de propuestas comerciales cada mes. Ante la imposibilidad operativa de auditar minuciosamente la infraestructura de cada uno de sus proveedores potenciales, implementan un primer filtro con una pregunta estrictamente binaria:</p>
-      <p class="body" style="font-style: italic; padding-left: 12px; border-left: 3px solid var(--accent); margin-top: 10pt; color: var(--ink);">«¿Su organización cuenta con una certificación vigente bajo la norma ISO 27001 emitida por un organismo acreditado?»</p>
-      <p class="body" style="margin-top: 10pt;">Si la respuesta es <b>«no»</b>, la plataforma o solución tecnológica es descartada de inmediato — sin importar la interfaz, el código o el precio.</p>
+      <div style="margin-top: 10px;" class="h3">Cómo funciona <em>el filtro.</em></div>
+      <p class="body" style="margin-top: 12px;">Los comités de compras reciben decenas de propuestas comerciales cada mes. Ante la imposibilidad operativa de auditar minuciosamente la infraestructura de cada uno de sus proveedores potenciales, implementan un primer filtro con una pregunta estrictamente binaria:</p>
+      <p class="body" style="font-style: italic; padding-left: 14px; border-left: 3px solid var(--accent); margin-top: 12pt; color: var(--ink);">«¿Su organización cuenta con una certificación vigente bajo la norma ISO 27001 emitida por un organismo acreditado?»</p>
+      <p class="body" style="margin-top: 12pt;">Si la respuesta es <b>«no»</b>, la plataforma o solución tecnológica es descartada de inmediato — sin importar la interfaz, el código o el precio.</p>
+      <div class="label-muted" style="margin-top: 30px; border-top: 1px solid var(--rule); padding-top: 20px;">1.3 · EL COSTO</div>
+      <div style="margin-top: 10px;" class="h3">Invisible — o catalogado <em>como riesgo inasumible.</em></div>
+      <p class="body" style="margin-top: 12px;">Esta exclusión no ocurre porque el cliente haya identificado un fallo de seguridad real en su plataforma. Ocurre porque evaluar y construir un caso de cumplimiento interno para un proveedor no certificado consume demasiado tiempo y recursos para el equipo del comprador, especialmente cuando existen alternativas competidoras que ya cuentan con el certificado oficial.</p>
     </div>
   </div>
   <div class="bottom">009</div>
 </div>
 
 <!-- =====================================================
-     PAGE 10 · 1.3 EL COSTO
-     ===================================================== -->
-<div class="page">
-  <div class="top">
-    <span class="brand">ONCE MÉXICO · GUÍA EJECUTIVA</span>
-    <span class="right"><span>1.3 · EL COSTO</span><span class="sep"></span><span>01 / 07</span></span>
-  </div>
-  <div class="two-col">
-    <div class="left">
-      <div class="label-muted">1.3 · EL COSTO</div>
-      <div style="margin-top: 12px;" class="display">Invisible — o catalogado <em>como riesgo inasumible.</em></div>
-      <div class="body-block">
-        <p class="body">Esta exclusión no ocurre porque el cliente haya identificado un fallo de seguridad real en su plataforma. Ocurre porque evaluar y construir un caso de cumplimiento interno para un proveedor no certificado consume demasiado tiempo y recursos para el equipo del comprador, especialmente cuando existen alternativas competidoras que ya cuentan con el certificado oficial.</p>
-      </div>
-    </div>
-    <div class="right" style="padding-top: 86px;">
-      <div class="callout-dark">
-        <div class="label">EN EL ENTORNO ENTERPRISE</div>
-        <div class="text">La falta de una certificación internacional equivale a ser invisible — o a ser catalogado proactivamente <em>como un riesgo inasumible.</em></div>
-      </div>
-      <p class="body" style="margin-top: 18px; font-weight: 600; color: var(--ink); border-left: 3px solid var(--accent); padding-left: 12px;">Cada mes que su empresa opera sin este respaldo, se reduce drásticamente el mercado accesible y se entrega una ventaja competitiva masiva a sus competidores certificados.</p>
-    </div>
-  </div>
-  <div class="bottom">010</div>
-</div>
-
-<!-- =====================================================
-     PAGE 11 · CAP 02 OPENER
+     PAGE 10 · CAP 02 OPENER
      ===================================================== -->
 <div class="page">
   <div class="top">
     <span class="brand">ONCE MÉXICO · GUÍA EJECUTIVA</span>
     <span class="right"><span>CAPÍTULO 02</span><span class="sep"></span><span>02 / 07</span></span>
   </div>
-  <div class="two-col narrow">
-    <div class="left">
+  <div class="two-col narrow opener" style="padding-top: 10mm;">
+    <div class="left" style="display: flex; flex-direction: column;">
       <div class="label-muted">02 · CAPÍTULO DOS</div>
-      <div style="margin-top: 12px;" class="display">El cuello de botella que congela sus ventas <em>y agota a su CTO.</em></div>
+      <div style="margin-top: 14px;" class="display">El cuello de botella que congela sus ventas <em>y agota a su CTO.</em></div>
       <div class="colofon-mark" style="margin-top: 30px;"></div>
-      <p class="body" style="font-family: var(--serif); font-style: italic; font-size: 12pt; color: var(--ink-soft); max-width: 92%;">Cuando una empresa tecnológica en crecimiento logra superar la primera barrera y despierta el interés genuino de un cliente de nivel corporativo, el proceso comercial suele verse frenado por un obstáculo burocrático sumamente desgastante: <b style="font-style: normal; color: var(--ink);">el cuestionario de debida diligencia en seguridad de la información.</b></p>
-      <div class="photo-block" style="margin-top: 24px;">
-        <img class="photo wide" src="images/equipo.jpg" alt="Equipo evaluando seguridad"/>
+      <p class="body" style="font-family: var(--serif); font-style: italic; font-size: 13.5pt; line-height: 1.55; color: var(--ink-soft); max-width: 94%;">Cuando una empresa tecnológica en crecimiento logra superar la primera barrera y despierta el interés genuino de un cliente de nivel corporativo, el proceso comercial suele verse frenado por un obstáculo burocrático sumamente desgastante: <b style="font-style: normal; color: var(--ink);">el cuestionario de debida diligencia en seguridad de la información.</b></p>
+      <div class="photo-block" style="margin-top: 26px; flex: 1; display: flex;">
+        <img class="photo" style="aspect-ratio: auto; height: 100%;" src="images/equipo.jpg" alt="Equipo evaluando seguridad"/>
       </div>
     </div>
-    <div class="right" style="padding-top: 60px;">
+    <div class="right stretch-col" style="padding-top: 70px;">
       <div class="chip-grid">
-        <div class="chip"><div class="row1"><span class="label">2.1</span><span class="when">EL CUESTIONARIO</span></div><div class="what" style="margin-top: 6px;">Hasta 300 preguntas que nadie en ventas puede responder</div></div>
-        <div class="chip"><div class="row1"><span class="label">2.2</span><span class="when">EL IMPACTO INTERNO</span></div><div class="what" style="margin-top: 6px;">60 a 120 horas de esfuerzo por cada cliente potencial</div></div>
-        <div class="chip"><div class="row1"><span class="label">2.3</span><span class="when">EL CICLO DE VENTAS</span></div><div class="what" style="margin-top: 6px;">De 4 a 12 semanas de limbo burocrático</div></div>
+        <div class="chip" style="padding: 26px 0;"><div class="row1"><span class="label">2.1</span><span class="when">EL CUESTIONARIO</span></div><div class="what" style="margin-top: 8px;">Hasta 300 preguntas que nadie en ventas puede responder</div></div>
+        <div class="chip" style="padding: 26px 0;"><div class="row1"><span class="label">2.2</span><span class="when">EL IMPACTO INTERNO</span></div><div class="what" style="margin-top: 8px;">60 a 120 horas de esfuerzo por cada cliente potencial</div></div>
+        <div class="chip" style="padding: 26px 0;"><div class="row1"><span class="label">2.3</span><span class="when">EL CICLO DE VENTAS</span></div><div class="what" style="margin-top: 8px;">De 4 a 12 semanas de limbo burocrático</div></div>
       </div>
     </div>
   </div>
-  <div class="bottom">011</div>
+  <div class="bottom">010</div>
 </div>
 
 <!-- =====================================================
-     PAGE 12 · 2.1 + 2.2
+     PAGE 11 · 2.1 + 2.2 + 2.3
      ===================================================== -->
 <div class="page">
   <div class="top">
     <span class="brand">ONCE MÉXICO · GUÍA EJECUTIVA</span>
-    <span class="right"><span>2.1 · EL CUESTIONARIO</span><span class="sep"></span><span>02 / 07</span></span>
+    <span class="right"><span>2.1 · 2.2 · 2.3</span><span class="sep"></span><span>02 / 07</span></span>
   </div>
   <div class="two-col">
     <div class="left">
       <div class="label-muted">2.1 · EL CUESTIONARIO</div>
-      <div style="margin-top: 12px;" class="display">Hasta 300 preguntas <em>que nadie en ventas puede responder.</em></div>
+      <div style="margin-top: 12px;" class="display" >Hasta 300 preguntas <em>que nadie en ventas puede responder.</em></div>
       <div class="body-block">
         <p class="body">En la práctica comercial actual, el departamento de riesgo del cliente envía extensas hojas de cálculo o portales interactivos que contienen hasta <b>300 preguntas detalladas.</b> Estas evaluaciones indagan de forma exhaustiva en:</p>
-        <ul class="body" style="font-family: var(--sans); font-size: 9.5pt; line-height: 1.55; color: var(--ink-soft); padding-left: 18px; margin-top: 6pt;">
+        <ul class="body" style="font-size: 10.5pt; margin-top: 8pt;">
           <li>Las metodologías de cifrado de datos en tránsito y en reposo</li>
           <li>Las políticas formales de control de accesos basadas en el principio del menor privilegio</li>
           <li>Los protocolos de respuesta ante incidentes y los planes de continuidad de negocio</li>
@@ -732,89 +709,64 @@
         </ul>
       </div>
     </div>
-    <div class="right" style="padding-top: 86px;">
+    <div class="right" style="padding-top: 10px;">
       <div class="label-muted">2.2 · EL IMPACTO INTERNO</div>
-      <div style="margin-top: 8px;" class="h3">60 a 120 horas <em>por cada cliente potencial.</em></div>
-      <p class="body" style="margin-top: 10px;">Dado que el personal comercial no posee los conocimientos técnicos ni jurídicos necesarios, el formulario suele ser derivado con urgencia al Director de Tecnología o al equipo de ingeniería de software.</p>
+      <div style="margin-top: 10px;" class="h3">60 a 120 horas <em>por cada cliente potencial.</em></div>
+      <p class="body" style="margin-top: 12px;">Dado que el personal comercial no posee los conocimientos técnicos ni jurídicos necesarios, el formulario suele ser derivado con urgencia al Director de Tecnología o al equipo de ingeniería de software.</p>
       <p class="body">El CTO se ve obligado a desviar su atención de sus funciones principales para dedicar entre <b>40 y 80 horas</b> de trabajo especializado a rellenar casillas de forma repetitiva.</p>
-      <p class="body" style="border-top: 1px solid var(--rule); padding-top: 10px;">Sumando el tiempo invertido por los distintos líderes de área en recopilar evidencias parciales, el esfuerzo total oscila fácilmente entre las <b>60 y 120 horas</b> por cada cliente potencial.</p>
+      <p class="body" style="border-top: 1px solid var(--rule); padding-top: 12px;">Sumando el tiempo invertido por los distintos líderes de área en recopilar evidencias parciales, el esfuerzo total oscila fácilmente entre las <b>60 y 120 horas</b> por cada cliente potencial.</p>
+      <div class="label-muted" style="margin-top: 24px; border-top: 1px solid var(--rule); padding-top: 18px;">2.3 · EL CICLO DE VENTAS</div>
+      <div style="margin-top: 10px;" class="h3">De 4 a 12 semanas <em>de limbo burocrático.</em></div>
+      <p class="body" style="margin-top: 12px;">Mientras el cuestionario permanece atrapado en las bandejas de entrada del equipo técnico, las negociaciones comerciales se retrasan de <b>4 a 12 semanas críticas.</b> Durante este periodo de limbo burocrático, la oportunidad comercial se enfría de manera peligrosa.</p>
     </div>
   </div>
-  <div class="bottom">012</div>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 38px; margin-top: 24px; border-top: 1.5px solid var(--ink); padding-top: 18px;">
+    <div>
+      <div class="label-muted">EN EL DÍA A DÍA</div>
+      <p class="body" style="margin-top: 8px;">Peor aún, ante la presión por cerrar la venta, los equipos técnicos suelen cometer el grave error de enviar capturas de pantalla de configuraciones internas o direcciones IP de bases de datos como «evidencia», <b>arriesgando la topología de seguridad real</b> de la empresa frente a terceros.</p>
+    </div>
+    <div>
+      <p class="body" style="font-weight: 600; color: var(--ink); border-left: 3px solid var(--accent); padding-left: 14px;">Al final del día, la falta de respuestas estandarizadas genera desconfianza en los oficiales de riesgo, provocando que el contrato se pierda definitivamente tras semanas de extenuante esfuerzo interno.</p>
+    </div>
+  </div>
+  <div class="bottom">011</div>
 </div>
 
 <!-- =====================================================
-     PAGE 13 · 2.3 EL CICLO
-     ===================================================== -->
-<div class="page">
-  <div class="top">
-    <span class="brand">ONCE MÉXICO · GUÍA EJECUTIVA</span>
-    <span class="right"><span>2.3 · EL CICLO DE VENTAS</span><span class="sep"></span><span>02 / 07</span></span>
-  </div>
-  <div class="two-col">
-    <div class="left">
-      <div class="label-muted">2.3 · EL CICLO DE VENTAS</div>
-      <div style="margin-top: 12px;" class="display">De 4 a 12 semanas <em>de limbo burocrático.</em></div>
-      <div class="body-block">
-        <p class="body">Mientras el cuestionario permanece atrapado en las bandejas de entrada del equipo técnico, las negociaciones comerciales se retrasan de <b>4 a 12 semanas críticas.</b> Durante este periodo de limbo burocrático, la oportunidad comercial se enfría de manera peligrosa.</p>
-      </div>
-      <div class="label-muted" style="margin-top: 16px;">EN EL DÍA A DÍA</div>
-      <p class="body" style="margin-top: 6px;">Peor aún, ante la presión por cerrar la venta, los equipos técnicos suelen cometer el grave error de enviar capturas de pantalla de configuraciones internas o direcciones IP de bases de datos como «evidencia», <b>arriesgando la topología de seguridad real</b> de la empresa frente a terceros.</p>
-    </div>
-    <div class="right" style="padding-top: 86px;">
-      <div class="stat-grid" style="grid-template-columns: 1fr;">
-        <div class="stat">
-          <span class="num">4–12<small> sem</small></span>
-          <div class="lbl">RETRASO EN CICLO DE VENTAS</div>
-          <div class="desc">Por cada cuestionario corporativo en limbo.</div>
-        </div>
-        <div class="stat">
-          <span class="num">60–120<small> h</small></span>
-          <div class="lbl">ESFUERZO POR CLIENTE</div>
-          <div class="desc">Tiempo agregado entre CTO, ventas, legal y operaciones.</div>
-        </div>
-      </div>
-      <p class="body" style="margin-top: 18px; border-top: 1px solid var(--rule); padding-top: 12px; font-weight: 600; color: var(--ink);">Al final del día, la falta de respuestas estandarizadas genera desconfianza en los oficiales de riesgo, provocando que el contrato se pierda definitivamente tras semanas de extenuante esfuerzo interno.</p>
-    </div>
-  </div>
-  <div class="bottom">013</div>
-</div>
-
-<!-- =====================================================
-     PAGE 14 · CAP 03 OPENER · De centro de costos
+     PAGE 12 · CAP 03 OPENER · De centro de costos
      ===================================================== -->
 <div class="page">
   <div class="top">
     <span class="brand">ONCE MÉXICO · GUÍA EJECUTIVA</span>
     <span class="right"><span>CAPÍTULO 03</span><span class="sep"></span><span>03 / 07</span></span>
   </div>
-  <div class="two-col narrow">
+  <div class="two-col narrow opener" style="padding-top: 10mm;">
     <div class="left">
       <div class="label-muted">03 · CAPÍTULO TRES</div>
-      <div style="margin-top: 12px;" class="display">De centro de costos <em>a motor de ingresos.</em></div>
-      <div class="colofon-mark" style="margin-top: 30px;"></div>
-      <p class="body" style="font-family: var(--serif); font-style: italic; font-size: 12pt; color: var(--ink-soft); max-width: 92%;">La certificación de un Sistema de Gestión de Seguridad de la Información (SGSI) bajo la norma ISO 27001, emitida por un organismo de certificación acreditado, transforma radicalmente la dinámica comercial descrita en los capítulos anteriores, convirtiendo la ciberseguridad de un centro de costos defensivo en el mayor habilitador y catalizador de ingresos de la compañía.</p>
+      <div style="margin-top: 14px;" class="display">De centro de costos <em>a motor de ingresos.</em></div>
+      <div class="colofon-mark" style="margin-top: 34px;"></div>
+      <p class="body" style="font-family: var(--serif); font-style: italic; font-size: 13.5pt; line-height: 1.55; color: var(--ink-soft); max-width: 94%;">La certificación de un Sistema de Gestión de Seguridad de la Información (SGSI) bajo la norma ISO 27001, emitida por un organismo de certificación acreditado, transforma radicalmente la dinámica comercial descrita en los capítulos anteriores, convirtiendo la ciberseguridad de un centro de costos defensivo en el mayor habilitador y catalizador de ingresos de la compañía.</p>
     </div>
-    <div class="right" style="padding-top: 60px;">
+    <div class="right stretch-col" style="padding-top: 70px; padding-bottom: 10mm;">
       <div class="chip-grid">
-        <div class="chip"><div class="row1"><span class="label">3.1</span><span class="when">LA TRANSFORMACIÓN</span></div><div class="what" style="margin-top: 6px;">La postura proactiva que lo cambia todo</div></div>
-        <div class="chip"><div class="row1"><span class="label">3.2</span><span class="when">LOS TRES INDICADORES</span></div><div class="what" style="margin-top: 6px;">Los números que cambian de forma radical</div></div>
-        <div class="chip"><div class="row1"><span class="label">3.3</span><span class="when">LA COMPARACIÓN</span></div><div class="what" style="margin-top: 6px;">El antes y el después: una comparación ejecutiva</div></div>
+        <div class="chip" style="padding: 26px 0;"><div class="row1"><span class="label">3.1</span><span class="when">LA TRANSFORMACIÓN</span></div><div class="what" style="margin-top: 8px;">La postura proactiva que lo cambia todo</div></div>
+        <div class="chip" style="padding: 26px 0;"><div class="row1"><span class="label">3.2</span><span class="when">LOS TRES INDICADORES</span></div><div class="what" style="margin-top: 8px;">Los números que cambian de forma radical</div></div>
+        <div class="chip" style="padding: 26px 0;"><div class="row1"><span class="label">3.3</span><span class="when">LA COMPARACIÓN</span></div><div class="what" style="margin-top: 8px;">El antes y el después: una comparación ejecutiva</div></div>
       </div>
     </div>
   </div>
-  <div class="bottom">014</div>
+  <div class="bottom">012</div>
 </div>
 
 <!-- =====================================================
-     PAGE 15 · 3.1 LA TRANSFORMACIÓN + 3.2 INDICADORES
+     PAGE 13 · 3.1 LA TRANSFORMACIÓN + 3.2 INDICADORES
      ===================================================== -->
 <div class="page">
   <div class="top">
     <span class="brand">ONCE MÉXICO · GUÍA EJECUTIVA</span>
     <span class="right"><span>3.1 · LA TRANSFORMACIÓN</span><span class="sep"></span><span>03 / 07</span></span>
   </div>
-  <div class="two-col">
+  <div class="two-col" style="flex: 1;">
     <div class="left">
       <div class="label-muted">3.1 · LA TRANSFORMACIÓN</div>
       <div style="margin-top: 12px;" class="display">La postura proactiva <em>que lo cambia todo.</em></div>
@@ -823,32 +775,32 @@
         <p class="body">Como estos documentos cuentan con el respaldo de una auditoría externa imparcial, responden de manera automática a la inmensa mayoría de las exigencias normativas del comprador corporativo.</p>
       </div>
     </div>
-    <div class="right" style="padding-top: 86px;">
+    <div class="right stretch-col" style="padding-top: 64px; padding-bottom: 8mm;">
       <div class="label-muted">3.2 · LOS TRES INDICADORES</div>
-      <div style="margin-top: 8px;" class="h3">Los números que <em>cambian radical.</em></div>
-      <div class="chip-grid" style="margin-top: 14px;">
-        <div class="chip"><div class="row1"><span class="label">01</span><span class="when">CICLO DE VALIDACIÓN</span></div><div class="desc">De hasta tres meses a <b>1–3 semanas</b> — incluso 2 días hábiles en entornos optimizados.</div></div>
-        <div class="chip"><div class="row1"><span class="label">02</span><span class="when">CAPACIDAD TÉCNICA</span></div><div class="desc">El esfuerzo de ingenieros baja de 60–120 h a <b>10–20 h</b> por acuerdo comercial.</div></div>
-        <div class="chip"><div class="row1"><span class="label">03</span><span class="when">TASA DE CIERRE</span></div><div class="desc">En sectores estrictos: de un 30–40 % a un destacado <b>70–80 %.</b></div></div>
+      <div style="margin-top: 10px;" class="h3">Los números que <em>cambian radical.</em></div>
+      <div class="chip-grid" style="margin-top: 18px;">
+        <div class="chip" style="padding: 22px 0;"><div class="row1"><span class="label">01</span><span class="when">CICLO DE VALIDACIÓN</span></div><div class="desc" style="font-size: 11pt; margin-top: 10px;">De hasta tres meses a <b style="color: var(--ink);">1–3 semanas</b> — incluso 2 días hábiles en entornos optimizados.</div></div>
+        <div class="chip" style="padding: 22px 0;"><div class="row1"><span class="label">02</span><span class="when">CAPACIDAD TÉCNICA</span></div><div class="desc" style="font-size: 11pt; margin-top: 10px;">El esfuerzo de ingenieros baja de 60–120 h a <b style="color: var(--ink);">10–20 h</b> por acuerdo comercial.</div></div>
+        <div class="chip" style="padding: 22px 0;"><div class="row1"><span class="label">03</span><span class="when">TASA DE CIERRE</span></div><div class="desc" style="font-size: 11pt; margin-top: 10px;">En sectores estrictos: de un 30–40 % a un destacado <b style="color: var(--ink);">70–80 %.</b></div></div>
       </div>
     </div>
   </div>
-  <div class="bottom">015</div>
+  <div class="bottom">013</div>
 </div>
 
 <!-- =====================================================
-     PAGE 16 · 3.3 ANTES Y DESPUÉS
+     PAGE 14 · 3.3 ANTES Y DESPUÉS
      ===================================================== -->
 <div class="page">
   <div class="top">
     <span class="brand">ONCE MÉXICO · GUÍA EJECUTIVA</span>
     <span class="right"><span>3.3 · COMPARACIÓN</span><span class="sep"></span><span>03 / 07</span></span>
   </div>
-  <div style="padding-top: 6mm;">
+  <div style="padding-top: 8mm;">
     <div class="label-muted">3.3 · LA COMPARACIÓN EJECUTIVA</div>
-    <div style="margin-top: 10px;" class="display med">El antes <em>y el después.</em></div>
+    <div style="margin-top: 12px;" class="display med">El antes <em>y el después.</em></div>
   </div>
-  <table class="data-table" style="margin-top: 24px;">
+  <table class="data-table" style="margin-top: 28px;">
     <thead><tr><th style="width: 30%;">Variable operativa</th><th style="width: 32%;">Sin ISO 27001</th><th>Con ISO 27001</th></tr></thead>
     <tbody>
       <tr><td><b>Tiempo de respuesta técnica</b></td><td>4 a 12 semanas</td><td style="color: var(--accent-deep); font-weight: 600;">1 a 3 semanas (o 2 días hábiles)</td></tr>
@@ -858,271 +810,263 @@
       <tr><td><b>Renovaciones</b></td><td>Nueva auditoría exhaustiva cada vez</td><td>Renovación automática con controles anuales</td></tr>
     </tbody>
   </table>
-  <div class="callout-dark" style="margin-top: 24px; max-width: 100%;">
+  <div class="callout-dark" style="margin-top: 30px; max-width: 100%; padding: 30px 32px;">
     <div class="label">LA DISTINCIÓN FUNDAMENTAL</div>
-    <div class="text">La certificación ISO 27001 opera como un escudo reputacional que permite a las medianas y pequeñas <em>competir de igual a igual</em> frente a multinacionales.</div>
+    <div class="text" style="font-size: 17pt; max-width: 92%;">La certificación ISO 27001 opera como un escudo reputacional que permite a las medianas y pequeñas <em>competir de igual a igual</em> frente a multinacionales.</div>
   </div>
-  <div class="bottom">016</div>
+  <div class="bottom">014</div>
 </div>
 
 <!-- =====================================================
-     PAGE 17 · CAP 04 OPENER · Un solo sistema
+     PAGE 15 · CAP 04 OPENER · Un solo sistema
      ===================================================== -->
 <div class="page">
   <div class="top">
     <span class="brand">ONCE MÉXICO · GUÍA EJECUTIVA</span>
     <span class="right"><span>CAPÍTULO 04</span><span class="sep"></span><span>04 / 07</span></span>
   </div>
-  <div class="two-col narrow">
-    <div class="left">
+  <div class="two-col narrow opener" style="padding-top: 10mm;">
+    <div class="left" style="display: flex; flex-direction: column;">
       <div class="label-muted">04 · CAPÍTULO CUATRO</div>
-      <div style="margin-top: 12px;" class="display">Un solo sistema para gobernar <em>todos sus marcos regulatorios.</em></div>
+      <div style="margin-top: 14px;" class="display">Un solo sistema para gobernar <em>todos sus marcos regulatorios.</em></div>
       <div class="colofon-mark" style="margin-top: 30px;"></div>
-      <p class="body" style="font-family: var(--serif); font-style: italic; font-size: 12pt; color: var(--ink-soft); max-width: 92%;">Uno de los mayores desafíos operativos para las empresas tecnológicas en fases de rápido crecimiento es la aparición de la <b style="font-style: normal; color: var(--ink);">fatiga de cumplimiento.</b> A medida que el negocio se expande hacia nuevos mercados sectoriales o geografías internacionales, la organización se ve asediada por una proliferación de marcos regulatorios que debe satisfacer de manera simultánea.</p>
-      <div class="photo-block" style="margin-top: 24px;">
-        <img class="photo wide" src="images/auditoria.jpg" alt="Centro de mando regulatorio"/>
+      <p class="body" style="font-family: var(--serif); font-style: italic; font-size: 13.5pt; line-height: 1.55; color: var(--ink-soft); max-width: 94%;">Uno de los mayores desafíos operativos para las empresas tecnológicas en fases de rápido crecimiento es la aparición de la <b style="font-style: normal; color: var(--ink);">fatiga de cumplimiento.</b> A medida que el negocio se expande hacia nuevos mercados sectoriales o geografías internacionales, la organización se ve asediada por una proliferación de marcos regulatorios que debe satisfacer de manera simultánea.</p>
+      <div class="photo-block" style="margin-top: 26px; flex: 1; display: flex;">
+        <img class="photo" style="aspect-ratio: auto; height: 100%;" src="images/auditoria.jpg" alt="Centro de mando regulatorio"/>
       </div>
     </div>
-    <div class="right" style="padding-top: 60px;">
+    <div class="right stretch-col" style="padding-top: 70px;">
       <div class="chip-grid">
-        <div class="chip"><div class="row1"><span class="label">4.1</span><span class="when">EL PROBLEMA</span></div><div class="what" style="margin-top: 6px;">La proliferación de marcos que satura a los equipos</div></div>
-        <div class="chip"><div class="row1"><span class="label">4.2</span><span class="when">LA SOLUCIÓN</span></div><div class="what" style="margin-top: 6px;">El centro de mando unificado</div></div>
-        <div class="chip"><div class="row1"><span class="label">4.3</span><span class="when">EN EL DÍA A DÍA</span></div><div class="what" style="margin-top: 6px;">Cómo se traduce esto en su operación</div></div>
+        <div class="chip" style="padding: 26px 0;"><div class="row1"><span class="label">4.1</span><span class="when">EL PROBLEMA</span></div><div class="what" style="margin-top: 8px;">La proliferación de marcos que satura a los equipos</div></div>
+        <div class="chip" style="padding: 26px 0;"><div class="row1"><span class="label">4.2</span><span class="when">LA SOLUCIÓN</span></div><div class="what" style="margin-top: 8px;">El centro de mando unificado</div></div>
+        <div class="chip" style="padding: 26px 0;"><div class="row1"><span class="label">4.3</span><span class="when">EN EL DÍA A DÍA</span></div><div class="what" style="margin-top: 8px;">Cómo se traduce esto en su operación</div></div>
       </div>
     </div>
   </div>
-  <div class="bottom">017</div>
+  <div class="bottom">015</div>
 </div>
 
 <!-- =====================================================
-     PAGE 18 · 4.1 + 4.2
+     PAGE 16 · 4.1 + 4.2
      ===================================================== -->
 <div class="page">
   <div class="top">
     <span class="brand">ONCE MÉXICO · GUÍA EJECUTIVA</span>
     <span class="right"><span>4.1 · 4.2 · MARCOS</span><span class="sep"></span><span>04 / 07</span></span>
   </div>
-  <div class="two-col">
+  <div class="two-col" style="flex: 1;">
     <div class="left">
       <div class="label-muted">4.1 · EL PROBLEMA</div>
       <div style="margin-top: 12px;" class="display">Marcos que <em>saturan al equipo.</em></div>
       <div class="body-block">
-        <ul class="body" style="font-family: var(--sans); font-size: 9.5pt; line-height: 1.6; color: var(--ink-soft); padding-left: 18px;">
+        <ul class="body check-rows">
           <li><b>RGPD</b> si procesa datos de ciudadanos europeos</li>
           <li><b>NIS2 o DORA</b> para infraestructuras críticas y financieras</li>
           <li><b>PCI DSS</b> para pasarelas de pago electrónico</li>
           <li><b>LFPDPPP</b> en México o el <b>Esquema Nacional de Seguridad (ENS)</b> en España</li>
         </ul>
-        <p class="body" style="margin-top: 12pt;">Gestionar cada uno de estos marcos de forma aislada y fragmentada representa una <b>ineficiencia administrativa insostenible</b> que satura a los equipos de cumplimiento y duplica innecesariamente los esfuerzos documentales.</p>
+        <p class="body" style="margin-top: 16pt;">Gestionar cada uno de estos marcos de forma aislada y fragmentada representa una <b>ineficiencia administrativa insostenible</b> que satura a los equipos de cumplimiento y duplica innecesariamente los esfuerzos documentales.</p>
       </div>
     </div>
-    <div class="right" style="padding-top: 86px;">
-      <div class="label-muted">4.2 · LA SOLUCIÓN</div>
-      <div style="margin-top: 8px;" class="h3">El centro de mando <em>unificado.</em></div>
-      <p class="body" style="margin-top: 10px;">La verdadera genialidad estratégica de certificar un SGSI bajo ISO 27001 radica en que el estándar funciona como el <b>centro de mando unificado y definitivo</b> para gobernar múltiples iniciativas de cumplimiento simultáneamente.</p>
-      <div class="stat-grid" style="grid-template-columns: 1fr; margin-top: 14px;">
+    <div class="right" style="padding-top: 64px; padding-bottom: 8mm; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div class="label-muted">4.2 · LA SOLUCIÓN</div>
+        <div style="margin-top: 10px;" class="h3">El centro de mando <em>unificado.</em></div>
+        <p class="body" style="margin-top: 12px;">La verdadera genialidad estratégica de certificar un SGSI bajo ISO 27001 radica en que el estándar funciona como el <b>centro de mando unificado y definitivo</b> para gobernar múltiples iniciativas de cumplimiento simultáneamente.</p>
+      </div>
+      <div class="stat-grid" style="grid-template-columns: 1fr; margin-top: 22px;">
         <div class="stat">
-          <span class="num">75<small>%</small></span>
+          <span class="num" style="font-size: 52pt;">75<small>%</small></span>
           <div class="lbl">REQUISITOS CUBIERTOS</div>
-          <div class="desc">La ISO 27001 cubre de manera nativa aproximadamente el 75 % de los requisitos técnicos y organizativos exigidos por el RGPD y leyes equivalentes.</div>
+          <div class="desc" style="font-size: 11pt;">La ISO 27001 cubre de manera nativa aproximadamente el 75 % de los requisitos técnicos y organizativos exigidos por el RGPD y leyes equivalentes.</div>
         </div>
       </div>
     </div>
   </div>
-  <div class="bottom">018</div>
+  <div class="bottom">016</div>
 </div>
 
 <!-- =====================================================
-     PAGE 19 · 4.3 EN EL DÍA A DÍA
+     PAGE 17 · 4.3 EN EL DÍA A DÍA
      ===================================================== -->
 <div class="page">
   <div class="top">
     <span class="brand">ONCE MÉXICO · GUÍA EJECUTIVA</span>
     <span class="right"><span>4.3 · EN EL DÍA A DÍA</span><span class="sep"></span><span>04 / 07</span></span>
   </div>
-  <div class="two-col">
+  <div class="two-col" style="flex: 1;">
     <div class="left">
       <div class="label-muted">4.3 · EN EL DÍA A DÍA</div>
       <div style="margin-top: 12px;" class="display">Cómo se traduce <em>en su operación.</em></div>
       <div class="body-block">
         <p class="body"><b>Capacitación del personal:</b> Un único programa continuo e institucionalizado satisface simultáneamente el control de personas del Anexo A de ISO 27001, las exigencias de PCI DSS, las salvaguardas administrativas de privacidad y las directivas de NIS2.</p>
-        <p class="body"><b>Gobernanza tecnológica común:</b> Los mismos registros operativos, informes de auditoría técnica, bitácoras de control de accesos multifactor y análisis de cifrado criptográfico se reutilizan de forma centralizada para responder tanto a una auditoría de certificación como a una evaluación regulatoria estatal.</p>
+        <p class="body" style="border-top: 1px solid var(--rule); padding-top: 12px; margin-top: 14pt;"><b>Gobernanza tecnológica común:</b> Los mismos registros operativos, informes de auditoría técnica, bitácoras de control de accesos multifactor y análisis de cifrado criptográfico se reutilizan de forma centralizada para responder tanto a una auditoría de certificación como a una evaluación regulatoria estatal.</p>
       </div>
     </div>
-    <div class="right" style="padding-top: 86px;">
-      <div class="label-muted">EL IMPACTO EN NÚMEROS</div>
-      <div class="stat-grid" style="grid-template-columns: 1fr; margin-top: 12px;">
-        <div class="stat">
-          <span class="num">75<small> h / año</small></span>
-          <div class="lbl">ESFUERZO DE INGENIERÍA</div>
-          <div class="desc">Bajo de un promedio histórico de <b>550–600 horas anuales</b> a tan solo 75 horas al año.</div>
-        </div>
-        <div class="stat">
-          <span class="num">4–5<small> meses</small></span>
-          <div class="lbl">PLAZOS DE PREPARACIÓN</div>
-          <div class="desc">Para auditorías concurrentes: de 9–12 meses tradicionales a 4 o 5 meses.</div>
+    <div class="right" style="padding-top: 64px; padding-bottom: 8mm; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div class="label-muted">EL IMPACTO EN NÚMEROS</div>
+        <div class="stat-grid" style="grid-template-columns: 1fr; margin-top: 18px; gap: 34px;">
+          <div class="stat">
+            <span class="num" style="font-size: 44pt;">75<small> h / año</small></span>
+            <div class="lbl">ESFUERZO DE INGENIERÍA</div>
+            <div class="desc">Bajo de un promedio histórico de <b style="color: var(--ink);">550–600 horas anuales</b> a tan solo 75 horas al año.</div>
+          </div>
+          <div class="stat">
+            <span class="num" style="font-size: 44pt;">4–5<small> meses</small></span>
+            <div class="lbl">PLAZOS DE PREPARACIÓN</div>
+            <div class="desc">Para auditorías concurrentes: de 9–12 meses tradicionales a 4 o 5 meses.</div>
+          </div>
         </div>
       </div>
-      <p class="body" style="margin-top: 14px; border-top: 1px solid var(--rule); padding-top: 12px;">El SGSI certificado dota a la empresa de una <b>infraestructura de ciberseguridad flexible</b>, preparada para asimilar futuras regulaciones de manera costo-eficiente sin alterar el ritmo operativo de la organización.</p>
+      <p class="body" style="margin-top: 24px; border-top: 1px solid var(--rule); padding-top: 16px;">El SGSI certificado dota a la empresa de una <b>infraestructura de ciberseguridad flexible</b>, preparada para asimilar futuras regulaciones de manera costo-eficiente sin alterar el ritmo operativo de la organización.</p>
     </div>
   </div>
-  <div class="bottom">019</div>
+  <div class="bottom">017</div>
 </div>
 
 <!-- =====================================================
-     PAGE 20 · CAP 05 OPENER · Las objeciones
+     PAGE 18 · CAP 05 OPENER + OBJECIÓN 01 · COSTOSA
      ===================================================== -->
 <div class="page">
   <div class="top">
     <span class="brand">ONCE MÉXICO · GUÍA EJECUTIVA</span>
-    <span class="right"><span>CAPÍTULO 05</span><span class="sep"></span><span>05 / 07</span></span>
+    <span class="right"><span>CAPÍTULO 05 · OBJECIÓN 01</span><span class="sep"></span><span>05 / 07</span></span>
   </div>
-  <div style="padding-top: 6mm;">
+  <div style="padding-top: 7mm;">
     <div class="label-muted">05 · CAPÍTULO CINCO</div>
-    <div style="margin-top: 10px;" class="display med">Las objeciones que frenan la decisión directiva — <em>y cómo desmontarlas.</em></div>
-    <p class="body" style="font-family: var(--serif); font-style: italic; margin-top: 14px; max-width: 80%;">A pesar de los contundentes datos que avalan los beneficios comerciales de la certificación, muchos comités directivos y directores de finanzas retrasan la decisión de iniciar el proceso debido a una serie de conceptos erróneos fuertemente arraigados en el mercado.</p>
+    <div style="margin-top: 12px;" class="display med">Las objeciones que frenan la decisión directiva — <em>y cómo desmontarlas.</em></div>
+    <p class="body" style="font-family: var(--serif); font-style: italic; font-size: 13pt; line-height: 1.5; margin-top: 16px; max-width: 84%;">A pesar de los contundentes datos que avalan los beneficios comerciales de la certificación, muchos comités directivos y directores de finanzas retrasan la decisión de iniciar el proceso debido a una serie de conceptos erróneos fuertemente arraigados en el mercado.</p>
   </div>
-  <div class="bottom">020</div>
-</div>
-
-<!-- =====================================================
-     PAGE 21 · OBJECIÓN 01 · COSTOSA
-     ===================================================== -->
-<div class="page">
-  <div class="top">
-    <span class="brand">ONCE MÉXICO · GUÍA EJECUTIVA</span>
-    <span class="right"><span>OBJECIÓN 01</span><span class="sep"></span><span>05 / 07</span></span>
-  </div>
-  <div class="two-col">
+  <div class="two-col" style="margin-top: 20px; border-top: 1.5px solid var(--ink); padding-top: 22px;">
     <div class="left">
       <div class="label-muted" style="color: var(--accent);">01 · LA OBJECIÓN</div>
-      <div class="myth" style="border-top: 0; padding-top: 6px;">
-        <div class="quote" style="font-size: 17pt;">«La certificación ISO 27001 es demasiado costosa y no podemos asumirla este trimestre.»</div>
+      <div class="myth" style="border-top: 0; padding-top: 8px;">
+        <div class="quote" style="font-size: 19pt;">«La certificación ISO 27001 es demasiado costosa y no podemos asumirla este trimestre.»</div>
       </div>
       <p class="body" style="margin-top: 10pt;">Esta objeción nace de un error fundamental en la cuantificación del riesgo y la priorización del capital. Analizar la ISO 27001 exclusivamente desde la perspectiva del costo del proceso de certificación es ignorar la <b>economía de la brecha de datos</b> y el <b>costo de oportunidad comercial.</b></p>
       <p class="body" style="font-style: italic; color: var(--ink); font-weight: 600;">En la economía digital contemporánea, el verdadero riesgo financiero es el costo de no estar certificados.</p>
     </div>
-    <div class="right" style="padding-top: 60px;">
+    <div class="right">
       <div class="label-muted">LA REALIDAD · EN NÚMEROS</div>
-      <div class="stat-grid" style="grid-template-columns: 1fr; margin-top: 14px;">
+      <div class="stat-grid" style="grid-template-columns: 1fr; margin-top: 16px; gap: 24px;">
         <div class="stat">
-          <span class="num">40<small>%</small></span>
+          <span class="num" style="font-size: 36pt;">40<small>%</small></span>
           <div class="lbl">CANAL DE VENTAS</div>
           <div class="desc">Pérdida directa del canal de ventas proyectado por descalificación en procesos corporativos.</div>
         </div>
         <div class="stat">
-          <span class="num">$200K<small> USD</small></span>
+          <span class="num" style="font-size: 36pt;">$200K<small> USD</small></span>
           <div class="lbl">CONTRATO TIPO</div>
           <div class="desc">Para una empresa con $2M USD anuales, un solo contrato corporativo perdido representa más de $200,000 USD en ingresos recurrentes anuales.</div>
         </div>
       </div>
-      <p class="body" style="margin-top: 14px; border-top: 1px solid var(--rule); padding-top: 12px; font-weight: 600; color: var(--ink);">El costo del proceso de certificación es una <b>fracción mínima</b> de este monto. El retorno se justifica con el primer contrato que el certificado ayuda a desbloquear.</p>
+      <p class="body" style="margin-top: 18px; border-top: 1px solid var(--rule); padding-top: 14px; font-weight: 600; color: var(--ink);">El costo del proceso de certificación es una <b>fracción mínima</b> de este monto. El retorno se justifica con el primer contrato que el certificado ayuda a desbloquear.</p>
     </div>
   </div>
-  <div class="bottom">021</div>
+  <div class="bottom">018</div>
 </div>
 
 <!-- =====================================================
-     PAGE 22 · OBJECIÓN 02 · BUROCRACIA
+     PAGE 19 · OBJECIÓN 02 · BUROCRACIA
      ===================================================== -->
 <div class="page">
   <div class="top">
     <span class="brand">ONCE MÉXICO · GUÍA EJECUTIVA</span>
     <span class="right"><span>OBJECIÓN 02</span><span class="sep"></span><span>05 / 07</span></span>
   </div>
-  <div class="two-col">
+  <div class="two-col" style="padding-top: 9mm;">
     <div class="left">
       <div class="label-muted" style="color: var(--accent);">02 · LA OBJECIÓN</div>
-      <div class="myth" style="border-top: 0; padding-top: 6px;">
-        <div class="quote" style="font-size: 17pt;">«La norma va a burocratizar a nuestra empresa y frenará el desarrollo ágil de software.»</div>
+      <div class="myth" style="border-top: 0; padding-top: 8px;">
+        <div class="quote" style="font-size: 20pt;">«La norma va a burocratizar a nuestra empresa y frenará el desarrollo ágil de software.»</div>
       </div>
-      <p class="body" style="margin-top: 10pt;">Este es el mito más extendido dentro de las organizaciones tecnológicas. La realidad operativa demuestra lo contrario: un SGSI bien estructurado <b>introduce orden y eficiencia</b>, reemplazando el caos improvisado por procesos previsibles y repetibles.</p>
+      <p class="body" style="margin-top: 12pt;">Este es el mito más extendido dentro de las organizaciones tecnológicas. La realidad operativa demuestra lo contrario: un SGSI bien estructurado <b>introduce orden y eficiencia</b>, reemplazando el caos improvisado por procesos previsibles y repetibles.</p>
       <p class="body">La versión 2022 destaca precisamente por su <b>enorme flexibilidad y enfoque pragmático.</b> No exige crear estructuras burocráticas paralelas ni documentación excesiva desde el primer día.</p>
     </div>
-    <div class="right" style="padding-top: 60px;">
+    <div class="right" style="padding-top: 56px;">
       <div class="label-muted">LA REALIDAD</div>
-      <p class="body" style="margin-top: 8px;">Los controles tecnológicos que el auditor verifica —gestión de accesos, control de cambios, cifrado de datos, monitoreo de eventos— son actividades que las empresas de software maduras <b>ya realizan o deberían realizar</b> de forma natural en sus ciclos de desarrollo.</p>
+      <p class="body" style="margin-top: 10px;">Los controles tecnológicos que el auditor verifica —gestión de accesos, control de cambios, cifrado de datos, monitoreo de eventos— son actividades que las empresas de software maduras <b>ya realizan o deberían realizar</b> de forma natural en sus ciclos de desarrollo.</p>
       <p class="body">Los datos de empresas certificadas demuestran que los equipos de desarrollo <b>mantienen su ritmo normal</b> de producto durante el proceso de certificación, dado que la norma evalúa la gobernanza sobre los controles existentes, no exige construir infraestructura desde cero.</p>
-      <div class="callout-dark" style="margin-top: 18px; max-width: 100%;">
+      <div class="callout-dark" style="margin-top: 24px; max-width: 100%;">
         <div class="label">LA DISTINCIÓN FUNDAMENTAL</div>
         <div class="text">La ISO 27001 no es un freno para la innovación: es la red de seguridad que permite <em>escalar el producto de forma rápida, segura y sostenible.</em></div>
       </div>
     </div>
   </div>
-  <div class="bottom">022</div>
+  <div class="bottom">019</div>
 </div>
 
 <!-- =====================================================
-     PAGE 23 · CAP 06 OPENER · Lo que evalúa el auditor
+     PAGE 20 · CAP 06 OPENER · Lo que evalúa el auditor
      ===================================================== -->
 <div class="page">
   <div class="top">
     <span class="brand">ONCE MÉXICO · GUÍA EJECUTIVA</span>
     <span class="right"><span>CAPÍTULO 06</span><span class="sep"></span><span>06 / 07</span></span>
   </div>
-  <div class="two-col narrow">
+  <div class="two-col narrow opener" style="padding-top: 10mm;">
     <div class="left">
       <div class="label-muted">06 · CAPÍTULO SEIS</div>
-      <div style="margin-top: 12px;" class="display">Lo que evalúa el auditor — <em>y qué significa estar realmente listo.</em></div>
-      <div class="colofon-mark" style="margin-top: 30px;"></div>
-      <p class="body" style="font-family: var(--serif); font-style: italic; font-size: 12pt; color: var(--ink-soft); max-width: 92%;">Iniciar el camino hacia la certificación internacional requiere entender con claridad qué es lo que un auditor acreditado bajo la norma ISO/IEC 17021-1 verifica durante el proceso. Conocer el criterio del auditor con anticipación es la diferencia entre llegar preparado a la auditoría o descubrir brechas en el momento menos oportuno.</p>
+      <div style="margin-top: 14px;" class="display">Lo que evalúa el auditor — <em>y qué significa estar realmente listo.</em></div>
+      <div class="colofon-mark" style="margin-top: 34px;"></div>
+      <p class="body" style="font-family: var(--serif); font-style: italic; font-size: 13.5pt; line-height: 1.55; color: var(--ink-soft); max-width: 94%;">Iniciar el camino hacia la certificación internacional requiere entender con claridad qué es lo que un auditor acreditado bajo la norma ISO/IEC 17021-1 verifica durante el proceso. Conocer el criterio del auditor con anticipación es la diferencia entre llegar preparado a la auditoría o descubrir brechas en el momento menos oportuno.</p>
     </div>
-    <div class="right" style="padding-top: 60px;">
+    <div class="right stretch-col" style="padding-top: 70px; padding-bottom: 10mm;">
       <div class="chip-grid">
-        <div class="chip"><div class="row1"><span class="label">6.1</span><span class="when">GOBERNANZA</span></div><div class="what" style="margin-top: 6px;">Las Cláusulas Mandatorias — el motor del sistema</div></div>
-        <div class="chip"><div class="row1"><span class="label">6.2</span><span class="when">SEGURIDAD OPERATIVA</span></div><div class="what" style="margin-top: 6px;">El Catálogo de Controles del Anexo A</div></div>
-        <div class="chip"><div class="row1"><span class="label">6.3</span><span class="when">LAS DOS ETAPAS</span></div><div class="what" style="margin-top: 6px;">Cómo se desarrolla el proceso de auditoría</div></div>
+        <div class="chip" style="padding: 26px 0;"><div class="row1"><span class="label">6.1</span><span class="when">GOBERNANZA</span></div><div class="what" style="margin-top: 8px;">Las Cláusulas Mandatorias — el motor del sistema</div></div>
+        <div class="chip" style="padding: 26px 0;"><div class="row1"><span class="label">6.2</span><span class="when">SEGURIDAD OPERATIVA</span></div><div class="what" style="margin-top: 8px;">El Catálogo de Controles del Anexo A</div></div>
+        <div class="chip" style="padding: 26px 0;"><div class="row1"><span class="label">6.3</span><span class="when">LAS DOS ETAPAS</span></div><div class="what" style="margin-top: 8px;">Cómo se desarrolla el proceso de auditoría</div></div>
       </div>
     </div>
   </div>
-  <div class="bottom">023</div>
+  <div class="bottom">020</div>
 </div>
 
 <!-- =====================================================
-     PAGE 24 · 6.1 CLÁUSULAS
+     PAGE 21 · 6.1 CLÁUSULAS
      ===================================================== -->
 <div class="page">
   <div class="top">
     <span class="brand">ONCE MÉXICO · GUÍA EJECUTIVA</span>
     <span class="right"><span>6.1 · CLÁUSULAS MANDATORIAS</span><span class="sep"></span><span>06 / 07</span></span>
   </div>
-  <div class="two-col">
+  <div class="two-col" style="flex: 1;">
     <div class="left">
       <div class="label-muted">6.1 · GOBERNANZA</div>
-      <div style="margin-top: 12px;" class="display">Las Cláusulas Mandatorias — <em>el motor del sistema.</em></div>
-      <div class="body-block">
-        <p class="body">Las cláusulas 4 a la 10 del estándar internacional representan el motor de gobernanza y liderazgo del sistema. El auditor verifica la existencia y operación activa de <b>16 registros de cumplimiento obligatorio</b>, entre los que destacan:</p>
-      </div>
+      <div style="margin-top: 12px; font-size: 44pt;" class="display">Las Cláusulas Mandatorias — <em>el motor del sistema.</em></div>
+      <div class="colofon-mark" style="margin-top: 30px;"></div>
+      <p class="body" style="font-size: 12pt; line-height: 1.65;">Las cláusulas 4 a la 10 del estándar internacional representan el motor de gobernanza y liderazgo del sistema. El auditor verifica la existencia y operación activa de <b>16 registros de cumplimiento obligatorio</b>, entre los que destacan:</p>
     </div>
-    <div class="right" style="padding-top: 86px;">
-      <ul class="body" style="font-family: var(--sans); font-size: 9.5pt; line-height: 1.7; color: var(--ink-soft); padding-left: 18px;">
-        <li>La definición del alcance formal del perímetro del SGSI</li>
-        <li>La Política de Seguridad de la Información aprobada y firmada por la alta dirección</li>
-        <li>La metodología formal de evaluación de riesgos corporativos</li>
-        <li>El informe de análisis de riesgos con su tratamiento documentado</li>
-        <li>La Declaración de Aplicabilidad (SoA) con la justificación de cada control incluido o excluido</li>
+    <div class="right" style="padding-top: 64px; padding-bottom: 8mm; display: flex; flex-direction: column; justify-content: space-between;">
+      <ul class="body check-rows" style="font-size: 11.5pt;">
+        <li style="padding-top: 20px; padding-bottom: 20px;">La definición del alcance formal del perímetro del SGSI</li>
+        <li style="padding-top: 20px; padding-bottom: 20px;">La Política de Seguridad de la Información aprobada y firmada por la alta dirección</li>
+        <li style="padding-top: 20px; padding-bottom: 20px;">La metodología formal de evaluación de riesgos corporativos</li>
+        <li style="padding-top: 20px; padding-bottom: 20px;">El informe de análisis de riesgos con su tratamiento documentado</li>
+        <li style="padding-top: 20px; padding-bottom: 20px;">La Declaración de Aplicabilidad (SoA) con la justificación de cada control incluido o excluido</li>
       </ul>
-      <p class="body" style="margin-top: 14px; border-top: 1px solid var(--rule); padding-top: 12px; font-weight: 600; color: var(--ink);">Sin estos documentos operando de forma activa —no solo redactados, sino evidenciados en la práctica— la auditoría de Etapa 2 no puede concluir favorablemente.</p>
+      <p class="body" style="margin-top: 26px; font-size: 11.5pt; font-weight: 600; color: var(--ink); border-left: 3px solid var(--accent); padding-left: 16px;">Sin estos documentos operando de forma activa —no solo redactados, sino evidenciados en la práctica— la auditoría de Etapa 2 no puede concluir favorablemente.</p>
     </div>
   </div>
-  <div class="bottom">024</div>
+  <div class="bottom">021</div>
 </div>
 
 <!-- =====================================================
-     PAGE 25 · 6.2 ANEXO A
+     PAGE 22 · 6.2 ANEXO A + 6.3 LAS DOS ETAPAS
      ===================================================== -->
 <div class="page">
   <div class="top">
     <span class="brand">ONCE MÉXICO · GUÍA EJECUTIVA</span>
-    <span class="right"><span>6.2 · ANEXO A</span><span class="sep"></span><span>06 / 07</span></span>
+    <span class="right"><span>6.2 · ANEXO A · 6.3 · DOS ETAPAS</span><span class="sep"></span><span>06 / 07</span></span>
   </div>
-  <div style="padding-top: 6mm;">
+  <div style="padding-top: 7mm;">
     <div class="label-muted">6.2 · SEGURIDAD OPERATIVA</div>
-    <div style="margin-top: 10px;" class="display med">El Catálogo de Controles <em>del Anexo A.</em></div>
-    <p class="body" style="margin-top: 12px; max-width: 80%;">La versión actualizada ISO/IEC 27001:2022 consolidó el marco operativo en <b>93 controles de seguridad</b>, organizados en cuatro grandes categorías temáticas que el auditor recorre sistemáticamente.</p>
+    <div style="margin-top: 12px;" class="display med">El Catálogo de Controles <em>del Anexo A.</em></div>
+    <p class="body" style="margin-top: 14px; max-width: 84%;">La versión actualizada ISO/IEC 27001:2022 consolidó el marco operativo en <b>93 controles de seguridad</b>, organizados en cuatro grandes categorías temáticas que el auditor recorre sistemáticamente.</p>
   </div>
-  <table class="data-table" style="margin-top: 24px;">
-    <thead><tr><th>Categoría</th><th>Qué verifica el auditor</th></tr></thead>
+  <table class="data-table" style="margin-top: 22px;">
+    <thead><tr><th style="width: 32%;">Categoría</th><th>Qué verifica el auditor</th></tr></thead>
     <tbody>
       <tr><td><b>Controles Organizacionales (A.5)</b></td><td>Políticas corporativas, gestión de la seguridad en las relaciones con proveedores externos y cumplimiento legal integrado.</td></tr>
       <tr><td><b>Controles de Personas (A.6)</b></td><td>Competencias técnicas documentadas, términos contractuales de confidencialidad y programas continuos de concientización frente a amenazas como el phishing.</td></tr>
@@ -1130,168 +1074,159 @@
       <tr><td><b>Controles Tecnológicos (A.8)</b></td><td>Seguridad en el ciclo de desarrollo de software, cifrado criptográfico de datos sensibles, control de accesos multifactor y monitoreo centralizado de eventos y bitácoras.</td></tr>
     </tbody>
   </table>
-  <div class="bottom">025</div>
+  <div style="margin-top: 24px; border-top: 1.5px solid var(--ink); padding-top: 18px;">
+    <div class="label-muted">6.3 · LAS DOS ETAPAS</div>
+    <div style="margin-top: 8px;" class="h3">Cómo se desarrolla <em>el proceso de auditoría.</em></div>
+  </div>
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 22px; margin-top: 14px; align-items: stretch;">
+    <div class="chip" style="border-top: 2px solid var(--accent); padding-top: 14px; border-bottom: 0;">
+      <div class="row1"><span class="label">ETAPA 1</span><span class="when">REVISIÓN DOCUMENTAL</span></div>
+      <div class="desc" style="margin-top: 10px; max-width: 100%;">El auditor verifica que el SGSI esté correctamente diseñado, documentado y que su alcance sea coherente con las actividades de la organización. Es la auditoría <i>«de escritorio»</i> que determina si la empresa está lista para la auditoría presencial.</div>
+    </div>
+    <div class="chip" style="border-top: 2px solid var(--accent); padding-top: 14px; border-bottom: 0;">
+      <div class="row1"><span class="label">ETAPA 2</span><span class="when">AUDITORÍA DE CERTIFICACIÓN</span></div>
+      <div class="desc" style="margin-top: 10px; max-width: 100%;">El auditor verifica en campo que los controles documentados en la Etapa 1 estén efectivamente operando en la práctica. Aquí se emiten las no conformidades —mayores o menores— y se determina si procede otorgar el certificado oficial.</div>
+    </div>
+    <div class="callout-dark" style="max-width: 100%; padding: 18px 20px;">
+      <div class="label">EL CONOCIMIENTO MÁS VALIOSO</div>
+      <div class="text" style="font-size: 12.5pt;">Entender lo que el auditor busca en cada etapa es el conocimiento más valioso que una organización puede tener <em>antes de iniciar su proceso de certificación.</em></div>
+    </div>
+  </div>
+  <div class="bottom">022</div>
 </div>
 
 <!-- =====================================================
-     PAGE 26 · 6.3 LAS DOS ETAPAS
-     ===================================================== -->
-<div class="page">
-  <div class="top">
-    <span class="brand">ONCE MÉXICO · GUÍA EJECUTIVA</span>
-    <span class="right"><span>6.3 · DOS ETAPAS</span><span class="sep"></span><span>06 / 07</span></span>
-  </div>
-  <div class="two-col">
-    <div class="left">
-      <div class="label-muted">6.3 · LAS DOS ETAPAS</div>
-      <div style="margin-top: 12px;" class="display">Cómo se desarrolla <em>el proceso de auditoría.</em></div>
-      <div class="body-block">
-        <div class="chip" style="border-top: 1px solid var(--accent); padding-top: 12px;">
-          <div class="row1"><span class="label">ETAPA 1</span><span class="when">REVISIÓN DOCUMENTAL</span></div>
-          <div class="desc" style="margin-top: 8px;">El auditor verifica que el SGSI esté correctamente diseñado, documentado y que su alcance sea coherente con las actividades de la organización. Es la auditoría <i>«de escritorio»</i> que determina si la empresa está lista para la auditoría presencial.</div>
-        </div>
-        <div class="chip" style="border-top: 1px solid var(--accent); padding-top: 12px;">
-          <div class="row1"><span class="label">ETAPA 2</span><span class="when">AUDITORÍA DE CERTIFICACIÓN</span></div>
-          <div class="desc" style="margin-top: 8px;">El auditor verifica en campo que los controles documentados en la Etapa 1 estén efectivamente operando en la práctica. Aquí se emiten las no conformidades —mayores o menores— y se determina si procede otorgar el certificado oficial.</div>
-        </div>
-      </div>
-    </div>
-    <div class="right" style="padding-top: 86px;">
-      <div class="callout-dark">
-        <div class="label">EL CONOCIMIENTO MÁS VALIOSO</div>
-        <div class="text">Entender lo que el auditor busca en cada etapa es el conocimiento más valioso que una organización puede tener <em>antes de iniciar su proceso de certificación.</em></div>
-      </div>
-    </div>
-  </div>
-  <div class="bottom">026</div>
-</div>
-
-<!-- =====================================================
-     PAGE 27 · CAP 07 OPENER + CASO 01 VEXTIA
+     PAGE 23 · CAP 07 OPENER
      ===================================================== -->
 <div class="page">
   <div class="top">
     <span class="brand">ONCE MÉXICO · GUÍA EJECUTIVA</span>
     <span class="right"><span>CAPÍTULO 07</span><span class="sep"></span><span>07 / 07</span></span>
   </div>
-  <div style="padding-top: 6mm; display: grid; grid-template-columns: 1.4fr 1fr; gap: 28px; align-items: start;">
+  <div style="padding-top: 10mm; display: grid; grid-template-columns: 1.1fr 1fr; gap: 34px; align-items: stretch; flex: 1;">
     <div>
       <div class="label-muted">07 · CAPÍTULO SIETE</div>
-      <div style="margin-top: 10px;" class="display med">Tres empresas que esperaron demasiado — <em>y lo que ganaron al actuar.</em></div>
-      <p class="body" style="font-family: var(--serif); font-style: italic; margin-top: 14px;">Para comprender el impacto económico real de la certificación en el mercado hispanohablante, analizamos tres casos concretos de organizaciones que transformaron su postura operativa y comercial tras obtener la certificación ISO 27001 de un organismo acreditado.</p>
+      <div style="margin-top: 14px; font-size: 40pt;" class="display">Tres empresas que esperaron demasiado — <em>y lo que ganaron al actuar.</em></div>
+      <div class="colofon-mark" style="margin-top: 34px;"></div>
+      <p class="body" style="font-family: var(--serif); font-style: italic; font-size: 13.5pt; line-height: 1.55; max-width: 94%;">Para comprender el impacto económico real de la certificación en el mercado hispanohablante, analizamos tres casos concretos de organizaciones que transformaron su postura operativa y comercial tras obtener la certificación ISO 27001 de un organismo acreditado.</p>
+      <div class="chip-grid" style="margin-top: 34px;">
+        <div class="chip" style="padding: 20px 0;"><div class="row1"><span class="label">CASO 01</span><span class="when">SAAS · GUADALAJARA</span></div><div class="what" style="margin-top: 8px;">Vextia</div></div>
+        <div class="chip" style="padding: 20px 0;"><div class="row1"><span class="label">CASO 02</span><span class="when">SERVICIOS TI · CDMX</span></div><div class="what" style="margin-top: 8px;">Teksonar</div></div>
+        <div class="chip" style="padding: 20px 0;"><div class="row1"><span class="label">CASO 03</span><span class="when">FINTECH · MONTERREY</span></div><div class="what" style="margin-top: 8px;">Kreddia</div></div>
+      </div>
     </div>
-    <div class="photo-block">
-      <img class="photo cap" src="images/casos.jpg" alt="Profesionales corporativos"/>
+    <div class="photo-block" style="display: flex;">
+      <img class="photo" style="aspect-ratio: auto; height: 100%;" src="images/casos.jpg" alt="Profesionales corporativos"/>
     </div>
   </div>
-  <div class="bottom">027</div>
+  <div class="bottom">023</div>
 </div>
 
 <!-- =====================================================
-     PAGE 28 · CASO 01 · VEXTIA
+     PAGE 24 · CASO 01 · VEXTIA
      ===================================================== -->
 <div class="page">
   <div class="top">
     <span class="brand">ONCE MÉXICO · GUÍA EJECUTIVA</span>
     <span class="right"><span>CASO 01 · VEXTIA</span><span class="sep"></span><span>07 / 07</span></span>
   </div>
-  <div style="padding-top: 6mm;">
+  <div style="padding-top: 8mm; display: flex; flex-direction: column; flex: 1;">
     <div class="label-muted" style="color: var(--accent);">CASO 01 · VEXTIA · EMPRESA SAAS DE CUMPLIMIENTO NORMATIVO · GUADALAJARA, JALISCO</div>
-    <div class="h2" style="margin-top: 10px;">Cuando el cuestionario de seguridad <em>enfría la preventa.</em></div>
-    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 22px; margin-top: 18px;">
-      <div>
+    <div class="h2" style="margin-top: 14px;">Cuando el cuestionario de seguridad <em>enfría la preventa.</em></div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 26px; margin-top: 26px; flex: 1;">
+      <div style="border-top: 1px solid var(--rule); padding-top: 14px;">
         <div class="label-muted">EL PROBLEMA DE PARTIDA</div>
-        <p class="body" style="margin-top: 6px;">Plataforma tecnológica enfocada en gestión de cumplimiento normativo con <b>42 colaboradores</b> y controles técnicos sólidos en AWS. Perdía oportunidades comerciales críticas porque tardaba hasta tres semanas en responder cuestionarios de seguridad de clientes potenciales.</p>
+        <p class="body" style="margin-top: 10px;">Plataforma tecnológica enfocada en gestión de cumplimiento normativo con <b>42 colaboradores</b> y controles técnicos sólidos en AWS. Perdía oportunidades comerciales críticas porque tardaba hasta tres semanas en responder cuestionarios de seguridad de clientes potenciales.</p>
       </div>
-      <div>
+      <div style="border-top: 1px solid var(--rule); padding-top: 14px;">
         <div class="label-muted">EL DETONANTE</div>
-        <p class="body" style="margin-top: 6px;">Perder una cuenta corporativa clave con una aseguradora del top 10 en México — exclusivamente por carecer del certificado ISO 27001 emitido por un organismo acreditado.</p>
+        <p class="body" style="margin-top: 10px;">Perder una cuenta corporativa clave con una aseguradora del top 10 en México — exclusivamente por carecer del certificado ISO 27001 emitido por un organismo acreditado.</p>
       </div>
-      <div>
+      <div style="border-top: 1px solid var(--rule); padding-top: 14px;">
         <div class="label-muted">EL PROCESO Y RESULTADOS</div>
-        <p class="body" style="margin-top: 6px;">Certificación completada en <b>cinco meses</b>, superando la auditoría con <b>cero no conformidades mayores</b>. La transformación comercial: tiempo de respuesta técnica de tres semanas a <b>dos días hábiles</b>, enviando proactivamente el certificado oficial y la SoA.</p>
+        <p class="body" style="margin-top: 10px;">Certificación completada en <b>cinco meses</b>, superando la auditoría con <b>cero no conformidades mayores</b>. La transformación comercial: tiempo de respuesta técnica de tres semanas a <b>dos días hábiles</b>, enviando proactivamente el certificado oficial y la SoA.</p>
       </div>
     </div>
-    <div class="label-muted" style="margin-top: 22px;">EN ESTE CASO · 8 MESES</div>
-    <div class="stat-grid" style="margin-top: 10px;">
+    <div class="label-muted" style="margin-top: 26px; border-top: 1.5px solid var(--ink); padding-top: 16px;">EN ESTE CASO · 8 MESES</div>
+    <div class="stat-grid" style="margin-top: 16px;">
       <div class="stat"><span class="num">$4.8M<small> MXN</small></span><div class="lbl">INGRESOS RECURRENTES</div><div class="desc">anuales directamente atribuibles al valor comercial de la certificación.</div></div>
       <div class="stat"><span class="num">2<small> días hábiles</small></span><div class="lbl">RESPUESTA TÉCNICA</div><div class="desc">ante prospectos corporativos — vs. tres semanas antes.</div></div>
       <div class="stat"><span class="num">5<small> contratos</small></span><div class="lbl">ADJUDICADOS</div><div class="desc">corporativos en solo ocho meses posteriores a la certificación.</div></div>
       <div class="stat"><span class="num">0<small> NC mayores</small></span><div class="lbl">AUDITORÍA</div><div class="desc">en la auditoría de certificación oficial.</div></div>
     </div>
   </div>
-  <div class="bottom">028</div>
+  <div class="bottom">024</div>
 </div>
 
 <!-- =====================================================
-     PAGE 29 · CASO 02 · TEKSONAR
+     PAGE 25 · CASO 02 · TEKSONAR
      ===================================================== -->
 <div class="page">
   <div class="top">
     <span class="brand">ONCE MÉXICO · GUÍA EJECUTIVA</span>
     <span class="right"><span>CASO 02 · TEKSONAR</span><span class="sep"></span><span>07 / 07</span></span>
   </div>
-  <div style="padding-top: 6mm;">
+  <div style="padding-top: 8mm; display: flex; flex-direction: column; flex: 1;">
     <div class="label-muted" style="color: var(--accent);">CASO 02 · TEKSONAR · SERVICIOS ADMINISTRADOS DE TI · CIUDAD DE MÉXICO</div>
-    <div class="h2" style="margin-top: 10px;">La certificación que <em>abrió las licitaciones gubernamentales.</em></div>
-    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 22px; margin-top: 18px;">
-      <div>
+    <div class="h2" style="margin-top: 14px;">La certificación que <em>abrió las licitaciones gubernamentales.</em></div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 26px; margin-top: 26px; flex: 1;">
+      <div style="border-top: 1px solid var(--rule); padding-top: 14px;">
         <div class="label-muted">EL PROBLEMA DE PARTIDA</div>
-        <p class="body" style="margin-top: 6px;">Compañía con <b>12 años de trayectoria</b> y certificación ISO 9001 en gestión de calidad, cartera consolidada en el sector privado. Estancada comercialmente por exclusión automática de licitaciones públicas de gran escala (IMSS, CFE), que exigen ISO 27001 como requisito de exclusión obligatorio.</p>
+        <p class="body" style="margin-top: 10px;">Compañía con <b>12 años de trayectoria</b> y certificación ISO 9001 en gestión de calidad, cartera consolidada en el sector privado. Estancada comercialmente por exclusión automática de licitaciones públicas de gran escala (IMSS, CFE), que exigen ISO 27001 como requisito de exclusión obligatorio.</p>
       </div>
-      <div>
+      <div style="border-top: 1px solid var(--rule); padding-top: 14px;">
         <div class="label-muted">EL PROCESO</div>
-        <p class="body" style="margin-top: 6px;">Aprovechando la cultura documental existente de ISO 9001, completó la auditoría de certificación en <b>cuatro meses</b>. Tras obtener el certificado, ganó su primera licitación pública con el IMSS por <b>$3.2M MXN</b>.</p>
+        <p class="body" style="margin-top: 10px;">Aprovechando la cultura documental existente de ISO 9001, completó la auditoría de certificación en <b>cuatro meses</b>. Tras obtener el certificado, ganó su primera licitación pública con el IMSS por <b>$3.2M MXN</b>.</p>
       </div>
-      <div>
+      <div style="border-top: 1px solid var(--rule); padding-top: 14px;">
         <div class="label-muted">LOS RESULTADOS</div>
-        <p class="body" style="margin-top: 6px;">Durante los primeros 14 meses de vigencia, la firma incrementó su tasa de adjudicación del 15 % promedio de industria a un destacado <b>43 %</b>, acumulando <b>$8.7M MXN</b> en nuevos ingresos gubernamentales que pasaron a representar el 35 % de su facturación total.</p>
+        <p class="body" style="margin-top: 10px;">Durante los primeros 14 meses de vigencia, la firma incrementó su tasa de adjudicación del 15 % promedio de industria a un destacado <b>43 %</b>, acumulando <b>$8.7M MXN</b> en nuevos ingresos gubernamentales que pasaron a representar el 35 % de su facturación total.</p>
       </div>
     </div>
-    <div class="label-muted" style="margin-top: 22px;">EN ESTE CASO · 14 MESES</div>
-    <div class="stat-grid" style="margin-top: 10px;">
+    <div class="label-muted" style="margin-top: 26px; border-top: 1.5px solid var(--ink); padding-top: 16px;">EN ESTE CASO · 14 MESES</div>
+    <div class="stat-grid" style="margin-top: 16px;">
       <div class="stat"><span class="num">$8.7M<small> MXN</small></span><div class="lbl">INGRESOS GUBERNAMENTALES</div><div class="desc">acumulados en los primeros 14 meses del certificado.</div></div>
       <div class="stat"><span class="num">43<small>%</small></span><div class="lbl">TASA DE ADJUDICACIÓN</div><div class="desc">en concursos públicos — vs. el 15 % promedio de industria.</div></div>
       <div class="stat"><span class="num">35<small>%</small></span><div class="lbl">DE FACTURACIÓN</div><div class="desc">pasó a corresponder a ingresos gubernamentales.</div></div>
       <div class="stat"><span class="num">$3.2M<small> MXN</small></span><div class="lbl">PRIMERA LICITACIÓN IMSS</div><div class="desc">ganada en el mes posterior al certificado.</div></div>
     </div>
   </div>
-  <div class="bottom">029</div>
+  <div class="bottom">025</div>
 </div>
 
 <!-- =====================================================
-     PAGE 30 · CASO 03 · KREDDIA + LECCIÓN
+     PAGE 26 · CASO 03 · KREDDIA + LECCIÓN
      ===================================================== -->
 <div class="page">
   <div class="top">
     <span class="brand">ONCE MÉXICO · GUÍA EJECUTIVA</span>
     <span class="right"><span>CASO 03 · KREDDIA</span><span class="sep"></span><span>07 / 07</span></span>
   </div>
-  <div style="padding-top: 6mm;">
+  <div style="padding-top: 8mm;">
     <div class="label-muted" style="color: var(--accent);">CASO 03 · KREDDIA · TECNOLOGÍA FINANCIERA · MONTERREY, NUEVO LEÓN</div>
-    <div class="h2" style="margin-top: 10px;">La gobernanza que <em>desbloqueó la ronda de inversión.</em></div>
-    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 22px; margin-top: 16px;">
-      <div><div class="label-muted">EL PROBLEMA DE PARTIDA</div><p class="body" style="margin-top: 6px;">Joven organización de crédito digital para PyMEs con <b>28 empleados</b> y equipo técnico pequeño sin oficial de seguridad dedicado. Inversionistas de capital de riesgo impusieron como <b>condición contractual vinculante</b> evidencia auditada de gobernanza y ciberseguridad.</p></div>
-      <div><div class="label-muted">EL PROCESO</div><p class="body" style="margin-top: 6px;">Certificación completada en <b>cuatro meses</b>, satisfaciendo simultáneamente los requerimientos de la CNBV. Tras obtener el certificado, Kreddia cerró su ronda Serie A solo <b>seis semanas después</b>.</p></div>
-      <div><div class="label-muted">LOS RESULTADOS</div><p class="body" style="margin-top: 6px;">Captó <b>$32M MXN</b> en financiamiento Serie A que salvaguardó la expansión de la compañía y respondió simultáneamente a las exigencias del regulador.</p></div>
+    <div class="h2" style="margin-top: 14px;">La gobernanza que <em>desbloqueó la ronda de inversión.</em></div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 26px; margin-top: 24px;">
+      <div style="border-top: 1px solid var(--rule); padding-top: 14px;"><div class="label-muted">EL PROBLEMA DE PARTIDA</div><p class="body" style="margin-top: 10px;">Joven organización de crédito digital para PyMEs con <b>28 empleados</b> y equipo técnico pequeño sin oficial de seguridad dedicado. Inversionistas de capital de riesgo impusieron como <b>condición contractual vinculante</b> evidencia auditada de gobernanza y ciberseguridad.</p></div>
+      <div style="border-top: 1px solid var(--rule); padding-top: 14px;"><div class="label-muted">EL PROCESO</div><p class="body" style="margin-top: 10px;">Certificación completada en <b>cuatro meses</b>, satisfaciendo simultáneamente los requerimientos de la CNBV. Tras obtener el certificado, Kreddia cerró su ronda Serie A solo <b>seis semanas después</b>.</p></div>
+      <div style="border-top: 1px solid var(--rule); padding-top: 14px;"><div class="label-muted">LOS RESULTADOS</div><p class="body" style="margin-top: 10px;">Captó <b>$32M MXN</b> en financiamiento Serie A que salvaguardó la expansión de la compañía y respondió simultáneamente a las exigencias del regulador.</p></div>
     </div>
-    <div class="stat-grid" style="margin-top: 16px;">
+    <div class="stat-grid" style="margin-top: 24px;">
       <div class="stat"><span class="num">$32M<small> MXN</small></span><div class="lbl">RONDA SERIE A</div><div class="desc">captados en el cierre desbloqueado por la certificación.</div></div>
       <div class="stat"><span class="num">6<small> sem</small></span><div class="lbl">TIEMPO DE CIERRE</div><div class="desc">entre certificado y cierre financiero.</div></div>
       <div class="stat"><span class="num">CNBV</span><div class="lbl">SATISFECHO</div><div class="desc">requerimientos satisfechos simultáneamente.</div></div>
       <div class="stat"><span class="num">4<small> meses</small></span><div class="lbl">PROCESO TOTAL</div><div class="desc">desde diagnóstico inicial al certificado.</div></div>
     </div>
   </div>
-  <div style="border-top: 1.5px solid var(--ink); margin-top: 22px; padding-top: 14px;">
+  <div style="border-top: 1.5px solid var(--ink); margin-top: 28px; padding-top: 18px;">
     <div class="label-muted">LA LECCIÓN COMPARTIDA DE LOS TRES CASOS</div>
-    <p class="body" style="font-family: var(--serif); font-style: italic; margin-top: 8px;">Las tres organizaciones cometieron el mismo error estratégico: esperar a sufrir una pérdida comercial masiva o un bloqueo crítico de negocio para decidirse a actuar.</p>
-    <p class="body" style="margin-top: 8pt; border-left: 3px solid var(--accent); padding-left: 14px; color: var(--ink); font-weight: 500;">Si su empresa vende tecnología o gestiona datos sensibles de clientes, la certificación ISO 27001 no es un proyecto opcional para el futuro. Es una necesidad comercial prioritaria <b>para el presente.</b></p>
+    <p class="body" style="font-family: var(--serif); font-style: italic; font-size: 13pt; margin-top: 10px;">Las tres organizaciones cometieron el mismo error estratégico: esperar a sufrir una pérdida comercial masiva o un bloqueo crítico de negocio para decidirse a actuar.</p>
+    <p class="body" style="margin-top: 10pt; border-left: 3px solid var(--accent); padding-left: 16px; color: var(--ink); font-weight: 500;">Si su empresa vende tecnología o gestiona datos sensibles de clientes, la certificación ISO 27001 no es un proyecto opcional para el futuro. Es una necesidad comercial prioritaria <b>para el presente.</b></p>
   </div>
-  <div class="bottom">030</div>
+  <div class="bottom">026</div>
 </div>
 
 <!-- =====================================================
-     PAGE 31 · ¿LISTO PARA INICIAR?
+     PAGE 27 · ¿LISTO PARA INICIAR?
      ===================================================== -->
 <div class="page">
   <div class="top">
@@ -1301,10 +1236,10 @@
   <div style="padding-top: 6mm;">
     <div class="label-muted" style="color: var(--accent);">→ ¿LISTO PARA INICIAR SU PROCESO DE CERTIFICACIÓN?</div>
     <div style="margin-top: 10px;" class="display med">El futuro de su empresa <em>se decide hoy.</em></div>
-    <p class="body" style="font-family: var(--serif); font-style: italic; margin-top: 12px; max-width: 80%;">La ciberseguridad ha trascendido los límites de la infraestructura técnica para consolidarse como una de las variables comerciales <b style="font-style: normal;">más críticas, rentables y decisivas</b> en el entorno de los negocios modernos.</p>
-    <div style="border-left: 3px solid var(--accent); padding-left: 14px; margin-top: 16px; max-width: 88%;">
-      <p class="body" style="color: var(--ink); font-weight: 600;">La confianza auditada por un tercero independiente acreditado es la moneda de intercambio de la economía digital contemporánea.</p>
-      <p class="body" style="font-family: var(--serif); font-style: italic; color: var(--ink); margin-top: 6pt;">No permita que la falta de una certificación de seguridad siga siendo el cuello de botella que frena sus ventas, agota a su Director de Tecnología y regala ventajas estratégicas a sus competidores.</p>
+    <p class="body" style="font-family: var(--serif); font-style: italic; font-size: 12.5pt; margin-top: 12px; max-width: 84%;">La ciberseguridad ha trascendido los límites de la infraestructura técnica para consolidarse como una de las variables comerciales <b style="font-style: normal;">más críticas, rentables y decisivas</b> en el entorno de los negocios modernos.</p>
+    <div style="border-left: 3px solid var(--accent); padding-left: 16px; margin-top: 16px; max-width: 90%;">
+      <p class="body" style="color: var(--ink); font-weight: 600; font-size: 10.5pt;">La confianza auditada por un tercero independiente acreditado es la moneda de intercambio de la economía digital contemporánea.</p>
+      <p class="body" style="font-family: var(--serif); font-style: italic; color: var(--ink); margin-top: 6pt; font-size: 10.5pt;">No permita que la falta de una certificación de seguridad siga siendo el cuello de botella que frena sus ventas, agota a su Director de Tecnología y regala ventajas estratégicas a sus competidores.</p>
     </div>
   </div>
   <div class="routes">
@@ -1330,20 +1265,16 @@
       <span class="cta">SOLICITA INFORMACIÓN →</span>
     </a>
   </div>
-  <p class="body" style="font-family: var(--serif); font-style: italic; margin-top: 22px; color: var(--ink); font-weight: 600; border-top: 1px solid var(--rule); padding-top: 14px;">Asegure hoy mismo la resiliencia y el éxito comercial de su organización. Contáctenos para iniciar su proceso de certificación con un organismo acreditado.</p>
-  <div style="margin-top: 18px; padding-top: 18px; border-top: 1.5px solid var(--ink); display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end;">
+  <p class="body" style="font-family: var(--serif); font-style: italic; margin-top: 20px; color: var(--ink); font-weight: 600; font-size: 11.5pt; border-top: 1px solid var(--rule); padding-top: 14px;">Asegure hoy mismo la resiliencia y el éxito comercial de su organización. Contáctenos para iniciar su proceso de certificación con un organismo acreditado.</p>
+  <div style="margin-top: 16px; padding-top: 16px; border-top: 1.5px solid var(--ink); display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end;">
     <div>
-      <p class="body"><b>EDITOR · ONCE México</b> · Organismo de certificación · <span style="color: var(--accent); font-weight: 600;">oncemexico.org</span></p>
+      <p class="body" style="font-size: 10.5pt;"><b>EDITOR · ONCE México</b> · Organismo de certificación · <span style="color: var(--accent); font-weight: 600;">oncemexico.org</span></p>
       <p class="label-mono" style="margin-top: 6px;">ONCE MÉXICO ® · CERTEZA HECHA NORMA</p>
     </div>
-    <div class="logo-mark">
-      <span class="square"><svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#00AFED" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"><path d="M 280 60 L 80 60 Q 60 60 60 80 L 60 320 Q 60 340 80 340 L 320 340 Q 340 340 340 320 L 340 200"></path><polyline points="115 215 180 280 320 125"></polyline></g></svg></span>
-      <span class="sep-v"></span>
-      <span class="name">ONCE<br/>MÉXICO<sup>®</sup></span>
-    </div>
+    <img src="images/logo-once-mexico.png" alt="ONCE México" style="height:56px;width:146px;display:block;justify-self:end;">
   </div>
-  <p class="label-muted" style="margin-top: 14px;">© 2026 · CERTEZA HECHA NORMA</p>
-  <div class="bottom">031</div>
+  <p class="label-muted" style="margin-top: 12px;">© 2026 · CERTEZA HECHA NORMA</p>
+  <div class="bottom">027</div>
 </div>
 
 </body>
