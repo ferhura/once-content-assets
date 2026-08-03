@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Guía informativa · Certificación HACCP · ONCE México</title>
+<style>
+:root {
+  --accent: #1FA9E0;
+  --accent-dark: #0E8DBF;
+  --accent-soft: #EAF7FC;
+  --ink: #3A3F44;
+  --ink-strong: #2B3036;
+  --muted: #7A8087;
+  --slate: #3E4A52;
+  --rule: #E3E6E8;
+  --paper: #FFFFFF;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+@page { size: 210mm 297mm; margin: 0; }
+body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: var(--ink); background: #888; }
+@media screen { body { display: flex; flex-direction: column; align-items: center; gap: 20px; padding: 20px 0; } .page { box-shadow: 0 2px 10px rgba(0,0,0,.3); } }
+@media print { body { background: none; } }
+
+.page {
+  width: 210mm; height: 297mm; background: var(--paper);
+  position: relative; overflow: hidden; page-break-after: always;
+  display: flex; flex-direction: column;
+}
+.page:last-child { page-break-after: auto; }
+
+/* ── Portada ── */
+.cover { padding: 0; }
+.cover .sidebar { position: absolute; top: 0; left: 0; bottom: 0; width: 11mm; background: var(--accent); }
+.cover .inner { padding: 16mm 18mm 0 24mm; display: flex; flex-direction: column; height: 100%; }
+.cover .logo { height: 21mm; width: auto; align-self: flex-start; }
+.cover .org {
+  margin-top: 5mm; font-size: 10.5pt; font-weight: 700; letter-spacing: .22em;
+  color: var(--accent); text-transform: uppercase;
+}
+.cover .kicker { margin-top: 22mm; font-size: 12pt; font-weight: 700; letter-spacing: .3em; color: var(--ink-strong); text-transform: uppercase; }
+.cover h1 { margin-top: 6mm; font-size: 38pt; line-height: 1.12; font-weight: 300; color: var(--ink-strong); }
+.cover h1 b { font-weight: 700; }
+.cover .sub { margin-top: 8mm; border-left: 3.5px solid var(--accent); padding-left: 6mm; }
+.cover .sub .t1 { font-size: 13.5pt; font-weight: 700; color: var(--accent); margin-bottom: 2.5mm; }
+.cover .sub .t2 { font-size: 13pt; line-height: 1.5; color: var(--ink); }
+.cover .chips { display: flex; gap: 6mm; margin-top: 13mm; }
+.cover .chipcard {
+  flex: 1; border: 1px solid var(--rule); border-radius: 3mm; padding: 5.5mm 5mm;
+  display: flex; gap: 4mm; align-items: flex-start; background: var(--paper);
+}
+.cover .chipcard .ico {
+  width: 9mm; height: 9mm; flex: 0 0 auto; border-radius: 50%;
+  border: 2px solid var(--accent); color: var(--accent);
+  display: grid; place-items: center; font-size: 12pt; font-weight: 700;
+}
+.cover .chipcard h4 { font-size: 10.5pt; font-weight: 700; color: var(--ink-strong); margin-bottom: 1.5mm; }
+.cover .chipcard p { font-size: 9pt; line-height: 1.4; color: var(--muted); }
+.cover .closing { margin-top: auto; padding-bottom: 12mm; font-size: 12.5pt; line-height: 1.6; color: var(--ink); }
+.cover .footbar {
+  background: var(--slate); color: #fff; padding: 6mm 18mm 6mm 24mm;
+  display: flex; justify-content: space-between; align-items: center; font-size: 9pt;
+}
+.cover .footbar .badge { background: var(--accent); color: #fff; font-weight: 700; padding: 2.5mm 5mm; border-radius: 1.5mm; font-size: 9pt; }
+
+/* ── Páginas interiores ── */
+.inner-page { padding: 0 16mm; }
+.pghead {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 7mm 0 3.5mm; border-bottom: 2.5px solid var(--slate); margin-bottom: 6mm;
+}
+.pghead img { height: 11mm; width: auto; }
+.pghead .sec { font-size: 10pt; font-weight: 700; letter-spacing: .18em; color: var(--accent); text-transform: uppercase; }
+.pgfoot {
+  margin-top: auto; border-top: 1px solid var(--rule);
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 3.5mm 0 7mm; font-size: 9pt; color: var(--ink);
+}
+.pgfoot .pg { color: var(--accent); font-weight: 700; }
+
+h2 { font-size: 18pt; font-weight: 700; color: var(--ink-strong); margin-bottom: 2mm; }
+h2 + .hr { width: 12mm; height: 1.2mm; background: var(--accent); border-radius: 1mm; margin-bottom: 5mm; }
+h3.sub { font-size: 12.5pt; font-weight: 700; color: var(--accent); margin: 5.5mm 0 3.5mm; }
+p.body { font-size: 10.5pt; line-height: 1.5; margin-bottom: 3mm; }
+p.body b { color: var(--ink-strong); }
+
+.callout {
+  background: var(--slate); color: #fff; border-radius: 2.5mm;
+  padding: 5mm 6mm; margin: 4.5mm 0;
+}
+.callout .k { font-size: 9pt; font-weight: 700; letter-spacing: .2em; color: var(--accent); text-transform: uppercase; margin-bottom: 2.5mm; }
+.callout p { font-size: 10pt; line-height: 1.5; }
+.callout p b { color: #fff; }
+
+.softnote {
+  background: var(--accent-soft); border-left: 3.5px solid var(--accent);
+  border-radius: 0 2mm 2mm 0; padding: 4.5mm 5.5mm; margin: 4.5mm 0;
+  font-size: 10pt; line-height: 1.5;
+}
+.softnote b { color: var(--accent-dark); }
+
+.cardrow { display: flex; gap: 4mm; margin: 3.5mm 0; }
+.cardrow .c {
+  flex: 1; background: var(--accent-soft); border-radius: 2mm; padding: 4mm 4.5mm;
+  border-top: 2.5px solid var(--accent);
+}
+.cardrow .c h4 { font-size: 10.5pt; font-weight: 700; color: var(--ink-strong); margin-bottom: 2mm; }
+.cardrow .c p { font-size: 8.5pt; line-height: 1.4; color: var(--ink); }
+
+.clausegrid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5mm; margin: 3.5mm 0; }
+.clause {
+  border: 1px solid var(--rule); border-left: 3.5px solid var(--accent);
+  border-radius: 2mm; padding: 3.8mm 4.8mm;
+}
+.clause .k { font-size: 8.5pt; font-weight: 700; letter-spacing: .16em; color: var(--accent); text-transform: uppercase; margin-bottom: 1.8mm; }
+.clause h4 { font-size: 11pt; font-weight: 700; color: var(--ink-strong); margin-bottom: 1.8mm; }
+.clause p { font-size: 9pt; line-height: 1.4; color: var(--ink); }
+.clause.wide { grid-column: 1 / -1; }
+
+.plist { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5mm 7mm; margin: 3.5mm 0; }
+.pitem { display: flex; gap: 3.5mm; align-items: flex-start; }
+.pitem .n {
+  width: 6.5mm; height: 6.5mm; flex: 0 0 auto; border-radius: 50%;
+  background: var(--accent-soft); color: var(--accent); font-weight: 700;
+  display: grid; place-items: center; font-size: 9pt; margin-top: .5mm;
+}
+.pitem .n.check { background: var(--accent); color: #fff; }
+.pitem .n.dot { width: 3.8mm; height: 3.8mm; margin-top: 1.6mm; position: relative; }
+.pitem .n.dot::after { content: ''; position: absolute; inset: 1.15mm; border-radius: 50%; background: var(--accent); }
+
+.pitem h4 { font-size: 10.5pt; font-weight: 700; color: var(--ink-strong); margin-bottom: 1.2mm; }
+.pitem p { font-size: 9pt; line-height: 1.4; color: var(--ink); }
+
+.steps { display: flex; gap: 4mm; margin: 3.5mm 0 5mm; }
+.step { flex: 1; border: 1px solid var(--rule); border-radius: 2.5mm; padding: 4.5mm 4mm; text-align: center; border-top: 3px solid var(--accent); }
+.step .big { font-size: 19pt; font-weight: 300; color: var(--accent); margin-bottom: 1.5mm; }
+.step h4 { font-size: 11pt; font-weight: 700; color: var(--ink-strong); margin-bottom: 2mm; }
+.step p { font-size: 8.5pt; line-height: 1.4; color: var(--ink); text-align: left; }
+
+.faq { border: 1px solid var(--rule); border-radius: 2.5mm; padding: 4mm 5mm; margin-bottom: 3.2mm; }
+.faq h4 { font-size: 10.5pt; font-weight: 700; color: var(--ink-strong); margin-bottom: 1.8mm; }
+.faq p { font-size: 9.5pt; line-height: 1.45; padding-left: 4.5mm; position: relative; }
+.faq p::before { content: '●'; color: var(--accent); position: absolute; left: 0; font-size: 8pt; top: 1.5pt; }
+
+.gantt { margin: 3mm 0; }
+.gantt .row { display: flex; align-items: center; gap: 3mm; margin-bottom: 1.6mm; }
+.gantt .lbl { flex: 0 0 20mm; text-align: right; font-size: 9pt; font-weight: 700; color: var(--ink-strong); }
+.gantt .bar { height: 5.8mm; border-radius: 1.2mm; color: #fff; font-size: 8pt; font-weight: 600; display: flex; align-items: center; padding: 0 3mm; }
+.legend { display: flex; gap: 7mm; margin-top: 3mm; font-size: 8.5pt; color: var(--ink); }
+.legend span::before { content: '■ '; }
+
+.contactbox { background: var(--slate); color: #fff; border-radius: 2.5mm; padding: 5mm 6mm; margin: 4mm 0; }
+.contactbox .k { font-size: 9pt; font-weight: 700; letter-spacing: .2em; color: var(--accent); text-transform: uppercase; margin-bottom: 3.5mm; }
+.contactbox p { font-size: 10pt; line-height: 1.6; }
+.contactbox b { color: #fff; }
+.ctabox { background: var(--slate); color: #fff; border-radius: 2.5mm; padding: 5.5mm; margin-top: 4mm; text-align: center; }
+.ctabox h3 { font-size: 13pt; font-weight: 700; margin-bottom: 2.5mm; }
+.ctabox p { font-size: 9.5pt; line-height: 1.5; }
+.ctabox .cta { margin-top: 4mm; font-size: 11.5pt; font-weight: 700; color: var(--accent); display: flex; justify-content: center; gap: 12mm; }
+
+/* densificación por página */
+.dense h3.sub { margin: 3.5mm 0 2.2mm; }
+.dense p.body { margin-bottom: 2mm; }
+.dense .steps { margin: 3mm 0 4mm; }
+.dense .step { padding: 3.6mm 3.4mm; }
+.dense .clause { padding: 3mm 4mm; }
+.dense .clause p { font-size: 8.5pt; }
+.dense .clause h4 { font-size: 10.5pt; margin-bottom: 1.4mm; }
+.dense .gantt .bar { height: 5mm; }
+.dense .gantt .row { margin-bottom: 1.1mm; }
+.dense .pgfoot { padding-bottom: 6mm; }
+.tight .plist { gap: 2.8mm 6mm; }
+.tight p.body { margin-bottom: 2.2mm; }
+.tight .faq { padding: 3.4mm 4.5mm; margin-bottom: 2.6mm; }
+.tight .faq p { font-size: 9pt; }
+.tight .cardrow .c { padding: 3.4mm 4mm; }
+</style>
+</head>
+<body>
+
+<!-- ═══ PORTADA ═══ -->
+<div class="page cover">
+  <span class="sidebar"></span>
+  <div class="inner">
+    <img class="logo" src="images/logo-once-mexico.png" alt="ONCE México">
+    <div class="org">Organismo de Normalización y Certificación Empresarial</div>
+    <div class="kicker">Guía informativa</div>
+    <h1>Certificación<br><b>HACCP</b></h1>
+    <div class="sub">
+      <div class="t1">Análisis de Peligros y Puntos Críticos de Control</div>
+      <div class="t2">Todo lo que su organización necesita saber<br>para certificarse con éxito</div>
+    </div>
+    <div class="chips">
+      <div class="chipcard"><span class="ico">✓</span><div><h4>Inocuidad</h4><p>Peligros identificados y bajo control</p></div></div>
+      <div class="chipcard"><span class="ico">+</span><div><h4>Reconocimiento</h4><p>Base Codex Alimentarius · requisito de exportación</p></div></div>
+      <div class="chipcard"><span class="ico">⌂</span><div><h4>Confianza</h4><p>Ante clientes, autoridades y consumidores</p></div></div>
+    </div>
+    <div class="closing">Una guía práctica de <b>ONCE México</b> para entender<br>la norma, sus requisitos y el camino hacia la certificación.</div>
+  </div>
+  <div class="footbar">
+    <span><b>ONCE México</b> &nbsp;·&nbsp; contacto@oncemexico.org &nbsp;·&nbsp; 55 12 04 11 31 &nbsp;·&nbsp; www.oncemexico.org</span>
+    <span class="badge">Documento informativo</span>
+  </div>
+</div>
+
+<!-- ═══ PÁG 1 · QUÉ ES ═══ -->
+<div class="page inner-page tight">
+  <div class="pghead"><img src="images/logo-once-mexico.png" alt="ONCE México"><span class="sec">¿Qué es HACCP?</span></div>
+  <h2>¿Qué es HACCP?</h2><div class="hr"></div>
+  <p class="body"><b>HACCP</b> (Hazard Analysis and Critical Control Points — Análisis de Peligros y Puntos Críticos de Control) es el sistema preventivo de inocuidad alimentaria más reconocido del mundo, con base en el <b>Codex Alimentarius</b>. En lugar de confiar solo en inspecciones al producto final, identifica los peligros del proceso y los controla en los puntos donde realmente pueden prevenirse.</p>
+  <p class="body">Aplica a toda organización que maneja alimentos: producción, cocinas y servicios de alimentos, comedores, distribución y almacenamiento.</p>
+  <div class="callout">
+    <div class="k">Dato clave</div>
+    <p>HACCP es <b>requisito de exportación</b> en los principales mercados y una exigencia cada vez más común de cadenas comerciales, hoteles y compradores institucionales en México. La certificación demuestra ante clientes y autoridades que la inocuidad se gestiona con un sistema — no con suerte.</p>
+  </div>
+  <h3 class="sub">¿Qué busca HACCP?</h3>
+  <div class="cardrow">
+    <div class="c"><h4>Prevención</h4><p>Anticipar los peligros biológicos, químicos y físicos antes de que lleguen al consumidor.</p></div>
+    <div class="c"><h4>Control en puntos críticos</h4><p>Concentrar la vigilancia donde el peligro realmente se puede eliminar o reducir.</p></div>
+    <div class="c"><h4>Evidencia y trazabilidad</h4><p>Registros que demuestran el control — y permiten reaccionar rápido ante cualquier desviación.</p></div>
+    <div class="c"><h4>Cultura de inocuidad</h4><p>Personal capacitado que entiende por qué cada control existe y lo ejecuta a diario.</p></div>
+  </div>
+  <h3 class="sub">Los 7 principios HACCP</h3>
+  <p class="body">Siete principios del Codex Alimentarius — el corazón de lo que la auditoría verifica:</p>
+  <div class="plist">
+    <div class="pitem"><span class="n">1</span><div><h4>Análisis de peligros</h4><p>Identificar los peligros biológicos, químicos y físicos de cada etapa del proceso.</p></div></div>
+    <div class="pitem"><span class="n">2</span><div><h4>Determinar los PCC</h4><p>Definir los Puntos Críticos de Control: donde el peligro se previene, elimina o reduce.</p></div></div>
+    <div class="pitem"><span class="n">3</span><div><h4>Establecer límites críticos</h4><p>Valores medibles que separan lo aceptable de lo inaceptable.</p></div></div>
+    <div class="pitem"><span class="n">4</span><div><h4>Vigilar los PCC</h4><p>Monitoreo planificado de cada punto crítico, con responsables y frecuencia definidos.</p></div></div>
+    <div class="pitem"><span class="n">5</span><div><h4>Acciones correctivas</h4><p>Qué se hace — y qué pasa con el producto — cuando un límite crítico se incumple.</p></div></div>
+    <div class="pitem"><span class="n">6</span><div><h4>Verificación</h4><p>Comprobar periódicamente que el sistema funciona: auditorías, muestreos, calibraciones.</p></div></div>
+    <div class="pitem"><span class="n">7</span><div><h4>Documentación y registros</h4><p>Evidencia escrita de todo lo anterior — la base de la trazabilidad y de la auditoría.</p></div></div>
+  </div>
+  <div class="pgfoot"><span>ONCE México · Guía informativa HACCP</span><span class="pg">Pág. 1</span></div>
+</div>
+
+<!-- ═══ PÁG 2 · ESTRUCTURA ═══ -->
+<div class="page inner-page">
+  <div class="pghead"><img src="images/logo-once-mexico.png" alt="ONCE México"><span class="sec">Estructura del sistema</span></div>
+  <h2>Cómo se construye un sistema HACCP</h2><div class="hr"></div>
+  <p class="body">Antes de aplicar los 7 principios, el Codex establece <b>5 pasos preliminares</b> que preparan el terreno. En conjunto forman las <b>12 etapas</b> de implementación que la auditoría recorre:</p>
+  <div class="clausegrid">
+    <div class="clause"><div class="k">Paso 1</div><h4>Formar el equipo HACCP</h4><p>Un equipo multidisciplinario con conocimiento real del producto y del proceso — con respaldo de la dirección.</p></div>
+    <div class="clause"><div class="k">Paso 2</div><h4>Describir el producto</h4><p>Composición, características, envasado, vida útil, condiciones de almacenamiento y distribución.</p></div>
+    <div class="clause"><div class="k">Paso 3</div><h4>Identificar el uso previsto</h4><p>Cómo y quién consumirá el producto — incluyendo poblaciones vulnerables si aplica.</p></div>
+    <div class="clause"><div class="k">Paso 4</div><h4>Elaborar el diagrama de flujo</h4><p>Todas las etapas del proceso, de la recepción de materias primas a la entrega.</p></div>
+    <div class="clause"><div class="k">Paso 5</div><h4>Verificar el diagrama en sitio</h4><p>Confirmar en piso que el diagrama refleja la operación real — no la teórica.</p></div>
+    <div class="clause"><div class="k">Pasos 6–12</div><h4>Aplicar los 7 principios</h4><p>Análisis de peligros, PCC, límites críticos, vigilancia, acciones correctivas, verificación y registros.</p></div>
+  </div>
+  <div class="softnote">
+    <b style="font-size:11.5pt;">La base: programas de prerrequisitos (BPM / POES)</b><br>
+    HACCP no opera en el vacío: se apoya en <b>Buenas Prácticas de Manufactura</b> e higiene (instalaciones, limpieza y sanitización, control de plagas, higiene del personal, manejo de proveedores). La auditoría verifica que estos prerrequisitos estén implementados — son la condición para que los PCC realmente funcionen.
+  </div>
+  <div class="pgfoot"><span>ONCE México · Guía informativa HACCP</span><span class="pg">Pág. 2</span></div>
+</div>
+
+<!-- ═══ PÁG 3 · INFORMACIÓN DOCUMENTADA ═══ -->
+<div class="page inner-page">
+  <div class="pghead"><img src="images/logo-once-mexico.png" alt="ONCE México"><span class="sec">Información documentada</span></div>
+  <h2>¿Qué información documentada se requiere?</h2><div class="hr"></div>
+  <p class="body">La certificación HACCP se sostiene en evidencia documentada. Estos son los principales elementos que la auditoría verificará:</p>
+  <div class="plist" style="margin-top:6mm;">
+    <div class="pitem"><span class="n dot"></span><div><h4>Plan HACCP</h4><p>El documento maestro: peligros, PCC, límites, vigilancia y responsables por producto/proceso.</p></div></div>
+    <div class="pitem"><span class="n dot"></span><div><h4>Análisis de peligros</h4><p>Identificación y evaluación de peligros por etapa, con su justificación.</p></div></div>
+    <div class="pitem"><span class="n dot"></span><div><h4>Determinación de PCC y límites críticos</h4><p>Criterios y valores medibles definidos para cada punto crítico.</p></div></div>
+    <div class="pitem"><span class="n dot"></span><div><h4>Registros de vigilancia</h4><p>Monitoreo de cada PCC: temperaturas, tiempos, mediciones — con fecha y responsable.</p></div></div>
+    <div class="pitem"><span class="n dot"></span><div><h4>Acciones correctivas</h4><p>Desviaciones registradas, disposición del producto afectado y correcciones aplicadas.</p></div></div>
+    <div class="pitem"><span class="n dot"></span><div><h4>Verificación y validación</h4><p>Evidencia de que los controles funcionan: auditorías internas, muestreos, calibración de equipos.</p></div></div>
+    <div class="pitem"><span class="n dot"></span><div><h4>Programas de prerrequisitos</h4><p>BPM y POES documentados y operando: limpieza, plagas, higiene del personal, proveedores.</p></div></div>
+    <div class="pitem"><span class="n dot"></span><div><h4>Capacitación del personal</h4><p>Evidencia de formación en inocuidad y en las tareas específicas de cada PCC.</p></div></div>
+    <div class="pitem"><span class="n dot"></span><div><h4>Trazabilidad y retiro de producto</h4><p>Capacidad demostrada de rastrear lotes hacia atrás y hacia adelante, y de retirarlos si hace falta.</p></div></div>
+    <div class="pitem"><span class="n dot"></span><div><h4>Control de documentos y registros</h4><p>Versiones vigentes, resguardo y disponibilidad de la evidencia.</p></div></div>
+  </div>
+  <div class="softnote">Esta lista no es exhaustiva. La norma permite flexibilidad, pero el auditor puede solicitar <b>información documentada adicional</b> dependiendo del tamaño, complejidad y sector de la organización.</div>
+  <div class="pgfoot"><span>ONCE México · Guía informativa HACCP</span><span class="pg">Pág. 3</span></div>
+</div>
+
+<!-- ═══ PÁG 4 · PROCESO ═══ -->
+<div class="page inner-page dense">
+  <div class="pghead"><img src="images/logo-once-mexico.png" alt="ONCE México"><span class="sec">Proceso de certificación</span></div>
+  <h2>¿Cómo es el proceso de certificación?</h2><div class="hr"></div>
+  <p class="body">El proceso de certificación con ONCE México sigue los lineamientos de <b>ISO/IEC 17021-1:2015</b> y se compone de las siguientes etapas:</p>
+  <div class="steps">
+    <div class="step"><div class="big">1</div><h4>Solicitud</h4><p>La organización solicita la certificación y proporciona información sobre su alcance y operación.</p></div>
+    <div class="step"><div class="big">2</div><h4>Etapa 1</h4><p>Revisión documental del sistema HACCP para verificar la preparación para la auditoría en sitio.</p></div>
+    <div class="step"><div class="big">3</div><h4>Etapa 2</h4><p>Auditoría en sitio para evaluar la implementación y eficacia del sistema.</p></div>
+    <div class="step"><div class="big">4</div><h4>Certificación</h4><p>Si los resultados son satisfactorios, se emite el certificado con validez de 3 años.</p></div>
+  </div>
+  <h3 class="sub">Detalle de cada etapa</h3>
+  <div class="clausegrid">
+    <div class="clause"><div class="k">Etapa 1 — Revisión documental</div><h4>Evaluación de preparación</h4><p>Se revisa la documentación del sistema: plan HACCP, prerrequisitos, alcance y procesos clave y la preparación general de la organización para la auditoría en sitio. Puede realizarse de forma remota.</p></div>
+    <div class="clause"><div class="k">Etapa 2 — Auditoría en sitio</div><h4>Evaluación de implementación</h4><p>El equipo auditor visita las instalaciones para verificar que el sistema HACCP está implementado y funciona eficazmente. Se entrevista al personal y se revisan registros y evidencias.</p></div>
+    <div class="clause"><div class="k">Seguimientos anuales</div><h4>Mantener la certificación</h4><p>Durante los 3 años de vigencia se realizan auditorías de seguimiento (generalmente anuales) para verificar que el sistema se mantiene y mejora continuamente.</p></div>
+    <div class="clause"><div class="k">Re-certificación</div><h4>Renovar el ciclo</h4><p>Al cumplirse los 3 años se realiza una auditoría de re-certificación para iniciar un nuevo ciclo. Es similar a la auditoría inicial pero considerando la madurez del sistema.</p></div>
+  </div>
+  <h3 class="sub">Cronograma típico</h3>
+  <p class="body" style="font-size:10pt;"><b>Fase 1 — Preparación</b> (previo a la certificación)</p>
+  <div class="gantt">
+    <div class="row"><span class="lbl">Mes 1–6+</span><span class="bar" style="flex:1;background:#2E8B74;">Implementación del sistema — 4 a 6 meses en promedio (según punto de partida en BPM)</span></div>
+  </div>
+  <p class="body" style="font-size:10pt;margin-top:3mm;"><b>Fase 2 — Ciclo de certificación</b> (una vez implementado el sistema)</p>
+  <div class="gantt">
+    <div class="row"><span class="lbl">Mes 1</span><span class="bar" style="flex:.85;background:var(--accent);">Solicitud + Etapa 1: Revisión documental</span></div>
+    <div class="row"><span class="lbl">Mes 2</span><span class="bar" style="flex:.8;background:var(--slate);">Etapa 2 — Auditoría en sitio</span></div>
+    <div class="row"><span class="lbl">Mes 3</span><span class="bar" style="flex:.85;background:#2E8B74;">Cierre de hallazgos + emisión de certificado</span></div>
+    <div class="row"><span class="lbl">Año 1–2</span><span class="bar" style="flex:.6;background:#9FD8EE;color:#2B3036;">Seguimientos anuales</span></div>
+    <div class="row"><span class="lbl">Año 3</span><span class="bar" style="flex:.75;background:var(--accent);">Re-certificación</span></div>
+  </div>
+  <div class="legend"><span style="color:var(--accent);">Certificación</span><span style="color:var(--slate);">Auditoría en sitio</span><span style="color:#2E8B74;">Cierre</span><span style="color:#9FD8EE;">Seguimiento</span></div>
+  <div class="pgfoot"><span>ONCE México · Guía informativa HACCP</span><span class="pg">Pág. 4</span></div>
+</div>
+
+<!-- ═══ PÁG 5 · BENEFICIOS Y FAQ ═══ -->
+<div class="page inner-page tight">
+  <div class="pghead"><img src="images/logo-once-mexico.png" alt="ONCE México"><span class="sec">Beneficios y preguntas frecuentes</span></div>
+  <h2>Beneficios de certificarse en HACCP</h2><div class="hr"></div>
+  <div class="cardrow">
+    <div class="c"><h4>Acceso a clientes exigentes</h4><p>Cadenas comerciales, hoteles y compradores institucionales lo piden a sus proveedores.</p></div>
+    <div class="c"><h4>Exportación</h4><p>Requisito de entrada en los principales mercados internacionales de alimentos.</p></div>
+    <div class="c"><h4>Menos riesgo</h4><p>Menor probabilidad de contaminaciones, retiros de producto y sanciones.</p></div>
+    <div class="c"><h4>Cultura de inocuidad</h4><p>Personal que ejecuta los controles porque entiende su porqué.</p></div>
+  </div>
+  <div class="plist" style="margin-top:5mm;">
+    <div class="pitem"><span class="n check">✓</span><div><h4>Menos mermas y reprocesos</h4><p>Controlar el proceso cuesta menos que desechar producto o enfrentar un retiro.</p></div></div>
+    <div class="pitem"><span class="n check">✓</span><div><h4>Cumplimiento demostrable</h4><p>Evidencia ordenada ante autoridades sanitarias y auditorías de clientes.</p></div></div>
+    <div class="pitem"><span class="n check">✓</span><div><h4>Decisiones con datos</h4><p>Los registros de vigilancia revelan tendencias antes de que sean problemas.</p></div></div>
+    <div class="pitem"><span class="n check">✓</span><div><h4>Ventaja competitiva</h4><p>Diferenciación real frente a competidores que no cuentan con la certificación.</p></div></div>
+  </div>
+  <h3 class="sub">Preguntas frecuentes</h3>
+  <div class="faq"><h4>¿Cuánto tiempo toma certificarse?</h4><p>El proceso de auditoría y certificación toma entre <b>2 y 4 meses</b> una vez que el sistema está implementado. La implementación previa depende del punto de partida — con buenas prácticas ya operando, típicamente <b>de 3 a 6 meses</b>.</p></div>
+  <div class="faq"><h4>¿Cuánto cuesta la certificación?</h4><p>La inversión depende del <b>tamaño de la organización</b> (número de empleados), la <b>complejidad de los procesos</b> y el <b>número de sitios</b> a auditar. ONCE México ofrece cotizaciones personalizadas sin compromiso.</p></div>
+  <div class="faq"><h4>¿Cuánto dura el certificado?</h4><p>El certificado tiene <b>validez de 3 años</b>, sujeto a auditorías de seguimiento anuales que verifican el mantenimiento y mejora del sistema.</p></div>
+  <div class="faq"><h4>¿Necesito tener BPM antes de HACCP?</h4><p>Sí — los <b>programas de prerrequisitos</b> (buenas prácticas de manufactura e higiene) son la base sobre la que opera el plan HACCP. El diagnóstico inicial evalúa ambos y prioriza las brechas.</p></div>
+  <div class="faq"><h4>¿Aplica para mi tipo de organización?</h4><p>Sí. HACCP aplica a <b>cualquier organización que maneje alimentos</b>: plantas de proceso, cocinas y restaurantes, comedores industriales, hoteles, distribución y almacén — e <b>instituciones educativas</b> con talleres y cocinas de formación gastronómica.</p></div>
+  <div class="pgfoot"><span>ONCE México · Guía informativa HACCP</span><span class="pg">Pág. 5</span></div>
+</div>
+
+<!-- ═══ PÁG 6 · ACERCA DE ONCE ═══ -->
+<div class="page inner-page">
+  <div class="pghead"><img src="images/logo-once-mexico.png" alt="ONCE México"><span class="sec">Acerca de ONCE México</span></div>
+  <h2>¿Por qué certificarse con ONCE México?</h2><div class="hr"></div>
+  <p class="body"><b>ONCE México</b> es un organismo de certificación comprometido con la excelencia y la accesibilidad. Nuestro enfoque combina rigor técnico con un trato cercano, guiando a cada organización durante todo el proceso de certificación.</p>
+  <div class="cardrow">
+    <div class="c"><h4>Equipo calificado</h4><p>Auditores con experiencia en múltiples sectores industriales y de servicios.</p></div>
+    <div class="c"><h4>Proceso claro</h4><p>Comunicación transparente en cada etapa, sin sorpresas ni costos ocultos.</p></div>
+    <div class="c"><h4>Trato personalizado</h4><p>Atención directa y adaptada al tamaño y necesidades de su organización.</p></div>
+    <div class="c"><h4>Cobertura nacional</h4><p>Capacidad para atender organizaciones en toda la República Mexicana.</p></div>
+  </div>
+  <h3 class="sub">Algunas normas que certificamos</h3>
+  <div class="plist">
+    <div class="pitem"><span class="n check">✓</span><div><h4>ISO 9001:2015</h4><p>Sistema de Gestión de la Calidad</p></div></div>
+    <div class="pitem"><span class="n check">✓</span><div><h4>ISO 14001:2015</h4><p>Sistema de Gestión Ambiental</p></div></div>
+    <div class="pitem"><span class="n check">✓</span><div><h4>HACCP · ISO 22000:2018</h4><p>Inocuidad Alimentaria</p></div></div>
+    <div class="pitem"><span class="n check">✓</span><div><h4>ISO/IEC 27001:2022</h4><p>Seguridad de la Información</p></div></div>
+  </div>
+  <p class="body" style="font-size:9.5pt;color:var(--muted);">Estos son solo algunos ejemplos. Consulte con nuestro equipo por otras normas y esquemas de certificación disponibles.</p>
+  <div class="contactbox">
+    <div class="k">Datos de contacto</div>
+    <p><b>ONCE México</b> — Organismo de Normalización y Certificación Empresarial<br>
+    <b>Domicilio:</b> Corporativo Kansas · Av. Insurgentes Sur 859, Piso 2, Col. Nápoles, Alcaldía Benito Juárez, C.P. 03810, Ciudad de México<br>
+    <b>Teléfono:</b> 55 12 04 11 31<br>
+    <b>Correo:</b> contacto@oncemexico.org<br>
+    <b>Web:</b> www.oncemexico.org</p>
+  </div>
+  <div class="ctabox">
+    <h3>Dé el primer paso hacia la certificación</h3>
+    <p>Solicite una cotización personalizada sin compromiso. Nuestro equipo le guiará en cada etapa del proceso.</p>
+    <div class="cta"><span>contacto@oncemexico.org</span><span>55 12 04 11 31</span></div>
+  </div>
+  <div class="pgfoot"><span>ONCE México · Guía informativa HACCP</span><span class="pg">Pág. 6</span></div>
+</div>
+
+</body>
+</html>
